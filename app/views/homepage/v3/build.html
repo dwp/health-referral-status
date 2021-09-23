@@ -4,30 +4,18 @@
   Health Assessment Service
 {% endblock %}
 
+{% block beforeContent %}
+<a href="index" class="govuk-back-link">Back</a>
+{% endblock %}
+
 {% block content %}
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-full">
     <h1 class="govuk-heading-l">
-      Main menu
+      Build referrals
     </h1>
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-full">
-
-      <div class="dwp-card dwp-card--clickable">
-        <div class="dwp-card__content">
-          <h2 class="dwp-card__heading dwp-heading-m">
-            <a class="dwp-card__link" href="find-claimant">Find a claimant</a>
-          </h2>
-        </div>
-      </div>
-
-      <div class="dwp-card dwp-card--clickable">
-        <div class="dwp-card__content">
-          <h2 class="dwp-card__heading dwp-heading-m">
-            <a class="dwp-card__link" href="start">Referrals in progress</a>
-          </h2>
-        </div>
-      </div>
 
       <div class="dwp-card dwp-card--clickable">
         <div class="dwp-card__content">
@@ -40,7 +28,23 @@
       <div class="dwp-card dwp-card--clickable">
         <div class="dwp-card__content">
           <h2 class="dwp-card__heading dwp-heading-m">
-            <a class="dwp-card__link" href="build">Build referrals</a>
+            <a class="dwp-card__link" href="#">Create a referral</a>
+          </h2>
+        </div>
+      </div>
+
+      <div class="dwp-card dwp-card--clickable">
+        <div class="dwp-card__content">
+          <h2 class="dwp-card__heading dwp-heading-m">
+            <a class="dwp-card__link" href="caseload">Incomplete referrals</a>
+          </h2>
+        </div>
+      </div>
+
+      <div class="dwp-card dwp-card--clickable">
+        <div class="dwp-card__content">
+          <h2 class="dwp-card__heading dwp-heading-m">
+            <a class="dwp-card__link" href="overview">Changes to PIP referrals</a>
           </h2>
         </div>
       </div>

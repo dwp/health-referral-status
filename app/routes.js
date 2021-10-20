@@ -371,6 +371,24 @@ router.post('/status-iteration/archive/v1/status-filter2', function (req, res) {
   }
 })
 
+//archive Magpie colab
+
+router.post('/magpie-colab/archive/v1/status-filter', function (req, res) {
+  
+  const status2 = req.session.data['status2']
+  req.session.data['status2']=''
+
+  if (status2 === 'list-1') {
+    res.redirect('/magpie-colab/archive/v1/list-1')
+  } else if (status2 === 'list-2') {
+      res.redirect('/magpie-colab/archive/v1/list-2')
+  } else if (status2 === 'list-3') {
+    res.redirect('/magpie-colab/archive/v1/list-3')
+  } else {
+    res.redirect('/magpie-colab/archive/v1/error')
+  }
+})
+
 //End of archive
 
 // Branching v1
@@ -699,6 +717,24 @@ router.post('/status-iteration/v4/status-filter2', function (req, res) {
     res.redirect('/status-iteration/v4/decision-list')
   } else {
     res.redirect('/status-iteration/v4/error')
+  }
+})
+
+// Magpie colab
+
+router.post('/magpie-colab/v1/status-filter', function (req, res) {
+  
+  const status2 = req.session.data['status2']
+  req.session.data['status2']=''
+
+  if (status2 === 'list-1') {
+    res.redirect('/magpie-colab/v1/list-1')
+  } else if (status2 === 'list-2') {
+      res.redirect('/magpie-colab/v1/list-2')
+  } else if (status2 === 'list-3') {
+    res.redirect('/magpie-colab/v1/list-3')
+  } else {
+    res.redirect('/magpie-colab/v1/error')
   }
 })
 

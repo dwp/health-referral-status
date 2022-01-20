@@ -3,6 +3,20 @@ const router = express.Router()
 
 // Add your routes here - above the module.exports line
 
+// Index branching
+
+router.post('/start-prototype', function (req, res) {
+  
+  const prototype = req.session.data['prototype']
+  req.session.data['prototype']=''
+
+  if (prototype === 'prototype1') {
+    res.redirect('/scr-index')
+  } else {
+    res.redirect('/chaffinch-index')
+  }
+})
+
 // Branching in archive
 router.post('/finding-and-organising/archive/v1/status-filter', function (req, res) {
   

@@ -1,67 +1,47 @@
 {% extends "layout.html" %}
 
 {% block pageTitle %}
-  Team Chaffinch prototype
+  Health Assessment Service
 {% endblock %}
 
 {% block content %}
+
   <div class="govuk-grid-row">
-    <div class="govuk-grid-column-full">
+    <div class="govuk-grid-column-two-thirds">
 
-      <h1 class="govuk-heading-xl">
-        {% if serviceName %} {{ serviceName }} {% endif %}
-      </h1>
+      <form action="/start-prototype" method="post" class="form">
 
-      <div class="govuk-grid-row">
-        <div class="govuk-grid-column-full">
-          <div class="dwp-card dwp-card--clickable">
-            <div class="dwp-card__content">
-              <h2 class="dwp-card__heading dwp-heading-m">
-                <a class="dwp-card__link" href="referral-state-model">Referral state model</a>
-              </h2>
-              <p class="dwp-card__description">Simplifying how a referral can be pushed end-to-end through the Health Assessment Service.</p>
+      <div class="govuk-form-group">
+        <fieldset class="govuk-fieldset" aria-describedby="prototype-hint">
+          <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+            <h1 class="govuk-fieldset__heading">
+              Select what topic you are interested in
+            </h1>
+          </legend>
+          <div id="prototype-hint" class="govuk-hint">
+
+          </div>
+          <div class="govuk-radios">
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="prototype" name="prototype" type="radio" value="prototype1">
+              <label class="govuk-label govuk-radios__label" for="prototype">
+                Single claimant record
+              </label>
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="prototype-2" name="prototype" type="radio" value="prototype2">
+              <label class="govuk-label govuk-radios__label" for="prototype-2">
+                Workflow (health referral status and caseload things)
+              </label>
             </div>
           </div>
-          <div class="dwp-card dwp-card--clickable">
-            <div class="dwp-card__content">
-              <h2 class="dwp-card__heading dwp-heading-m">
-                <a class="dwp-card__link" href="finding-and-organising">Finding and organising</a>
-              </h2>
-              <p class="dwp-card__description">Helping a user find a claimant and manage the list of active referrals</p>
-            </div>
-          </div>
-          <div class="dwp-card dwp-card--clickable">
-            <div class="dwp-card__content">
-              <h2 class="dwp-card__heading dwp-heading-m">
-                <a class="dwp-card__link" href="status-iteration">Status Iteration</a>
-              </h2>
-              <p class="dwp-card__description">Iterating the statuses based on what we are learning from the DTA in Tresco House </p>
-            </div>
-          </div>
-          <div class="dwp-card dwp-card--clickable">
-            <div class="dwp-card__content">
-              <h2 class="dwp-card__heading dwp-heading-m">
-                <a class="dwp-card__link" href="magpie-colab">Magpie Colab</a>
-              </h2>
-              <p class="dwp-card__description">Where access to documents links are displayed</p>
-            </div>
-          </div>
-          <div class="dwp-card dwp-card--clickable">
-            <div class="dwp-card__content">
-              <h2 class="dwp-card__heading dwp-heading-m">
-                <a class="dwp-card__link" href="claimant-case">Claimant case</a>
-              </h2>
-              <p class="dwp-card__description">How we display if a user has more than one referral on the service</p>
-            </div>
-          </div>
-          <div class="dwp-card dwp-card--clickable">
-            <div class="dwp-card__content">
-              <h2 class="dwp-card__heading dwp-heading-m">
-                <a class="dwp-card__link" href="homepage">Homepage iteration</a>
-              </h2>
-              <p class="dwp-card__description">Helping a user enter the service and find what they need to do</p>
-            </div>
-          </div>
+        </fieldset>
+      </div>
+      <button class="govuk-button" data-module="govuk-button">Continue</button>
+    </form>
+
     </div>
   </div>
+
+
 {% endblock %}

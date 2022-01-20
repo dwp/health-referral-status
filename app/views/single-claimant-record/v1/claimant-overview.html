@@ -1,4 +1,4 @@
-{% extends "layout-key-details-review.html" %}
+{% extends "layout.html" %}
 
 {% block pageTitle %}
   Claimant details
@@ -9,57 +9,231 @@
 <a href="index" class="govuk-back-link">Back</a>
 {% endblock %}
 
+
+
 {% block content %}
 
-<div class="govuk-grid-row">
-    <div class="govuk-grid-column-full">
+<!-- Styling of head and keydetails bar -->
+<style type="text/css">
 
-      <h1 class="govuk-heading-l">
-        Claimant Referrals
-      </h1>
+.govuk-header {
+  border-bottom: 10px solid #000000;
+}
 
-      <table class="govuk-table">
-        <thead class="govuk-table__head">
-          <tr class="govuk-table__row">
-            <th scope="col" class="govuk-table__header">Benefit</th>
-            <th scope="col" class="govuk-table__header">Referral date</th>
-            <th scope="col" class="govuk-table__header">Status</th>
-            <th scope="col" class="govuk-table__header">Last updated</th>
-            <th scope="col" class="govuk-table__header">Action</th>
-          </tr>
-        </thead>
-        <tbody class="govuk-table__body">
-          <tr class="govuk-table__row">
-            <td class="govuk-table__cell">PIP</td>
-            <td class="govuk-table__cell">1 Jun 2021</td>
-            <td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--green" id="Status 1">In Review</strong></td>
-            <td class="govuk-table__cell">8 Jun 2021</td>
-            <td class="govuk-table__cell"><a href="#" aria-describedby="referral-detail">View referral detail</a></td>
-          </tr>
-          <tr class="govuk-table__row">
-            <td class="govuk-table__cell">ESA</td>
-            <td class="govuk-table__cell">1 Feb 2021</td>
-            <td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--yellow" id="Status 1">Assessment booked</strong></td>
-            <td class="govuk-table__cell">28 May 2021</td>
-            <td class="govuk-table__cell"><a href="#" aria-describedby="referral-detail">View referral detail</a></td>
-          </tr>
-          <tr class="govuk-table__row">
-            <td class="govuk-table__cell">PIP</td>
-            <td class="govuk-table__cell">23 Jan 2018</td>
-            <td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--grey" id="Status 1">Archived</strong></td>
-            <td class="govuk-table__cell">8 Jun 2018</td>
-            <td class="govuk-table__cell"><a href="#" aria-describedby="referral-detail">View referral detail</a></td>
-          </tr>
-          <tr class="govuk-table__row">
-            <td class="govuk-table__cell">PIP</td>
-            <td class="govuk-table__cell">1 Feb 2016</td>
-            <td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--grey" id="Status 1">Archived</strong></td>
-            <td class="govuk-table__cell">1 Aug 2016</td>
-            <td class="govuk-table__cell"><a href="#" aria-describedby="referral-detail">View referral detail</a></td>
-          </tr>
-        </tbody>
-      </table>
+.govuk-header__container {
+  border-bottom: 0px;
+}
+
+.overview .govuk-grid-column-one-half {
+  width: 48%;
+  margin: 2% 2% 0 0;
+}
+
+.key-details-bar .key-details-bar__key-details {
+  margin: 0 auto;
+  max-width: 990px;
+  padding: 0px 30px 20px 0px;
+  position: relative;
+  font-family: "Arial";
+}
+
+@media (max-width: 670px) {
+  .key-details-bar .key-details-bar__key-details {
+    padding: 20px 15px;
+  }
+}
+
+.key-details-bar .key-details-bar__key-details * {
+  color: #000;
+}
+
+.key-details-bar .key-details-bar__key-details .key-details-bar__top-block::after,
+.key-details-bar .key-details-bar__key-details .key-details-bar__bottom-block::after {
+  clear: both;
+  content: ' ';
+  display: block;
+}
+
+.key-details-bar .key-details-bar__key-details .key-details-bar__bottom-block {
+  border-top: 1px solid rgba(255, 255, 255, 0.3);
+  content: ' ';
+  padding-top: 10px;
+  margin-top: 6px;
+}
+
+@media (max-width: 670px) {
+  .key-details-bar .key-details-bar__key-details .key-details-bar__bottom-block {
+    border: 0;
+  }
+}
+
+.key-details-bar .key-details-bar__key-details dd,
+.key-details-bar .key-details-bar__key-details dt {
+  float: left;
+  font-size: 19px;
+  margin-right: 5px;
+}
+
+@media (max-width: 670px) {
+  .key-details-bar .key-details-bar__key-details dd,
+  .key-details-bar .key-details-bar__key-details dt {
+    float: none;
+    font-size: 16px;
+    margin: 0;
+  }
+}
+
+.key-details-bar .key-details-bar__key-details dd {
+  margin-right: 20px;
+}
+
+.key-details-bar .key-details-bar__key-details .key-details-bar__bottom-block dd {
+  margin-right: 0;
+  margin-inline-start: 0;
+
+}
+
+@media (max-width: 670px) {
+  .key-details-bar .key-details-bar__key-details dd {
+    margin-bottom: 20px;
+  }
+  .key-details-bar .key-details-bar__key-details dd:last-of-type {
+    margin-bottom: 0;
+  }
+}
+
+.key-details-bar .key-details-bar__key-details .key-details-bar__name {
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 1.11111;
+  margin-right: 10px;
+}
+
+@media (max-width: 670px) {
+  .key-details-bar .key-details-bar__key-details .key-details-bar__name {
+    font-size: 24px;
+    line-height: 1.04167;
+    float: left;
+    margin: 0 5px 0 0;
+  }
+}
+
+.key-details-bar .key-details-bar__key-details .key-details-bar__nino {
+  font-size: 24px;
+  line-height: 1;
+  margin-top: 12px;
+}
+
+@media (max-width: 670px) {
+  .key-details-bar .key-details-bar__key-details .key-details-bar__nino {
+    font-size: 18px;
+    float: left;
+    margin: 5px 0 0 0;
+  }
+}
+
+.border { 
+  position: relative;
+  border-radius: 6px;
+  border: 1px solid #b1b4b6;
+  padding: 20px;
+}
+
+.border-bottom {
+  border-bottom: 1px solid #b1b4b6;
+}
+
+.recent-claim h3, .recent-claim p {
+  margin: 5px 0;
+}
+
+/* .key-details-bar .key-details-bar__key-details .key-details-bar__status {
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 1.25;
+  padding: 5px 8px 0;
+  color: #005ea5;
+  background-color: #fff;
+  letter-spacing: 1px;
+  text-decoration: none;
+  text-transform: uppercase;
+  float: right;
+  margin: 5px 0 0;
+}
+
+@media (max-width: 670px) {
+  .key-details-bar .key-details-bar__key-details .key-details-bar__status {
+    font-size: 14px;
+    float: left;
+    clear: both;
+    margin-top: 5px;
+  }
+} */
+
+#global-header .header-wrapper{
+max-width:1160px !important;}
+</style>
+
+<section class="key-details-bar" role="contentinfo" aria-label="Key details">
+  <dl class="key-details-bar__key-details">
+    <div class="key-details-bar__top-block">
+      <dt class="govuk-visually-hidden">Name:</dt>
+      <dt class="key-details-bar__name"> Jane Doe</dt>
+
+      <dt class="govuk-visually-hidden">National Insurance number:</dt>
+      <dt class="key-details-bar__nino">RN 00 04 26 D</dt>
 
     </div>
+
+    <div class="key-details-bar__bottom-block">
+      <dt class="govuk-visually-hidden">Claimant markers:</dt>
+      <dd>
+        <strong class="govuk-tag govuk-tag--purple">Terminally ill</strong>
+        <strong class="govuk-tag govuk-tag--yellow">Additional support</strong>
+        <strong class="govuk-tag govuk-tag--green">Appointee</strong>
+        <strong class="govuk-tag govuk-tag--blue">Dual claim</strong>
+        <strong class="govuk-tag govuk-tag--red">UCB</strong>
+      </dd>
+    </div>
+  </dl>
+</section>
+
+<div class="govuk-grid-row overview">
+    <div class="govuk-grid-column-full">
+
+      <div class="govuk-grid-column-one-half border">
+        <h2 class="govuk-heading-m">
+          Recent claims
+        </h2>
+
+        <div class="recent-claim border-bottom govuk-!-margin-bottom-4">
+          <h3 class="govuk-heading-s">Work capability assessment</h3>
+          <p class="govuk-hint">Submitted 19 November 2021</p>
+          <div class="status govuk-!-margin-bottom-4"><strong class="govuk-tag">In review</strong></div>
+        </div>
+
+        <div class="recent-claim">
+          <h3 class="govuk-heading-s">Personal independant payment</h3>
+          <p class="govuk-hint">Submitted 10 December 2021</p>
+          <div class="status"><strong class="govuk-tag">Awaiting Questionnaire</strong></div>
+        </div>
+      </div>
+
+      <div class="govuk-grid-column-one-half border">
+        <h2 class="govuk-heading-m">
+          Latest activity
+        </h2>
+      </div>
+
+      <div class="govuk-grid-column-one-half border">
+        <h2 class="govuk-heading-m">
+          Upcoming appointments
+        </h2>
+      </div>
+
+      
+
+    </div>
+
   </div>
 {% endblock %}

@@ -183,7 +183,7 @@
     font-size: 1rem;
     line-height: 1.25;
     color: #505a5f;
-    display: inline;
+    display: block;
     margin: 0;
 }
 
@@ -216,12 +216,12 @@
         font-size: 1.1875rem;
         line-height: 1.31579;
     }
-
+/* 
     .moj-timeline__byline {
-        font-size: 19px;
+        font-size: 16px;
         font-size: 1.1875rem;
         line-height: 1.31579;
-    }
+    } */
 
     .moj-timeline__date {
         font-size: 16px;
@@ -380,29 +380,9 @@
 .recent-claim h3, .recent-claim p {
   margin: 5px 0;
 }
-
-/* .key-details-bar .key-details-bar__key-details .key-details-bar__status {
-  font-size: 16px;
-  font-weight: 700;
-  line-height: 1.25;
-  padding: 5px 8px 0;
-  color: #005ea5;
-  background-color: #fff;
-  letter-spacing: 1px;
-  text-decoration: none;
-  text-transform: uppercase;
-  float: right;
-  margin: 5px 0 0;
+.govuk-notification-banner {
+    margin-bottom: 0;
 }
-
-@media (max-width: 670px) {
-  .key-details-bar .key-details-bar__key-details .key-details-bar__status {
-    font-size: 14px;
-    float: left;
-    clear: both;
-    margin-top: 5px;
-  }
-} */
 
 .govuk-width-container {
     max-width: 1200px!important;
@@ -461,6 +441,20 @@ max-width:1200px !important;}
 <div class="govuk-grid-row overview">
     <div class="govuk-grid-column-full">
 
+      <div class="govuk-notification-banner govuk-!-margin-top-4" role="region" aria-labelledby="govuk-notification-banner-title" data-module="govuk-notification-banner">
+        <div class="govuk-notification-banner__header">
+          <h2 class="govuk-notification-banner__title" id="govuk-notification-banner-title">
+            Important
+          </h2>
+        </div>
+        <div class="govuk-notification-banner__content">
+          <p class="govuk-notification-banner__heading">
+            Questionnaire outstanding
+          </p>
+          <p>Personal independent payment health questionnaire issued 12 December 2021</p>
+        </div>
+      </div>
+
       <div class="govuk-grid-column-one-half border">
         <h2 class="govuk-heading-m">
           Recent claims
@@ -469,11 +463,11 @@ max-width:1200px !important;}
         <div class="recent-claim border-bottom govuk-!-margin-bottom-4">
           <h3 class="govuk-heading-s">Work capability assessment</h3>
           <p class="govuk-hint">Submitted 19 November 2021</p>
-          <div class="status govuk-!-margin-bottom-4"><strong class="govuk-tag">In review</strong></div>
+          <div class="status govuk-!-margin-bottom-4"><strong class="govuk-tag">Assessment booked</strong></div>
         </div>
 
         <div class="recent-claim">
-          <h3 class="govuk-heading-s">Personal independant payment</h3>
+          <h3 class="govuk-heading-s">Personal independent payment</h3>
           <p class="govuk-hint">Submitted 10 December 2021</p>
           <div class="status"><strong class="govuk-tag">Awaiting Questionnaire</strong></div>
         </div>
@@ -487,13 +481,13 @@ max-width:1200px !important;}
         <div class="moj-timeline">
           <div class="moj-timeline__item">
             <div class="moj-timeline__header">
-              <h2 class="moj-timeline__title">Questionnaire recieved</h2>
+              <h2 class="moj-timeline__title">Assessment booked</h2>
               <p class="moj-timeline__byline">by Andy Clarke</p>
             </div>
             <p class="moj-timeline__date">
-              <time datetime="2019-06-14T14:01:00.000Z">8 Nov 2021 at 2:01pm</time>
+              <time datetime="2019-06-14T14:01:00.000Z">8 Jan 2022 at 2:01pm</time>
             </p>
-            <div class="moj-timeline__description">(UC) Post from claimant</div>
+            <div class="moj-timeline__description">(PIP) Phonecall to claimant</div>
           </div>
           
           <div class="moj-timeline__item">
@@ -502,7 +496,7 @@ max-width:1200px !important;}
               <p class="moj-timeline__byline">by Phillip Smith</p>
             </div>
             <p class="moj-timeline__date">
-              <time datetime="2019-06-07T12:32:00.000Z">28 Oct 2021 at 12:32pm</time>
+              <time datetime="2019-06-07T12:32:00.000Z">18 Dec 2021 at 12:32pm</time>
             </p>
             <div class="moj-timeline__description">(UC) Phonecall to the claimant</div>
           </div>
@@ -513,7 +507,7 @@ max-width:1200px !important;}
               <p class="moj-timeline__byline">by Phillip Smith</p>
             </div>
             <p class="moj-timeline__date">
-              <time datetime="2019-06-06T09:12:00.000Z">21 Oct 2021 at 9:12am</time>
+              <time datetime="2019-06-06T09:12:00.000Z">12 DEC 2021 at 9:12am</time>
             </p>
             <div class="moj-timeline__description">(UC) Post to claimant</div>
           </div>

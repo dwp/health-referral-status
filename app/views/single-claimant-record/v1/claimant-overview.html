@@ -369,19 +369,19 @@
 .card__header {
   background-color: rgba(0,0,0,.03);
   border-bottom: 1px solid rgba(0,0,0,.125);
-  padding: 15px;
+  padding: 15px 20px;
 }
 
-.card__content {
+.card__body {
   padding: 0 20px 20px;
+}
+
+.card__content h3, .card__content p {
+  margin: 5px 0;
 }
 
 .border-bottom {
   border-bottom: 1px solid #b1b4b6;
-}
-
-.recent-claim h3, .recent-claim p {
-  margin: 5px 0;
 }
 .govuk-notification-banner {
     margin-bottom: 0;
@@ -475,14 +475,14 @@
           <h2 class="govuk-heading-m card__header">
             Recent claims
           </h2>
-          <div class="card__content">
-            <div class="recent-claim border-bottom govuk-!-margin-bottom-4">
+          <div class="card__body">
+            <div class="card__content border-bottom govuk-!-margin-bottom-4">
               <h3 class="govuk-heading-s">Work capability assessment</h3>
               <p class="govuk-hint">Submitted 19 November 2021</p>
               <div class="status govuk-!-margin-bottom-4"><strong class="govuk-tag">Assessment booked</strong></div>
             </div>
 
-            <div class="recent-claim">
+            <div class="card__content">
               <h3 class="govuk-heading-s">Personal independent payment</h3>
               <p class="govuk-hint">Submitted 10 December 2021</p>
               <div class="status"><strong class="govuk-tag">Awaiting Questionnaire</strong></div>
@@ -494,8 +494,8 @@
           <h2 class="govuk-heading-m card__header">
             Upcoming appointments
           </h2>
-          <div class="card__content">
-            <div class="recent-claim">
+          <div class="card__body">
+            <div class="card__content">
               <h3 class="govuk-heading-s">Work capability assessment - face to face</h3>
               <p class="govuk-hint">29 January 2022 10:30am</p>
               <p class="">Tresco House</p>
@@ -510,7 +510,7 @@
           <h2 class="govuk-heading-m card__header">
             Latest activity
           </h2>
-          <div class="card__content">
+          <div class="card__body">
             <div class="moj-timeline">
               <div class="moj-timeline__item">
                 <div class="moj-timeline__header">

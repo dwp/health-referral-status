@@ -133,7 +133,6 @@
 <style>
 
 .moj-timeline {
-    margin-bottom: 20px;
     overflow: hidden;
     position: relative;
 }
@@ -361,30 +360,20 @@
   width: 85%;
 }
 
-.overview .govuk-grid-column-full {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  flex-wrap: wrap;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: column;
-  flex-direction: row;
-  position: relative;
-  min-height: 0;
-  overflow: inherit;
-}
-
-.overview .govuk-grid-column-one-half {
-  width: 48%;
-  margin: 2% 2% 0 0;
-}
-
-.border { 
+.card { 
   position: relative;
   border-radius: 6px;
   border: 1px solid #b1b4b6;
-  padding: 20px;
+}
+
+.card__header {
+  background-color: rgba(0,0,0,.03);
+  border-bottom: 1px solid rgba(0,0,0,.125);
+  padding: 15px;
+}
+
+.card__content {
+  padding: 0 20px 20px;
 }
 
 .border-bottom {
@@ -402,8 +391,19 @@
     max-width: 1200px!important;
 }
 
+/* Overrides */
 #global-header .header-wrapper{
-max-width:1200px !important;}
+  max-width:1200px !important;
+}
+
+.govuk-grid-column-one-half {
+  padding: 0;
+}
+
+.govuk-notification-banner__content > * {
+    box-sizing: border-box;
+    max-width: 850px;
+}
 </style>
 
 <div class="app-pane__body">
@@ -469,71 +469,87 @@ max-width:1200px !important;}
         </div>
       </div>
 
-      <div class="govuk-grid-column-one-half border">
-        <h2 class="govuk-heading-m">
-          Recent claims
-        </h2>
+      <div class="govuk-grid-column-one-half govuk-!-padding-right-4 govuk-!-padding-top-4">
+        
+        <div class="card">
+          <h2 class="govuk-heading-m card__header">
+            Recent claims
+          </h2>
+          <div class="card__content">
+            <div class="recent-claim border-bottom govuk-!-margin-bottom-4">
+              <h3 class="govuk-heading-s">Work capability assessment</h3>
+              <p class="govuk-hint">Submitted 19 November 2021</p>
+              <div class="status govuk-!-margin-bottom-4"><strong class="govuk-tag">Assessment booked</strong></div>
+            </div>
 
-        <div class="recent-claim border-bottom govuk-!-margin-bottom-4">
-          <h3 class="govuk-heading-s">Work capability assessment</h3>
-          <p class="govuk-hint">Submitted 19 November 2021</p>
-          <div class="status govuk-!-margin-bottom-4"><strong class="govuk-tag">Assessment booked</strong></div>
+            <div class="recent-claim">
+              <h3 class="govuk-heading-s">Personal independent payment</h3>
+              <p class="govuk-hint">Submitted 10 December 2021</p>
+              <div class="status"><strong class="govuk-tag">Awaiting Questionnaire</strong></div>
+            </div>
+          </div>
         </div>
 
-        <div class="recent-claim">
-          <h3 class="govuk-heading-s">Personal independent payment</h3>
-          <p class="govuk-hint">Submitted 10 December 2021</p>
-          <div class="status"><strong class="govuk-tag">Awaiting Questionnaire</strong></div>
+        <div class="card govuk-!-margin-top-4">
+          <h2 class="govuk-heading-m card__header">
+            Upcoming appointments
+          </h2>
+          <div class="card__content">
+            <div class="recent-claim">
+              <h3 class="govuk-heading-s">Work capability assessment - face to face</h3>
+              <p class="govuk-hint">29 January 2022 10:30am</p>
+              <p class="">Tresco House</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="govuk-grid-column-one-half govuk-!-padding-top-4">
+        <div class="card">
+          <h2 class="govuk-heading-m card__header">
+            Latest activity
+          </h2>
+          <div class="card__content">
+            <div class="moj-timeline">
+              <div class="moj-timeline__item">
+                <div class="moj-timeline__header">
+                  <h2 class="moj-timeline__title">Assessment booked</h2>
+                  <p class="moj-timeline__byline">by Andy Clarke</p>
+                </div>
+                <p class="moj-timeline__date">
+                  <time datetime="2019-06-14T14:01:00.000Z">8 Jan 2022 at 2:01pm</time>
+                </p>
+                <div class="moj-timeline__description">(PIP) Phonecall to claimant</div>
+              </div>
+              
+              <div class="moj-timeline__item">
+                <div class="moj-timeline__header">
+                  <h2 class="moj-timeline__title">Called to introduce myself and chase the progress of the form</h2>
+                  <p class="moj-timeline__byline">by Phillip Smith</p>
+                </div>
+                <p class="moj-timeline__date">
+                  <time datetime="2019-06-07T12:32:00.000Z">18 Dec 2021 at 12:32pm</time>
+                </p>
+                <div class="moj-timeline__description">(UC) Phonecall to the claimant</div>
+              </div>
+              
+              <div class="moj-timeline__item">
+                <div class="moj-timeline__header">
+                  <h2 class="moj-timeline__title">Questionnaire sent</h2>
+                  <p class="moj-timeline__byline">by Phillip Smith</p>
+                </div>
+                <p class="moj-timeline__date">
+                  <time datetime="2019-06-06T09:12:00.000Z">12 DEC 2021 at 9:12am</time>
+                </p>
+                <div class="moj-timeline__description">(UC) Post to claimant</div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
 
-      <div class="govuk-grid-column-one-half border">
-        <h2 class="govuk-heading-m">
-          Latest activity
-        </h2>
-
-        <div class="moj-timeline">
-          <div class="moj-timeline__item">
-            <div class="moj-timeline__header">
-              <h2 class="moj-timeline__title">Assessment booked</h2>
-              <p class="moj-timeline__byline">by Andy Clarke</p>
-            </div>
-            <p class="moj-timeline__date">
-              <time datetime="2019-06-14T14:01:00.000Z">8 Jan 2022 at 2:01pm</time>
-            </p>
-            <div class="moj-timeline__description">(PIP) Phonecall to claimant</div>
-          </div>
-          
-          <div class="moj-timeline__item">
-            <div class="moj-timeline__header">
-              <h2 class="moj-timeline__title">Called to introduce myself and chase the progress of the form</h2>
-              <p class="moj-timeline__byline">by Phillip Smith</p>
-            </div>
-            <p class="moj-timeline__date">
-              <time datetime="2019-06-07T12:32:00.000Z">18 Dec 2021 at 12:32pm</time>
-            </p>
-            <div class="moj-timeline__description">(UC) Phonecall to the claimant</div>
-          </div>
-          
-          <div class="moj-timeline__item">
-            <div class="moj-timeline__header">
-              <h2 class="moj-timeline__title">Questionnaire sent</h2>
-              <p class="moj-timeline__byline">by Phillip Smith</p>
-            </div>
-            <p class="moj-timeline__date">
-              <time datetime="2019-06-06T09:12:00.000Z">12 DEC 2021 at 9:12am</time>
-            </p>
-            <div class="moj-timeline__description">(UC) Post to claimant</div>
-          </div>
-
-        </div>
-      </div>
-
-      <div class="govuk-grid-column-one-half border">
-        <h2 class="govuk-heading-m">
-          Upcoming appointments
-        </h2>
-      </div>
+      
 
       
 

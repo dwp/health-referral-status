@@ -40,7 +40,7 @@
 
 .app-subnav {
     margin-bottom: 100px;
-    padding: 6px 15px 0 0;
+    padding: 30px 15px 0 0;
     font-family: arial,sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
@@ -293,7 +293,6 @@
   float: left;
   font-size: 19px;
   margin-right: 5px;
-  margin-inline-start: 0;
 }
 
 @media (max-width: 670px) {
@@ -409,6 +408,31 @@
 
 <div class="app-pane__body">
 
+<section class="key-details-bar" role="contentinfo" aria-label="Key details">
+  <dl class="key-details-bar__key-details">
+    <div class="key-details-bar__top-block">
+      <dt class="govuk-visually-hidden">Name:</dt>
+      <dt class="key-details-bar__name"> Jane Doe</dt>
+
+      <dt class="govuk-visually-hidden">National Insurance number:</dt>
+      <dt class="key-details-bar__nino">RN 00 04 26 D</dt>
+
+    </div>
+
+    <div class="key-details-bar__bottom-block">
+      <dt class="govuk-visually-hidden">Claimant markers:</dt>
+      <dd>
+        <strong class="govuk-tag govuk-tag--purple">Terminally ill</strong>
+        <strong class="govuk-tag govuk-tag--yellow">Additional support</strong>
+        <strong class="govuk-tag govuk-tag--green">Appointee</strong>
+        <strong class="govuk-tag govuk-tag--blue">Dual claim</strong>
+        <strong class="govuk-tag govuk-tag--pink">Unacceptable behaviour</strong>
+        <strong class="govuk-tag govuk-tag--red">Deceased</strong>
+      </dd>
+    </div>
+  </dl>
+</section>
+
 <div class="app-pane__subnav">
   <nav class="app-subnav" aria-labelledby="app-subnav-heading">
     <h2 class="govuk-visually-hidden" id="app-subnav-heading">Pages in this section</h2>
@@ -432,48 +456,19 @@
 <div class="govuk-grid-row overview">
     <div class="govuk-grid-column-full">
 
-      <h1 class="govuk-visually-hidden">Overview of claimant</h1>
-
-      <section class="key-details-bar" role="identifier" aria-label="Claimant name and identifier">
-        <dl class="key-details-bar__key-details">
-          <div class="key-details-bar__top-block">
-            <dt class="govuk-visually-hidden">Name:</dt>
-            <dd class="key-details-bar__name">Jane Doe</dd>
-      
-            <dt class="govuk-visually-hidden">National Insurance number:</dt>
-            <dd class="key-details-bar__nino">RN 00 04 26 D</dd>
-      
-          </div>
-      
-          <div class="key-details-bar__bottom-block">
-            <dt class="govuk-visually-hidden">Claimant markers:</dt>
-            <dd>
-              <strong class="govuk-tag govuk-tag--purple">Terminally ill</strong>
-              <strong class="govuk-tag govuk-tag--yellow">Additional support</strong>
-              <strong class="govuk-tag govuk-tag--green">Appointee</strong>
-              <strong class="govuk-tag govuk-tag--blue">Dual claim</strong>
-              <strong class="govuk-tag govuk-tag--pink">Unacceptable behaviour</strong>
-              <strong class="govuk-tag govuk-tag--red">Deceased</strong>
-            </dd>
-          </div>
-        </dl>
-      </section>
-
-      <section role="contentinfo" aria-label="important notification">
-        <div class="govuk-notification-banner govuk-!-margin-top-4" role="region" aria-labelledby="govuk-notification-banner-title" data-module="govuk-notification-banner">
-          <div class="govuk-notification-banner__header">
-            <h2 class="govuk-notification-banner__title" id="govuk-notification-banner-title">
-              Important
-            </h2>
-          </div>
-          <div class="govuk-notification-banner__content">
-            <p class="govuk-notification-banner__heading">
-              Questionnaire outstanding
-            </p>
-            <p>Personal independent payment health questionnaire issued 12 December 2021</p>
-          </div>
+      <div class="govuk-notification-banner govuk-!-margin-top-4" role="region" aria-labelledby="govuk-notification-banner-title" data-module="govuk-notification-banner">
+        <div class="govuk-notification-banner__header">
+          <h2 class="govuk-notification-banner__title" id="govuk-notification-banner-title">
+            Important
+          </h2>
         </div>
-      </section>
+        <div class="govuk-notification-banner__content">
+          <p class="govuk-notification-banner__heading">
+            Questionnaire outstanding
+          </p>
+          <p>Personal independent payment health questionnaire issued 12 December 2021</p>
+        </div>
+      </div>
 
       <div class="govuk-grid-column-one-half govuk-!-padding-right-4 govuk-!-padding-top-4">
         

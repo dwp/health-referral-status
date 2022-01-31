@@ -40,7 +40,7 @@
 
 .app-subnav {
     margin-bottom: 100px;
-    padding: 30px 15px 0 0;
+    padding: 6px 15px 0 0;
     font-family: arial,sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
@@ -132,6 +132,32 @@
 
 <style>
 
+/* DWP */
+.dwp-timeline {
+  font-family: Arial, sans-serif;
+  border-left: 3px solid #1d70b8;
+  list-style-type: none;
+  padding: 0;
+  }
+  
+  .dwp-timeline__entry {
+  margin: 2em 0;
+  padding-left: 1.125em;
+  position: relative;
+  top: -.6em;
+  }
+  
+  .dwp-timeline__entry::before {
+  background-color: #1d70b8;
+  content: '';
+  height: 3px;
+  left: 0;
+  position: absolute;
+  top: .6em;
+  width: 10px;
+  } 
+
+/* MOJ */
 .timeline {
     overflow: hidden;
     position: relative;
@@ -293,6 +319,7 @@
   float: left;
   font-size: 19px;
   margin-right: 5px;
+  margin-inline-start: 0;
 }
 
 @media (max-width: 670px) {
@@ -408,46 +435,27 @@
 
 <div class="app-pane__body">
 
-<section class="key-details-bar" role="contentinfo" aria-label="Key details">
-  <dl class="key-details-bar__key-details">
-    <div class="key-details-bar__top-block">
-      <dt class="govuk-visually-hidden">Name:</dt>
-      <dt class="key-details-bar__name"> Jane Doe</dt>
-
-      <dt class="govuk-visually-hidden">National Insurance number:</dt>
-      <dt class="key-details-bar__nino">RN 00 04 26 D</dt>
-
-    </div>
-
-    <div class="key-details-bar__bottom-block">
-      <dt class="govuk-visually-hidden">Claimant markers:</dt>
-      <dd>
-        <strong class="govuk-tag govuk-tag--purple">Terminally ill</strong>
-        <strong class="govuk-tag govuk-tag--yellow">Additional support</strong>
-        <strong class="govuk-tag govuk-tag--green">Appointee</strong>
-        <strong class="govuk-tag govuk-tag--blue">Dual claim</strong>
-        <strong class="govuk-tag govuk-tag--pink">Unacceptable behaviour</strong>
-        <strong class="govuk-tag govuk-tag--red">Deceased</strong>
-      </dd>
-    </div>
-  </dl>
-</section>
-
 <div class="app-pane__subnav">
   <nav class="app-subnav" aria-labelledby="app-subnav-heading">
     <h2 class="govuk-visually-hidden" id="app-subnav-heading">Pages in this section</h2>
     <ul class="app-subnav__section">
-      <li class="app-subnav__section-item app-subnav__section-item--current">
-        <a class="app-subnav__link govuk-link govuk-link--no-visited-state govuk-link--no-underline" href="#">Overview</a>
+      <li class="app-subnav__section-item">
+        <a class="app-subnav__link govuk-link govuk-link--no-visited-state govuk-link--no-underline" href="claimant-overview">Overview</a>
       </li>
       <li class="app-subnav__section-item">
         <a class="app-subnav__link govuk-link govuk-link--no-visited-state govuk-link--no-underline" href="claimant-details">Claimant details</a>
       </li>
-      <li class="app-subnav__section-item">
-        <a class="app-subnav__link govuk-link govuk-link--no-visited-state govuk-link--no-underline" href="#">Interaction log</a>
+      <li class="app-subnav__section-item app-subnav__section-item--current">
+        <a class="app-subnav__link govuk-link govuk-link--no-visited-state govuk-link--no-underline" href="interaction-log">Interaction log</a>
       </li>
       <li class="app-subnav__section-item">
-        <a class="app-subnav__link govuk-link govuk-link--no-visited-state govuk-link--no-underline" href="#">Claim history</a>
+        <a class="app-subnav__link govuk-link govuk-link--no-visited-state govuk-link--no-underline" href="#">Appointments</a>
+      </li>
+      <li class="app-subnav__section-item">
+        <a class="app-subnav__link govuk-link govuk-link--no-visited-state govuk-link--no-underline" href="#">Evidence</a>
+      </li>
+      <li class="app-subnav__section-item">
+        <a class="app-subnav__link govuk-link govuk-link--no-visited-state govuk-link--no-underline" href="claim-history">Claim history</a>
       </li>
     </ul>
   </nav>
@@ -456,108 +464,75 @@
 <div class="govuk-grid-row overview">
     <div class="govuk-grid-column-full">
 
-      <div class="govuk-notification-banner govuk-!-margin-top-4" role="region" aria-labelledby="govuk-notification-banner-title" data-module="govuk-notification-banner">
-        <div class="govuk-notification-banner__header">
-          <h2 class="govuk-notification-banner__title" id="govuk-notification-banner-title">
-            Important
-          </h2>
-        </div>
-        <div class="govuk-notification-banner__content">
-          <p class="govuk-notification-banner__heading">
-            Questionnaire outstanding
-          </p>
-          <p>Personal independent payment health questionnaire issued 12 December 2021</p>
-        </div>
-      </div>
-
-      <div class="govuk-grid-column-one-half govuk-!-padding-right-4 govuk-!-padding-top-4">
-        
-        <div class="card">
-          <h2 class="govuk-heading-m card__header">
-            Recent claims
-          </h2>
-          <div class="card__body">
-            <div class="card__content border-bottom govuk-!-margin-bottom-4">
-              <h3 class="govuk-heading-s"><a href="#" aria-describedby="referral-detail">Work capability assessment</a></h3>
-              <p class="govuk-hint">Submitted 19 November 2021</p>
-              <div class="status govuk-!-margin-bottom-4"><strong class="govuk-tag">Assessment booked</strong></div>
-            </div>
-
-            <div class="card__content">
-              <h3 class="govuk-heading-s"><a href="#" aria-describedby="referral-detail">Personal independent payment</a></h3>
-              <p class="govuk-hint">Submitted 10 December 2021</p>
-              <div class="status"><strong class="govuk-tag">Awaiting Questionnaire</strong></div>
-            </div>
-          </div>
-        </div>
-
-        <div class="card govuk-!-margin-top-4">
-          <h2 class="govuk-heading-m card__header">
-            Upcoming appointments
-          </h2>
-          <div class="card__body">
-            <div class="card__content">
-              <h3 class="govuk-heading-s">Work capability assessment - face to face</h3>
-              <p class="govuk-hint">29 January 2022 10:30am</p>
-              <p class="">Tresco House</p>
-              <p class="govuk-!-margin-top-2">
-                <a class="govuk-!-margin-right-2" href="#" aria-describedby="view-appointment">View appointment</a>
-              </p>
-            </div>
-          </div>
-        </div>
-
-      </div>
-
-      <div class="govuk-grid-column-one-half govuk-!-padding-top-4">
-        <div class="card">
-          <h2 class="govuk-heading-m card__header">
-            Latest activity
-          </h2>
-          <div class="card__body">
-            <div class="timeline">
-              <div class="timeline__item">
-                <div class="timeline__header">
-                  <h2 class="timeline__title">Assessment booked</h2>
-                  <p class="timeline__byline">by Andy Clarke</p>
-                </div>
-                <p class="timeline__date">
-                  <time datetime="2019-06-14T14:01:00.000Z">8 Jan 2022 at 2:01pm</time>
-                </p>
-                <div class="timeline__description">(PIP) Phonecall to claimant</div>
-              </div>
-              
-              <div class="timeline__item">
-                <div class="timeline__header">
-                  <h2 class="timeline__title">Called to introduce myself and chase the progress of the form</h2>
-                  <p class="timeline__byline">by Phillip Smith</p>
-                </div>
-                <p class="timeline__date">
-                  <time datetime="2019-06-07T12:32:00.000Z">18 Dec 2021 at 12:32pm</time>
-                </p>
-                <div class="timeline__description">(UC) Phonecall to the claimant</div>
-              </div>
-              
-              <div class="timeline__item">
-                <div class="timeline__header">
-                  <h2 class="timeline__title">Questionnaire sent</h2>
-                  <p class="timeline__byline">by Phillip Smith</p>
-                </div>
-                <p class="timeline__date">
-                  <time datetime="2019-06-06T09:12:00.000Z">12 DEC 2021 at 9:12am</time>
-                </p>
-                <div class="timeline__description">(UC) Post to claimant</div>
-              </div>
-            </div>
-            <p class="govuk-!-margin-top-4"><a href="#" aria-describedby="referral-detail">See more</a></p>
-          </div>
-        </div>
-      </div>
-
+      <section class="key-details-bar" role="identifier" aria-label="Claimant name and identifier">
+        <dl class="key-details-bar__key-details">
+          <div class="key-details-bar__top-block">
+            <dt class="govuk-visually-hidden">Name:</dt>
+            <dd class="key-details-bar__name">Jane Doe</dd>
       
-
+            <dt class="govuk-visually-hidden">National Insurance number:</dt>
+            <dd class="key-details-bar__nino">RN 00 04 26 D</dd>
       
+          </div>
+      
+          <div class="key-details-bar__bottom-block">
+            <dt class="govuk-visually-hidden">Claimant markers:</dt>
+            <dd>
+              <strong class="govuk-tag govuk-tag--purple">Terminally ill</strong>
+              <!-- <strong class="govuk-tag govuk-tag--yellow">Additional support</strong> -->
+              <strong class="govuk-tag govuk-tag--green">Appointee</strong>
+              <strong class="govuk-tag govuk-tag--blue">Dual claim</strong>
+              <!-- <strong class="govuk-tag govuk-tag--pink">Unacceptable behaviour</strong> -->
+              <!-- <strong class="govuk-tag govuk-tag--red">Deceased</strong> -->
+            </dd>
+          </div>
+        </dl>
+      </section>
 
+        <div class="govuk-grid-column-two-thirds">
+
+          <h1 class="govuk-heading-l govuk-!-margin-top-6">Claimant log</h1>
+          <ol class="dwp-timeline">
+            <li class="dwp-timeline__entry">
+                <h2 class="govuk-heading-s govuk-!-margin-bottom-1">ESA Face to face assessment booked</h2>
+                <p class="govuk-caption-m govuk-!-margin-bottom-1">Booked by Angela Tait</p>
+                <p class="govuk-caption-m">
+                    25 January 2022
+                </p>
+            </li>
+            <li class="dwp-timeline__entry">
+                <h2 class="govuk-heading-s govuk-!-margin-bottom-1">Returned questionnaire</h2>
+                <p class="govuk-caption-m govuk-!-margin-bottom-1">Post from claimant</p>
+                <p class="govuk-caption-m">
+                    23 January 2022
+                </p>
+            </li>
+            <li class="dwp-timeline__entry">
+                <h2 class="govuk-heading-s govuk-!-margin-bottom-1">Reminded them to return questionnaire</h2>
+                <p class="govuk-caption-m govuk-!-margin-bottom-1">Phonecall to claimant by Phil Smith</p>
+                <p class="govuk-caption-m">
+                    20 January 2022
+                </p>
+            </li>
+              <li class="dwp-timeline__entry">
+                <h2 class="govuk-heading-s govuk-!-margin-bottom-1">Sent questionnaire</h2>
+                <p class="govuk-caption-m govuk-!-margin-bottom-1">Posted to claimant by Phil Smith</p>
+                <p class="govuk-caption-m">
+                    6 January 2022
+                </p>
+              </li>
+          </ol>
+        </div>
+
+        <div class="govuk-grid-column-one-third">
+            
+          <h3 class="govuk-heading-m govuk-!-margin-top-8">What you can do next</h3>
+          <ul class="govuk-list">
+            <li class="govuk-!-margin-bottom-2"><a href="referral">Add new entry</a></li>
+            <li><a href="#">Edit an entry</a></li>
+          </ul>
+        </div>
+                
     </div>
   </div>
 </div>

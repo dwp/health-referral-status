@@ -128,140 +128,6 @@
 
 </style>
 
-<!-- Styling for timeline -->
-
-<style>
-
-/* DWP */
-.dwp-timeline {
-  font-family: Arial, sans-serif;
-  border-left: 3px solid #1d70b8;
-  list-style-type: none;
-  padding: 0;
-  }
-  
-  .dwp-timeline__entry {
-  margin: 2em 0;
-  padding-left: 1.125em;
-  position: relative;
-  top: -.6em;
-  }
-  
-  .dwp-timeline__entry::before {
-  background-color: #1d70b8;
-  content: '';
-  height: 3px;
-  left: 0;
-  position: absolute;
-  top: .6em;
-  width: 10px;
-  } 
-
-/* MOJ */
-.timeline {
-    overflow: hidden;
-    position: relative;
-}
-
-.timeline:before {
-    background-color: #1d70b8;
-    content: "";
-    height: 100%;
-    left: 0;
-    position: absolute;
-    top: 10px;
-    width: 5px;
-}
-
-.timeline__item {
-    padding-bottom: 30px;
-    padding-left: 20px;
-    position: relative;
-}
-
-.timeline__item:before {
-    background-color: #1d70b8;
-    content: "";
-    height: 5px;
-    left: 0;
-    position: absolute;
-    top: 10px;
-    width: 15px;
-}
-
-.timeline__title {
-    font-family: Arial, Helvetica, sans-serif;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    font-weight: 700;
-    font-size: 16px;
-    font-size: 1rem;
-    line-height: 1.25;
-    display: inline;
-}
-
-.timeline__byline {
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    font-weight: 400;
-    font-size: 16px;
-    font-size: 1rem;
-    line-height: 1.25;
-    color: #505a5f;
-    display: block;
-    margin: 0;
-}
-
-.timeline__date {
-    font-family: "GDS Transport",arial,sans-serif;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    font-weight: 400;
-    font-size: 14px;
-    font-size: .875rem;
-    line-height: 1.14286;
-    margin-top: 5px;
-    margin-bottom: 0;
-}
-
-.timeline__description {
-    font-family: Arial, Helvetica, sans-serif;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    font-weight: 400;
-    font-size: 16px;
-    font-size: 1rem;
-    line-height: 1.25;
-    margin-top: 20px;
-}
-
-@media (min-width: 40.0625em) {
-    .timeline__title {
-        font-size: 19px;
-        font-size: 1.1875rem;
-        line-height: 1.31579;
-    }
-  /* 
-    .timeline__byline {
-        font-size: 16px;
-        font-size: 1.1875rem;
-        line-height: 1.31579;
-    } */
-
-    .timeline__date {
-        font-size: 16px;
-        font-size: 1rem;
-        line-height: 1.25;
-    }
-
-    .timeline__description {
-    font-size: 19px;
-    font-size: 1.1875rem;
-    line-height: 1.31579;
-  }
-}
-</style>
-
 <!-- Styling of head and keydetails bar -->
 <style type="text/css">
 
@@ -387,50 +253,55 @@
   width: 85%;
 }
 
-.card { 
+.overview .govuk-grid-column-one-half {
+  width: 48%;
+  margin: 2% 2% 0 0;
+}
+
+.border { 
   position: relative;
   border-radius: 6px;
   border: 1px solid #b1b4b6;
-}
-
-.card__header {
-  background-color: rgba(0,0,0,.03);
-  border-bottom: 1px solid rgba(0,0,0,.125);
-  padding: 15px 20px;
-}
-
-.card__body {
-  padding: 0 20px 20px;
-}
-
-.card__content h3, .card__content p {
-  margin: 5px 0;
+  padding: 20px;
 }
 
 .border-bottom {
   border-bottom: 1px solid #b1b4b6;
 }
-.govuk-notification-banner {
-    margin-bottom: 0;
+
+.recent-claim h3, .recent-claim p {
+  margin: 5px 0;
 }
+
+/* .key-details-bar .key-details-bar__key-details .key-details-bar__status {
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 1.25;
+  padding: 5px 8px 0;
+  color: #005ea5;
+  background-color: #fff;
+  letter-spacing: 1px;
+  text-decoration: none;
+  text-transform: uppercase;
+  float: right;
+  margin: 5px 0 0;
+}
+
+@media (max-width: 670px) {
+  .key-details-bar .key-details-bar__key-details .key-details-bar__status {
+    font-size: 14px;
+    float: left;
+    clear: both;
+    margin-top: 5px;
+  }
+} */
 
 .govuk-width-container {
     max-width: 1200px!important;
 }
 
-/* Overrides */
 #global-header .header-wrapper{
-  max-width:1200px !important;
-}
-
-.govuk-grid-column-one-half {
-  padding: 0;
-}
-
-.govuk-notification-banner__content > * {
-    box-sizing: border-box;
-    max-width: 850px;
-}
+max-width:1200px !important;}
 </style>
 
 <div class="app-pane__body">
@@ -439,14 +310,14 @@
   <nav class="app-subnav" aria-labelledby="app-subnav-heading">
     <h2 class="govuk-visually-hidden" id="app-subnav-heading">Pages in this section</h2>
     <ul class="app-subnav__section">
-      <li class="app-subnav__section-item app-subnav__section-item--current">
-        <a class="app-subnav__link govuk-link govuk-link--no-visited-state govuk-link--no-underline" href="#">Overview</a>
+      <li class="app-subnav__section-item">
+        <a class="app-subnav__link govuk-link govuk-link--no-visited-state govuk-link--no-underline" href="claimant-overview">Overview</a>
       </li>
       <li class="app-subnav__section-item">
-        <a class="app-subnav__link govuk-link govuk-link--no-visited-state govuk-link--no-underline" href="claimant-details">Claimant details</a>
+        <a class="app-subnav__link govuk-link govuk-link--no-visited-state govuk-link--no-underline" href="#">Claimant details</a>
       </li>
       <li class="app-subnav__section-item">
-        <a class="app-subnav__link govuk-link govuk-link--no-visited-state govuk-link--no-underline" href="interaction-log">Interaction log</a>
+        <a class="app-subnav__link govuk-link govuk-link--no-visited-state govuk-link--no-underline" href="claimant-interaction-log">Interaction log</a>
       </li>
       <li class="app-subnav__section-item">
         <a class="app-subnav__link govuk-link govuk-link--no-visited-state govuk-link--no-underline" href="#">Appointments</a>
@@ -454,8 +325,8 @@
       <li class="app-subnav__section-item">
         <a class="app-subnav__link govuk-link govuk-link--no-visited-state govuk-link--no-underline" href="#">Evidence</a>
       </li>
-      <li class="app-subnav__section-item">
-        <a class="app-subnav__link govuk-link govuk-link--no-visited-state govuk-link--no-underline" href="claim-history">Claim history</a>
+      <li class="app-subnav__section-item app-subnav__section-item--current">
+        <a class="app-subnav__link govuk-link govuk-link--no-visited-state govuk-link--no-underline" href="#">Claim history</a>
       </li>
     </ul>
   </nav>
@@ -464,7 +335,7 @@
 <div class="govuk-grid-row overview">
     <div class="govuk-grid-column-full">
 
-      <h1 class="govuk-visually-hidden">Overview of claimant</h1>
+      <h1 class="govuk-visually-hidden">Full list of claimant information</h1>
 
       <section class="key-details-bar" role="identifier" aria-label="Claimant name and identifier">
         <dl class="key-details-bar__key-details">
@@ -480,7 +351,6 @@
           <div class="key-details-bar__bottom-block">
             <dt class="govuk-visually-hidden">Claimant markers:</dt>
             <dd>
-              
               <strong class="govuk-tag govuk-tag--purple">Terminally ill</strong>
               <!-- <strong class="govuk-tag govuk-tag--yellow">Additional support</strong> -->
               <strong class="govuk-tag govuk-tag--green">Appointee</strong>
@@ -492,82 +362,53 @@
         </dl>
       </section>
 
-      <div class="govuk-grid-column-one-half govuk-!-padding-right-4 govuk-!-padding-top-4">
-        
-        <div class="card">
-          <h2 class="govuk-heading-m card__header">
-            Recent claims
-          </h2>
-          <div class="card__body">
-            <div class="card__content border-bottom govuk-!-margin-bottom-4">
-              <h3 class="govuk-heading-s"><a href="esa-claim-detail" aria-describedby="referral-detail">Employment support allowance</a></h3>
-              <p class="govuk-hint">Submitted 19 November 2021</p>
-              <div class="status govuk-!-margin-bottom-4"><strong class="govuk-tag">In progress</strong></div>
-            </div>
+      <!-- <div class="govuk-grid-column-two-thirds"> -->
 
-            <div class="card__content">
-              <h3 class="govuk-heading-s"><a href="#" aria-describedby="referral-detail">Work capability assessment</a></h3>
-              <p class="govuk-hint">Submitted 10 December 2021</p>
-              <div class="status"><strong class="govuk-tag">In progress</strong></div>
-            </div>
-          </div>
-        </div>
+        <h2 class="govuk-heading-l govuk-!-margin-top-6">Claim history</h2>
 
-        <div class="card govuk-!-margin-top-4">
-          <h2 class="govuk-heading-m card__header">
-            Upcoming appointments
-          </h2>
-          <div class="card__body">
-            <div class="card__content">
-              <h3 class="govuk-heading-s">Employment support allowance assessment</h3>
-              <p class="govuk-hint">29 January 2022 10:30am</p>
-              <p class="">Tresco House</p>
-              <p class="govuk-!-margin-top-2">
-                <a class="govuk-!-margin-right-2" href="#" aria-describedby="view-appointment">View appointment</a>
-              </p>
-            </div>
-          </div>
-        </div>
-
-      </div>
-
-      <div class="govuk-grid-column-one-half govuk-!-padding-top-4">
-        <div class="card">
-          <h2 class="govuk-heading-m card__header">
-            Latest activity
-          </h2>
-          <div class="card__body">
-            <ol class="dwp-timeline">
-              <li class="dwp-timeline__entry">
-                  <h2 class="govuk-heading-s govuk-!-margin-bottom-1">ESA Face to face assessment booked</h2>
-                  <p class="govuk-caption-m govuk-!-margin-bottom-1">Booked by Angela Tait</p>
-                  <p class="govuk-caption-m">
-                      25 January 2022
-                  </p>
-              </li>
-              <li class="dwp-timeline__entry">
-                  <h2 class="govuk-heading-s govuk-!-margin-bottom-1">WCA Reminded them to return questionnaire</h2>
-                  <p class="govuk-caption-m govuk-!-margin-bottom-1">Phonecall to claimant by Phil Smith</p>
-                  <p class="govuk-caption-m">
-                      20 January 2022
-                  </p>
-              </li>
-                <li class="dwp-timeline__entry">
-                  <h2 class="govuk-heading-s govuk-!-margin-bottom-1">WCA Sent questionnaire</h2>
-                  <p class="govuk-caption-m govuk-!-margin-bottom-1">Posted to claimant by Phil Smith</p>
-                  <p class="govuk-caption-m">
-                      6 January 2022
-                  </p>
-                </li>
-            </ol>
-            <p class="govuk-!-margin-top-4"><a href="interaction-log" aria-describedby="interaction-log">See more</a></p>
-          </div>
-        </div>
-      </div>
-
-      
-
-      
+        <table class="govuk-table">
+          <thead class="govuk-table__head">
+            <tr class="govuk-table__row">
+              <th scope="col" class="govuk-table__header">Benefit</th>
+              <th scope="col" class="govuk-table__header">Referral date</th>
+              <th scope="col" class="govuk-table__header">SRTI</th>
+              <th scope="col" class="govuk-table__header">Status</th>
+            </tr>
+          </thead>
+          <tbody class="govuk-table__body">
+            <tr class="govuk-table__row">
+              <td class="govuk-table__cell"><a href="esa-claim-detail" aria-describedby="claim-detail">Employment support allowance</a></td>
+              <td class="govuk-table__cell">10 Feb 2021</td>
+              <td class="govuk-table__cell">No</td>
+              <td class="govuk-table__cell"><strong class="govuk-tag" id="Status 4">In progress</strong></td>
+            </tr>
+            <tr class="govuk-table__row">
+              <td class="govuk-table__cell"><a href="#" aria-describedby="claimant-detail">Work capability assessment</a></td>
+              <td class="govuk-table__cell">10 Feb 2021</td>
+              <td class="govuk-table__cell">No</td>
+              <td class="govuk-table__cell"><strong class="govuk-tag" id="Status 6">In progress</strong></td>
+            </tr>
+            <tr class="govuk-table__row">
+              <td class="govuk-table__cell"><a href="#" aria-describedby="claimant-detail">Work capability assessment</a></td>
+              <td class="govuk-table__cell">10 Feb 2021</td>
+              <td class="govuk-table__cell">No</td>
+              <td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--grey" id="Status 6">Archived</strong></td>
+            </tr>
+            <tr class="govuk-table__row">
+              <td class="govuk-table__cell"><a href="#" aria-describedby="#">Personal indenpendence payment</a></td>
+              <td class="govuk-table__cell">10 Feb 2021</td>
+              <td class="govuk-table__cell">No</td>
+              <td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--grey" id="Status 6">Archived</strong></td>
+            </tr>
+            <tr class="govuk-table__row">
+              <td class="govuk-table__cell"><a href="#" aria-describedby="#">Work capability assessment</a></td>
+              <td class="govuk-table__cell">10 Feb 2021</td>
+              <td class="govuk-table__cell">No</td>
+              <td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--grey" id="Status 6">Archived</strong></td>
+            </tr>
+          </tbody>
+        </table>
+      <!-- </div> -->
 
     </div>
   </div>

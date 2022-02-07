@@ -37,12 +37,12 @@
 <div class="navigation-header">
   <ul class="govuk-list">
     <li class="govuk-!-margin-bottom-2"><a href="claimant-overview" class="govuk-link--no-visited-state govuk-link--no-underline">Overview</a></li>
-    <li class="govuk-!-margin-bottom-2"><a href="claimant-detail" class="govuk-!-margin-bottom-2 active">Claimant details</a></li>
+    <li class="govuk-!-margin-bottom-2"><a href="claimant-detail" class="govuk-link--no-visited-state govuk-link--no-underline">Claimant details</a></li>
     <li class="govuk-!-margin-bottom-2"><a href="claimant-log" class="govuk-link--no-visited-state govuk-link--no-underline">Claimant log</a></li>
     <li class="govuk-!-margin-bottom-2"><a href="claimant-history" class="govuk-link--no-visited-state govuk-link--no-underline">Claim history</a></li>
   </ul>
 </div>
-<a href="start" class="govuk-back-link">Back</a>
+<a href="claimant-overview" class="govuk-back-link">Back</a>
 {% endblock %}
 
 {% block content %}
@@ -50,48 +50,56 @@
 <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds-from-desktop">
 
-      <h1 class="govuk-heading-l">Personal details</h1>
+      <h1 class="govuk-heading-l">Referral details</h1>
 
       <dl class="govuk-summary-list govuk-!-margin-bottom-9">
         <div class="govuk-summary-list__row">
           <dt class="govuk-summary-list__key">
-            Preferred name
+            Referral date
           </dt>
           <dd class="govuk-summary-list__value">
-            None
+            19 November 2021
           </dd>
         </div>
         <div class="govuk-summary-list__row">
           <dt class="govuk-summary-list__key">
-            Phone number
+            Referral type
           </dt>
           <dd class="govuk-summary-list__value">
-            07799 000000
+            New referral
           </dd>
         </div>
         <div class="govuk-summary-list__row">
           <dt class="govuk-summary-list__key">
-            Postcode
+            Benefit type
           </dt>
           <dd class="govuk-summary-list__value">
-            N2 1XX
+            Employment Support Allowance
           </dd>
         </div>
         <div class="govuk-summary-list__row">
           <dt class="govuk-summary-list__key">
-            SRTI
+            Assessment centre
           </dt>
           <dd class="govuk-summary-list__value">
-            No
+            Tresco House
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Case manager
+          </dt>
+          <dd class="govuk-summary-list__value">
+            Zoe Hall
           </dd>
         </div>
       </dl>
-      
+
     </div>
 
     <div class="govuk-grid-column-one-third">
 
-      <!-- <aside class="app-related-items" role="complementary">
+      <aside class="app-related-items" role="complementary">
         <h2 class="govuk-heading-m" id="subsection-title">
           What you can do next
         </h2>
@@ -105,7 +113,7 @@
             </li>
           </ul>
         </nav>
-      </aside> -->
+      </aside>
 
     </div>
 

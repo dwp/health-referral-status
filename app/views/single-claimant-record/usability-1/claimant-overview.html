@@ -4,9 +4,39 @@
   Claimant details
 {% endblock %}
 
-
 {% block beforeContent %}
-<a href="start" class="govuk-back-link">Back</a>
+<style type="text/css">
+  .navigation-header { 
+    width:100%;
+    border-bottom: 1px solid #bfc1c3;
+    float:left;
+    padding-top:10px;
+    margin-bottom:30px;
+  }
+
+  .navigation-header li {
+    float:left;
+    margin-right:20px;
+    margin-bottom:0 !important;
+    padding-bottom:6px; 
+  }
+  .navigation-header li a, .navigation-header li a:hover, .navigation-header li a:visited { 
+    text-decoration: none;
+  }
+  .navigation-header .active { 
+    border-bottom:4px #005ea5 solid;
+  }
+</style>
+
+<div class="navigation-header">
+  <ul class="govuk-list">
+    <li class="govuk-!-margin-bottom-2"><a href="claimant-overview" class="govuk-!-margin-bottom-2 active">Overview</a></li>
+    <li class="govuk-!-margin-bottom-2"><a href="claimant-detail" class="govuk-link--no-visited-state govuk-link--no-underline">Claimant details</a></li>
+    <li class="govuk-!-margin-bottom-2"><a href="claimant-log" class="govuk-link--no-visited-state govuk-link--no-underline">Claimant log</a></li>
+    <li class="govuk-!-margin-bottom-2"><a href="claimant-history" class="govuk-link--no-visited-state govuk-link--no-underline">Claim history</a></li>
+  </ul>
+</div>
+<a href="claimant-overview" class="govuk-back-link">Back</a>
 {% endblock %}
 
 {% block content %}
@@ -39,6 +69,11 @@
   .govuk-grid-column-one-half {
   padding: 0;
   }
+
+  .govuk-main-wrapper {
+    padding-top: 0;
+  }
+
 </style>
 
 <div class="govuk-grid-row">
@@ -54,15 +89,15 @@
           </h2>
           <div class="card__body">
             <div class="card__content border-bottom govuk-!-margin-bottom-4">
-              <h3 class="govuk-heading-s"><a href="esa-claim-detail" aria-describedby="referral-detail">Employment Support Allowance</a></h3>
+              <h3 class="govuk-heading-s"><a href="referral-detail" aria-describedby="referral-detail">Employment Support Allowance</a></h3>
               <p class="govuk-hint">Submitted 19 November 2021</p>
-              <div class="status govuk-!-margin-bottom-4"><strong class="govuk-tag">In progress</strong></div>
+              <div class="status govuk-!-margin-bottom-4"><strong class="govuk-tag">Assessment-booked</strong></div>
             </div>
 
             <div class="card__content">
               <h3 class="govuk-heading-s"><a href="#" aria-describedby="referral-detail">Universal Credit</a></h3>
               <p class="govuk-hint">Submitted 10 December 2021</p>
-              <div class="status"><strong class="govuk-tag">In progress</strong></div>
+              <div class="status"><strong class="govuk-tag">Questionnaire Issued</strong></div>
             </div>
           </div>
         </div>
@@ -114,7 +149,7 @@
                   </p>
                 </li>
             </ol>
-            <p class="govuk-!-margin-top-4"><a href="interaction-log" aria-describedby="interaction-log">See more</a></p>
+            <p class="govuk-!-margin-top-4"><a href="claimant-log" aria-describedby="claimant-log">See more</a></p>
           </div>
         </div>
       </div>

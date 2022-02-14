@@ -1,0 +1,422 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Claimant details
+{% endblock %}
+
+
+{% block beforeContent %}
+<a href="index" class="govuk-back-link">Back</a>
+{% endblock %}
+
+
+
+{% block content %}
+
+<!--Styling for navigation-->
+
+<style type="text/css">
+
+@media (min-width: 72.5em) {
+.app-pane__body {
+    width: 100%;
+  }
+}
+@media (min-width: 670px) {
+.app-pane__body {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    flex-wrap: wrap;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: row;
+    position: relative;
+    min-height: 0;
+    overflow: inherit;
+  }
+}
+
+.app-subnav {
+    margin-bottom: 100px;
+    padding: 6px 15px 0 0;
+    font-family: arial,sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.14286;
+}
+
+.app-subnav__section {
+    margin: 0 0 20px;
+    padding: 0;
+    list-style-type: none;
+}
+
+.app-subnav__section-item {
+    margin-bottom: 5px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+.app-subnav__section-item--current {
+    margin-left: -14px;
+    padding-left: 10px;
+    border-left: 4px solid #1d70b8;
+    background-color: #fff;
+}
+
+.govuk-link--no-underline:not(:hover):not(:active) {
+    text-decoration: none;
+}
+.app-subnav__section-item--current .app-subnav__link {
+    font-weight: bold;
+}
+
+.govuk-link--no-visited-state:link {
+    color: #1d70b8;
+}
+.govuk-link:link, .app-prose-scope a:link {
+    color: #1d70b8;
+}
+.app-subnav__link {
+    padding: 2px 0;
+}
+
+.app-subnav__section--nested {
+    margin-top: 10px;
+    margin-bottom: 0;
+    padding-left: 20px;
+}
+
+.app-subnav__section--nested .app-subnav__section-item::before {
+    content: "—";
+    margin-left: -20px;
+    color: #505a5f;
+}
+
+.app-subnav__section--nested .app-subnav__link {
+    padding-left: 0;
+    font-weight: normal;
+}
+
+
+@media (min-width: 670px) {
+.app-pane__subnav {
+    width: 260px;
+  }
+}
+
+@media (min-width: 670px) {
+.app-pane__subnav {
+    width: 15%;
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 auto;
+    flex: 0 0 auto;
+  }
+}
+
+@media (min-width: 670px) {
+.app-subnav {
+    font-size: 16px;
+    font-size: 1rem;
+    line-height: 1.25;
+  }
+}
+
+</style>
+
+<!-- Styling of head and keydetails bar -->
+<style type="text/css">
+
+.govuk-header {
+  border-bottom: 10px solid #000000;
+}
+
+.govuk-header__container {
+  border-bottom: 0px;
+}
+
+.key-details-bar {
+  width: 1200px;
+}
+
+.key-details-bar .key-details-bar__key-details {
+  margin: 0 auto;
+  padding: 0px 30px 20px 0px;
+  position: relative;
+  font-family: "Arial";
+}
+
+@media (max-width: 670px) {
+  .key-details-bar .key-details-bar__key-details {
+    padding: 20px 15px;
+  }
+}
+
+.key-details-bar .key-details-bar__key-details * {
+  color: #000;
+}
+
+.key-details-bar .key-details-bar__key-details .key-details-bar__top-block::after,
+.key-details-bar .key-details-bar__key-details .key-details-bar__bottom-block::after {
+  clear: both;
+  content: ' ';
+  display: block;
+}
+
+.key-details-bar .key-details-bar__key-details .key-details-bar__bottom-block {
+  border-top: 1px solid rgba(255, 255, 255, 0.3);
+  content: ' ';
+  padding-top: 10px;
+  margin-top: 6px;
+}
+
+@media (max-width: 670px) {
+  .key-details-bar .key-details-bar__key-details .key-details-bar__bottom-block {
+    border: 0;
+  }
+}
+
+.key-details-bar .key-details-bar__key-details dd,
+.key-details-bar .key-details-bar__key-details dt {
+  float: left;
+  font-size: 19px;
+  margin-right: 5px;
+  margin-inline-start: 0;
+}
+
+@media (max-width: 670px) {
+  .key-details-bar .key-details-bar__key-details dd,
+  .key-details-bar .key-details-bar__key-details dt {
+    float: none;
+    font-size: 16px;
+    margin: 0;
+  }
+}
+
+.key-details-bar .key-details-bar__key-details dd {
+  margin-right: 20px;
+}
+
+.key-details-bar .key-details-bar__key-details .key-details-bar__bottom-block dd {
+  margin-right: 0;
+  margin-inline-start: 0;
+
+}
+
+@media (max-width: 670px) {
+  .key-details-bar .key-details-bar__key-details dd {
+    margin-bottom: 20px;
+  }
+  .key-details-bar .key-details-bar__key-details dd:last-of-type {
+    margin-bottom: 0;
+  }
+}
+
+.key-details-bar .key-details-bar__key-details .key-details-bar__name {
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 1.11111;
+  margin-right: 10px;
+}
+
+@media (max-width: 670px) {
+  .key-details-bar .key-details-bar__key-details .key-details-bar__name {
+    font-size: 24px;
+    line-height: 1.04167;
+    float: left;
+    margin: 0 5px 0 0;
+  }
+}
+
+.key-details-bar .key-details-bar__key-details .key-details-bar__nino {
+  font-size: 24px;
+  line-height: 1;
+  margin-top: 12px;
+}
+
+@media (max-width: 670px) {
+  .key-details-bar .key-details-bar__key-details .key-details-bar__nino {
+    font-size: 18px;
+    float: left;
+    margin: 5px 0 0 0;
+  }
+}
+
+.overview {
+  -webkit-box-flex: 1;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  width: 85%;
+}
+
+.overview .govuk-grid-column-one-half {
+  width: 48%;
+  margin: 2% 2% 0 0;
+}
+
+.border { 
+  position: relative;
+  border-radius: 6px;
+  border: 1px solid #b1b4b6;
+  padding: 20px;
+}
+
+.border-bottom {
+  border-bottom: 1px solid #b1b4b6;
+}
+
+.recent-claim h3, .recent-claim p {
+  margin: 5px 0;
+}
+
+/* .key-details-bar .key-details-bar__key-details .key-details-bar__status {
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 1.25;
+  padding: 5px 8px 0;
+  color: #005ea5;
+  background-color: #fff;
+  letter-spacing: 1px;
+  text-decoration: none;
+  text-transform: uppercase;
+  float: right;
+  margin: 5px 0 0;
+}
+
+@media (max-width: 670px) {
+  .key-details-bar .key-details-bar__key-details .key-details-bar__status {
+    font-size: 14px;
+    float: left;
+    clear: both;
+    margin-top: 5px;
+  }
+} */
+
+.govuk-width-container {
+    max-width: 1200px!important;
+}
+
+#global-header .header-wrapper{
+max-width:1200px !important;}
+</style>
+
+<div class="app-pane__body">
+
+<div class="app-pane__subnav">
+  <nav class="app-subnav" aria-labelledby="app-subnav-heading">
+    <h2 class="govuk-visually-hidden" id="app-subnav-heading">Pages in this section</h2>
+    <ul class="app-subnav__section">
+      <li class="app-subnav__section-item">
+        <a class="app-subnav__link govuk-link govuk-link--no-visited-state govuk-link--no-underline" href="claimant-overview">Overview</a>
+      </li>
+      <li class="app-subnav__section-item">
+        <a class="app-subnav__link govuk-link govuk-link--no-visited-state govuk-link--no-underline" href="#">Claimant details</a>
+      </li>
+      <li class="app-subnav__section-item">
+        <a class="app-subnav__link govuk-link govuk-link--no-visited-state govuk-link--no-underline" href="claimant-interaction-log">Interaction log</a>
+      </li>
+      <li class="app-subnav__section-item">
+        <a class="app-subnav__link govuk-link govuk-link--no-visited-state govuk-link--no-underline" href="#">Appointments</a>
+      </li>
+      <li class="app-subnav__section-item">
+        <a class="app-subnav__link govuk-link govuk-link--no-visited-state govuk-link--no-underline" href="#">Evidence</a>
+      </li>
+      <li class="app-subnav__section-item app-subnav__section-item--current">
+        <a class="app-subnav__link govuk-link govuk-link--no-visited-state govuk-link--no-underline" href="#">Claim history</a>
+      </li>
+    </ul>
+  </nav>
+</div>
+
+<div class="govuk-grid-row overview">
+    <div class="govuk-grid-column-full">
+
+      <h1 class="govuk-visually-hidden">Full list of claimant information</h1>
+
+      <section class="key-details-bar" role="identifier" aria-label="Claimant name and identifier">
+        <dl class="key-details-bar__key-details">
+          <div class="key-details-bar__top-block">
+            <dt class="govuk-visually-hidden">Name:</dt>
+            <dd class="key-details-bar__name">Jane Doe</dd>
+      
+            <dt class="govuk-visually-hidden">National Insurance number:</dt>
+            <dd class="key-details-bar__nino">RN 00 04 26 D</dd>
+      
+          </div>
+      
+          <div class="key-details-bar__bottom-block">
+            <dt class="govuk-visually-hidden">Claimant markers:</dt>
+            <dd>
+              <strong class="govuk-tag govuk-tag--purple">Terminally ill</strong>
+              <!-- <strong class="govuk-tag govuk-tag--yellow">Additional support</strong> -->
+              <strong class="govuk-tag govuk-tag--green">Appointee</strong>
+              <strong class="govuk-tag govuk-tag--blue">Dual claim</strong>
+              <!-- <strong class="govuk-tag govuk-tag--pink">Unacceptable behaviour</strong> -->
+              <!-- <strong class="govuk-tag govuk-tag--red">Deceased</strong> -->
+            </dd>
+          </div>
+        </dl>
+      </section>
+
+      <!-- <div class="govuk-grid-column-two-thirds"> -->
+
+        <h2 class="govuk-heading-l govuk-!-margin-top-6">Claim history</h2>
+
+        <table class="govuk-table">
+          <thead class="govuk-table__head">
+            <tr class="govuk-table__row">
+              <th scope="col" class="govuk-table__header">Benefit</th>
+              <th scope="col" class="govuk-table__header">Referral date</th>
+              <th scope="col" class="govuk-table__header">SRTI</th>
+              <th scope="col" class="govuk-table__header">Status</th>
+              <th scope="col" class="govuk-table__header">Referral completion date</th>
+            </tr>
+          </thead>
+          <tbody class="govuk-table__body">
+            <tr class="govuk-table__row">
+              <td class="govuk-table__cell"><a href="esa-claim-detail" aria-describedby="claim-detail">Employment Support Allowance</a></td>
+              <td class="govuk-table__cell">10 Feb 2021</td>
+              <td class="govuk-table__cell">No</td>
+              <td class="govuk-table__cell"><strong class="govuk-tag" id="Status 4">In progress</strong></td>
+              <td class="govuk-table__cell">-</td>
+            </tr>
+            <tr class="govuk-table__row">
+              <td class="govuk-table__cell"><a href="#" aria-describedby="claimant-detail">Universal Credit</a></td>
+              <td class="govuk-table__cell">10 Feb 2021</td>
+              <td class="govuk-table__cell">No</td>
+              <td class="govuk-table__cell"><strong class="govuk-tag" id="Status 6">In progress</strong></td>
+              <td class="govuk-table__cell">-</td>
+            </tr>
+            <tr class="govuk-table__row">
+              <td class="govuk-table__cell"><a href="#" aria-describedby="claimant-detail">Universal Credit</a></td>
+              <td class="govuk-table__cell">10 Feb 2021</td>
+              <td class="govuk-table__cell">No</td>
+              <td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--grey" id="Status 6">Archived</strong></td>
+              <td class="govuk-table__cell">19 Sep 2021</td>
+            </tr>
+            <tr class="govuk-table__row">
+              <td class="govuk-table__cell"><a href="#" aria-describedby="#">Personal Independence Payment</a></td>
+              <td class="govuk-table__cell">10 Feb 2019</td>
+              <td class="govuk-table__cell">No</td>
+              <td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--grey" id="Status 6">Archived</strong></td>
+              <td class="govuk-table__cell">27 Aug 2019</td>
+            </tr>
+            <tr class="govuk-table__row">
+              <td class="govuk-table__cell"><a href="#" aria-describedby="#">Universal Credit</a></td>
+              <td class="govuk-table__cell">10 Feb 2017</td>
+              <td class="govuk-table__cell">No</td>
+              <td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--grey" id="Status 6">Archived</strong></td>
+              <td class="govuk-table__cell">19 Aug 2017</td>
+            </tr>
+          </tbody>
+        </table>
+      <!-- </div> -->
+
+    </div>
+  </div>
+</div>
+{% endblock %}

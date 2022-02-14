@@ -1,4 +1,4 @@
-{% extends "layout-key-details-single-claimant-record.html" %}
+{% extends "layout-key-details-assessment.html" %}
 
 {% block pageTitle %}
   Claimant details
@@ -37,9 +37,9 @@
 <div class="navigation-header">
   <ul class="govuk-list">
     <li class="govuk-!-margin-bottom-2"><a href="claimant-overview" class="govuk-link--no-visited-state govuk-link--no-underline">Claimant overview</a></li>
-    <li class="govuk-!-margin-bottom-2"><a href="claimant-detail" class="govuk-!-padding-bottom-1 active">Claimant detail</a></li>
-    <li class="govuk-!-margin-bottom-2"><a href="claimant-log" class="govuk-link--no-visited-state govuk-link--no-underline">Claimant log</a></li>
-    <li class="govuk-!-margin-bottom-2"><a href="claimant-history" class="govuk-link--no-visited-state govuk-link--no-underline">Referral History</a></li>
+    <li class="govuk-!-margin-bottom-2"><a href="claimant-detail" class="govuk-link--no-visited-state govuk-link--no-underline">Claimant detail</a></li>
+    <li class="govuk-!-margin-bottom-2"><a href="claimant-log" class="govuk-link--no-visited-state govuk-link--no-underline">Interaction log</a></li>
+    <li class="govuk-!-margin-bottom-2"><a href="claimant-history" class="govuk-link--no-visited-state govuk-link--no-underline">Claimant History</a></li>
   </ul>
 </div>
 <a href="claimant-overview" class="govuk-back-link">Back</a>
@@ -50,53 +50,67 @@
 <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds-from-desktop">
 
-      <h1 class="govuk-heading-l">Claimant details</h1>
+      <h1 class="govuk-heading-l">Referral detail</h1>
 
       <dl class="govuk-summary-list govuk-!-margin-bottom-9">
         <div class="govuk-summary-list__row">
           <dt class="govuk-summary-list__key">
-            Preferred name
+            Referral date
           </dt>
           <dd class="govuk-summary-list__value">
-            None
+            19 November 2021
           </dd>
         </div>
         <div class="govuk-summary-list__row">
           <dt class="govuk-summary-list__key">
-            Phone number
+            Referral type
           </dt>
           <dd class="govuk-summary-list__value">
-            07799 000000
+            New referral
           </dd>
         </div>
         <div class="govuk-summary-list__row">
           <dt class="govuk-summary-list__key">
-            Postcode
+            Benefit type
           </dt>
           <dd class="govuk-summary-list__value">
-            N2 1XX
+            Employment Support Allowance
           </dd>
         </div>
         <div class="govuk-summary-list__row">
           <dt class="govuk-summary-list__key">
-            SRTI
+            Assessment centre
           </dt>
           <dd class="govuk-summary-list__value">
-            No
+            Tresco House
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Case manager
+          </dt>
+          <dd class="govuk-summary-list__value">
+            Zoe Hall
           </dd>
         </div>
       </dl>
-      
+
     </div>
 
     <div class="govuk-grid-column-one-third">
 
-      <!-- <aside class="app-related-items" role="complementary">
+      <aside class="app-related-items" role="complementary">
         <h2 class="govuk-heading-m" id="subsection-title">
           What you can do next
         </h2>
         <nav role="navigation" aria-labelledby="subsection-title">
           <ul class="govuk-list">
+            <li>
+              <a href="update-status">Start assessment</a>
+            </li>
+            <li>
+              <a href="update-status">View all documents for this claimant</a>
+            </li>
             <li>
               <a href="update-status">Update status</a>
             </li>
@@ -105,7 +119,7 @@
             </li>
           </ul>
         </nav>
-      </aside> -->
+      </aside>
 
     </div>
 

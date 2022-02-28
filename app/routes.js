@@ -385,21 +385,21 @@ router.post('/status-iteration/archive/v1/status-filter2', function (req, res) {
   }
 })
 
-//archive Magpie colab
+//archive colab
 
-router.post('/magpie-colab/archive/v1/status-filter', function (req, res) {
+router.post('/colab/archive/v1/status-filter', function (req, res) {
   
   const status2 = req.session.data['status2']
   req.session.data['status2']=''
 
   if (status2 === 'list-1') {
-    res.redirect('/magpie-colab/archive/v1/list-1')
+    res.redirect('/colab/archive/v1/list-1')
   } else if (status2 === 'list-2') {
-      res.redirect('/magpie-colab/archive/v1/list-2')
+      res.redirect('/colab/archive/v1/list-2')
   } else if (status2 === 'list-3') {
-    res.redirect('/magpie-colab/archive/v1/list-3')
+    res.redirect('/colab/archive/v1/list-3')
   } else {
-    res.redirect('/magpie-colab/archive/v1/error')
+    res.redirect('/colab/archive/v1/error')
   }
 })
 
@@ -734,23 +734,40 @@ router.post('/status-iteration/v4/status-filter2', function (req, res) {
   }
 })
 
-// Magpie colab
+// Collaboration
 
-router.post('/magpie-colab/v1/status-filter', function (req, res) {
+router.post('/colab/v1/status-filter', function (req, res) {
   
   const status2 = req.session.data['status2']
   req.session.data['status2']=''
 
   if (status2 === 'list-1') {
-    res.redirect('/magpie-colab/v1/list-1')
+    res.redirect('/colab/v1/list-1')
   } else if (status2 === 'list-2') {
-      res.redirect('/magpie-colab/v1/list-2')
+      res.redirect('/colab/v1/list-2')
   } else if (status2 === 'list-3') {
-    res.redirect('/magpie-colab/v1/list-3')
+    res.redirect('/colab/v1/list-3')
   } else {
-    res.redirect('/magpie-colab/v1/error')
+    res.redirect('/colab/v1/error')
   }
 })
+
+router.post('/colab/v2/status-filter', function (req, res) {
+  
+  const status2 = req.session.data['status2']
+  req.session.data['status2']=''
+
+  if (status2 === 'list-1') {
+    res.redirect('/colab/v2/list-1')
+  } else if (status2 === 'list-2') {
+      res.redirect('/colab/v2/list-2')
+  } else if (status2 === 'list-3') {
+    res.redirect('/colab/v2/list-3')
+  } else {
+    res.redirect('/colab/v2/error')
+  }
+})
+
 
 //Branching bluesky
 

@@ -734,6 +734,34 @@ router.post('/status-iteration/v4/status-filter2', function (req, res) {
   }
 })
 
+// Status alignment
+
+router.post('/status-alignment/v1/status-filter2', function (req, res) {
+  
+  const status2 = req.session.data['status2']
+  req.session.data['status2']=''
+
+  if (status2 === 'list-1') {
+    res.redirect('/status-alignment/v1/list-1')
+  } else if (status2 === 'list-2') {
+      res.redirect('/status-alignment/v1/list-2')
+  } else if (status2 === 'list-3') {
+    res.redirect('/status-alignment/v1/list-3')
+  } else if (status2 === 'assigned') {
+    res.redirect('/status-alignment/v1/assigned-list')
+  } else if (status2 === 'in-review') {
+    res.redirect('/status-alignment/v1/review-list')
+  } else if (status2 === 'awaiting-evidence') {
+    res.redirect('/status-alignment/v1/evidence-list')
+  } else if (status2 === 'assessment-ready') {
+    res.redirect('/status-alignment/v1/assessment-list')
+  } else if (status2 === 'awaiting-decision') {
+    res.redirect('/status-alignment/v1/decision-list')
+  } else {
+    res.redirect('/status-alignment/v1/error')
+  }
+})
+
 // Collaboration
 
 router.post('/colab/v1/status-filter', function (req, res) {

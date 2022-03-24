@@ -789,6 +789,32 @@ router.post('/next-action/v1/status-filter2', function (req, res) {
   }
 })
 
+router.post('/next-action/v2/status-filter2', function (req, res) {
+  
+  const status2 = req.session.data['status2']
+  req.session.data['status2']=''
+
+  if (status2 === 'list-1') {
+    res.redirect('/next-action/v2/list-1')
+  } else if (status2 === 'list-2') {
+      res.redirect('/next-action/v2/list-2')
+  } else if (status2 === 'list-3') {
+    res.redirect('/next-action/v2/list-3')
+  } else if (status2 === 'assigned') {
+    res.redirect('/next-action/v2/assigned-list')
+  } else if (status2 === 'in-review') {
+    res.redirect('/next-action/v2/review-list')
+  } else if (status2 === 'awaiting-evidence') {
+    res.redirect('/next-action/v2/evidence-list')
+  } else if (status2 === 'assessment-ready') {
+    res.redirect('/next-action/v2/assessment-list')
+  } else if (status2 === 'awaiting-decision') {
+    res.redirect('/next-action/v2/decision-list')
+  } else {
+    res.redirect('/next-action/v2/error')
+  }
+})
+
 // Collaboration
 
 router.post('/colab/v1/status-filter', function (req, res) {

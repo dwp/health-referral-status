@@ -875,6 +875,22 @@ router.post('/colab/v2/status-filter', function (req, res) {
   }
 })
 
+router.post('/colab/v3/status-filter', function (req, res) {
+  
+  const status2 = req.session.data['status2']
+  req.session.data['status2']=''
+
+  if (status2 === 'list-1') {
+    res.redirect('/colab/v3/list-1')
+  } else if (status2 === 'list-2') {
+      res.redirect('/colab/v3/list-2')
+  } else if (status2 === 'list-3') {
+    res.redirect('/colab/v3/list-3')
+  } else {
+    res.redirect('/colab/v3/error')
+  }
+})
+
 
 //Branching bluesky
 

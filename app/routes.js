@@ -775,15 +775,7 @@ router.post('/next-action/v1/status-filter2', function (req, res) {
   } else if (status2 === 'list-3') {
     res.redirect('/next-action/v1/list-3')
   } else if (status2 === 'assigned') {
-    res.redirect('/next-action/v1/assigned-list')
-  } else if (status2 === 'in-review') {
-    res.redirect('/next-action/v1/review-list')
-  } else if (status2 === 'awaiting-evidence') {
-    res.redirect('/next-action/v1/evidence-list')
-  } else if (status2 === 'assessment-ready') {
-    res.redirect('/next-action/v1/assessment-list')
-  } else if (status2 === 'awaiting-decision') {
-    res.redirect('/next-action/v1/decision-list')
+    res.redirect('/next-action/v1/list-4')
   } else {
     res.redirect('/next-action/v1/error')
   }
@@ -801,15 +793,7 @@ router.post('/next-action/v2/status-filter2', function (req, res) {
   } else if (status2 === 'list-3') {
     res.redirect('/next-action/v2/list-3')
   } else if (status2 === 'assigned') {
-    res.redirect('/next-action/v2/assigned-list')
-  } else if (status2 === 'in-review') {
-    res.redirect('/next-action/v2/review-list')
-  } else if (status2 === 'awaiting-evidence') {
-    res.redirect('/next-action/v2/evidence-list')
-  } else if (status2 === 'assessment-ready') {
-    res.redirect('/next-action/v2/assessment-list')
-  } else if (status2 === 'awaiting-decision') {
-    res.redirect('/next-action/v2/decision-list')
+    res.redirect('/next-action/v2/list-4')
   } else {
     res.redirect('/next-action/v2/error')
   }
@@ -827,15 +811,7 @@ router.post('/next-action/v3/status-filter2', function (req, res) {
   } else if (status2 === 'list-3') {
     res.redirect('/next-action/v3/list-3')
   } else if (status2 === 'assigned') {
-    res.redirect('/next-action/v3/assigned-list')
-  } else if (status2 === 'in-review') {
-    res.redirect('/next-action/v3/review-list')
-  } else if (status2 === 'awaiting-evidence') {
-    res.redirect('/next-action/v3/evidence-list')
-  } else if (status2 === 'assessment-ready') {
-    res.redirect('/next-action/v3/assessment-list')
-  } else if (status2 === 'awaiting-decision') {
-    res.redirect('/next-action/v3/decision-list')
+    res.redirect('/next-action/v3/list-4')
   } else {
     res.redirect('/next-action/v3/error')
   }

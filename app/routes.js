@@ -855,6 +855,42 @@ router.post('/colab/v2/status-filter', function (req, res) {
   }
 })
 
+router.post('/colab/v2/assign-list-review', function (req, res) {
+
+  const list = req.session.data['list']
+  req.session.data['list']=''
+
+  if (list === 'list1') {
+    res.redirect('/colab/v2/confirmation-list1')
+  } else if (list === 'list2') {
+    res.redirect('/colab/v2/confirmation-list2')
+  } else if (list === 'list3') {
+    res.redirect('/colab/v2/confirmation-list3')
+  } else if (list === 'new-list') {
+    res.redirect('/colab/v2/new-list')
+  } else {
+    res.redirect('/colab/v2/error-list')
+  }
+})
+
+router.post('/colab/v2/unassigned-list', function (req, res) {
+
+  const list = req.session.data['list']
+  req.session.data['list']=''
+
+  if (list === 'list1') {
+    res.redirect('/colab/v2/confirmation-list-jared')
+  } else if (list === 'list2') {
+    res.redirect('/colab/v2/confirmation-list-zoe')
+  } else if (list === 'list3') {
+    res.redirect('/colab/v2/confirmation-list-akhtar')
+  } else if (list === 'new-list') {
+    res.redirect('/colab/v2/new-list')
+  } else {
+    res.redirect('/colab/v2/error-list')
+  }
+})
+
 router.post('/colab/v3/status-filter', function (req, res) {
   
   const status2 = req.session.data['status2']

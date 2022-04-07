@@ -841,8 +841,8 @@ router.post('/colab/v1/status-filter', function (req, res) {
 
 router.post('/colab/v2/status-filter', function (req, res) {
   
-  const status2 = req.session.data['status2']
-  req.session.data['status2']=''
+  const status2 = req.session.data['status']
+  req.session.data['status']=''
 
   if (status2 === 'list-1') {
     res.redirect('/colab/v2/list-1')
@@ -850,6 +850,12 @@ router.post('/colab/v2/status-filter', function (req, res) {
       res.redirect('/colab/v2/list-2')
   } else if (status2 === 'list-3') {
     res.redirect('/colab/v2/list-3')
+  } else if (status2 === 'assigned') {
+    res.redirect('/colab/v2/list-4')
+  } else if (status2 === 'assessment-booked') {
+    res.redirect('/colab/v2/list-5')
+  } else if (status2 === 'report-ready') {
+    res.redirect('/colab/v2/list-6')
   } else {
     res.redirect('/colab/v2/error')
   }

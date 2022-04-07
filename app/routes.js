@@ -776,6 +776,8 @@ router.post('/next-action/v1/status-filter2', function (req, res) {
     res.redirect('/next-action/v1/list-3')
   } else if (status2 === 'assigned') {
     res.redirect('/next-action/v1/list-4')
+  } else if (status2 === 'assessment-booked') {
+    res.redirect('/next-action/v1/list-5')
   } else {
     res.redirect('/next-action/v1/error')
   }
@@ -812,6 +814,8 @@ router.post('/next-action/v3/status-filter2', function (req, res) {
     res.redirect('/next-action/v3/list-3')
   } else if (status2 === 'assigned') {
     res.redirect('/next-action/v3/list-4')
+  } else if (status2 === 'assessment-booked') {
+    res.redirect('/next-action/v3/list-5')
   } else {
     res.redirect('/next-action/v3/error')
   }

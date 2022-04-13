@@ -392,13 +392,13 @@ router.post('/status-alignment/archive/v1/status-filter2', function (req, res) {
   req.session.data['status2']=''
 
   if (status2 === 'list-1') {
-    res.redirect('/status-alignment/v1/list-1')
+    res.redirect('/status-alignment/archive/v1/list-1')
   } else if (status2 === 'list-2') {
-      res.redirect('/status-alignment/v1/list-2')
+      res.redirect('/status-alignment/archive/v1/list-2')
   } else if (status2 === 'list-3') {
-    res.redirect('/status-alignment/v1/list-3')
+    res.redirect('/status-alignment/archive/v1/list-3')
   } else {
-    res.redirect('/status-alignment/v1/error')
+    res.redirect('/status-alignment/archive/v1/error')
   }
 })
 

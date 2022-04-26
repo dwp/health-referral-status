@@ -1,4 +1,4 @@
-{% extends "layout-key-details-review.html" %}
+{% extends "layout-key-details-assigned.html" %}
 
 {% block pageTitle %}
   Claimant details
@@ -6,7 +6,7 @@
 
 
 {% block beforeContent %}
-<a href="index" class="govuk-back-link">Back</a>
+<a href="start" class="govuk-back-link">Back</a>
 {% endblock %}
 
 {% block content %}
@@ -101,12 +101,16 @@
     <div class="govuk-grid-column-one-third">
 
       <aside class="app-related-items" role="complementary">
-        
+
+        <h2 class="govuk-heading-m" id="subsection-title">
+          What you can do next
+        </h2>
         <nav role="navigation" aria-labelledby="subsection-title">
           <ul class="govuk-list">
             <li>
-              <a href="update-status">Update status</a>
+              <a href="update-status-wca">Update status</a>
             </li>
+            <li>
               <a href="#">Move to another caseload</a>
             </li>
           </ul>

@@ -1,0 +1,37 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Referral State Model Prototype
+{% endblock %}
+
+{% block content %}
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <h1 class="govuk-heading-xl">
+        Filtering
+      </h1>
+
+      <p><a href="https://miro.com/app/board/uXjVOzNHYDo=/" role="button" draggable="false" aria-describedby="miro-link">Filter miro board</a></p>
+
+      <p>These prototypes look at filtering a list of referrals as the health assessment service grows.</p>
+
+      <h2 class="govuk-heading-m">Version 1</h2>
+
+      <ul class="govuk-list govuk-list--bullet">
+        <li>View by status lists</li>
+        <li>Caseload functionality removed</li>
+        <li>Filter by assessment centre and benefit type in status lists</li>
+        <li>Example pagination in status lists</li>
+      </ul>
+
+      <a href="filter/v1/" role="button" draggable="false" class="govuk-button govuk-button--start govuk-!-margin-top-2 govuk-!-margin-bottom-8"  data-module="govuk-button">
+        Start
+        <svg class="govuk-button__start-icon" xmlns="http://www.w3.org/2000/svg" width="17.5" height="19" viewBox="0 0 33 40" role="presentation" focusable="false">
+          <path fill="currentColor" d="M0 0h13l20 20-20 20H0l20-20z"></path>
+        </svg>
+      </a>     
+
+    </div>
+  </div>
+{% endblock %}

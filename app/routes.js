@@ -898,6 +898,23 @@ router.post('/next-action/v4/status-filter2', function (req, res) {
   }
 })
 
+// Filter
+router.post('/filter/v1/status-filter2', function (req, res) {
+  
+  const status2 = req.session.data['status2']
+  req.session.data['status2']=''
+
+  if (status2 === 'new') {
+    res.redirect('/filter/v1/list-4')
+  } else if (status2 === 'assessment-booked') {
+    res.redirect('/filter/v1/list-5')
+  } else if (status2 === 'hcp-review') {
+    res.redirect('/filter/v1/list-6')
+  } else {
+    res.redirect('/filter/v1/error')
+  }
+})
+
 // Collaboration
 
 router.post('/colab/v1/status-filter', function (req, res) {

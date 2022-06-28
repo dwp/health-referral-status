@@ -876,7 +876,7 @@ router.post('/next-action/v3/status-filter2', function (req, res) {
   }
 })
 
-router.post('/next-action/v4/status-filter2', function (req, res) {
+router.post('/next-action/v4/status-filter', function (req, res) {
   
   const status2 = req.session.data['status2']
   req.session.data['status2']=''
@@ -899,10 +899,10 @@ router.post('/next-action/v4/status-filter2', function (req, res) {
 })
 
 // Filter
-router.post('/filter/v1/status-filter2', function (req, res) {
+router.post('/filter/v1/status-filter', function (req, res) {
   
-  const status2 = req.session.data['status2']
-  req.session.data['status2']=''
+  const status2 = req.session.data['status']
+  req.session.data['status']=''
 
   if (status2 === 'new') {
     res.redirect('/filter/v1/list-4')

@@ -16,6 +16,104 @@
         New referrals
       </h1>
 
+      <h2 class="govuk-heading-m govuk-!-margin-bottom-1">Filter referrals</h2>
+      <div id="filter-hint" class="govuk-hint">
+        Emily do we need some hint text here? created it just in case.
+      </div>
+
+      <div class="govuk-grid-row govuk-!-margin-top-2">
+        <div class="govuk-grid-column-one-third">
+          {{ govukCheckboxes({
+          idPrefix: "endOfLife",
+          name: "end of life",
+          classes: "govuk-checkboxes--small",
+          fieldset: {
+          legend: {
+          text: "End of life",
+          isPageHeading: true,
+          classes: "govuk-fieldset__legend--s "
+          }
+          },
+          items: [
+          {
+          value: "end of life yes",
+          text: "Yes"
+          },
+          {
+          value: "end of life no",
+          text: "No"
+          }
+          ]
+          }) }}
+          </div>
+        
+          <div class="govuk-grid-column-one-third">
+          {{ govukCheckboxes({
+          idPrefix: "benefitType",
+          name: "benefit type",
+          classes: "govuk-checkboxes--small",
+          fieldset: {
+          legend: {
+          text: "Benefit type",
+          isPageHeading: true,
+          classes: "govuk-fieldset__legend--s "
+          }
+          },
+          items: [
+          {
+          value: "pip",
+          text: "PIP"
+          },
+          {
+          value: "uc",
+          text: "UC"
+          },
+          {
+          value: "esa",
+          text: "ESA"
+          }
+          ]
+          }) }}
+          </div>
+
+          <div class="govuk-grid-column-one-third">
+          {{ govukCheckboxes({
+          idPrefix: "assessmentCentre",
+          name: "assessment centre",
+          classes: "govuk-checkboxes--small",
+          fieldset: {
+          legend: {
+          text: "Assessment Centre",
+          isPageHeading: true,
+          classes: "govuk-fieldset__legend--s "
+          }
+          },
+          items: [
+          {
+          value: "tresco",
+          text: "London Tresco House"
+          },
+          {
+          value: "handsworth",
+          text: "Birmingham Handsworth"
+          },
+          {
+          value: "doncaster",
+          text: "Doncaster site name"
+          }
+          ]
+          }) }}
+          </div>
+        
+        </div>
+        
+        {{ govukButton({
+        text: "Apply",
+        classes: "govuk-button--secondary govuk-!-margin-bottom-4"
+        }) }}
+
+      <h3 class="govuk-heading-m govuk-!-padding-top-0">123 Referrals</h3>
+
       <table class="govuk-table">
         <thead class="govuk-table__head">
           <tr class="govuk-table__row">
@@ -23,7 +121,7 @@
             <th scope="col" class="govuk-table__header">NINO</th>
             <th scope="col" class="govuk-table__header">Benefit</th>
             <th scope="col" class="govuk-table__header">Referral date</th>
-            <th scope="col" class="govuk-table__header">SRTI</th>
+            <th scope="col" class="govuk-table__header">End of life</th>
             <th scope="col" class="govuk-table__header">Assessment centre</th>
             <th scope="col" class="govuk-table__header">Next action due in</th>
           </tr>

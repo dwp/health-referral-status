@@ -1,4 +1,4 @@
-{% extends "layout.html" %}
+{% extends "layout-extended.html" %}
 
 {% block pageTitle %}
   Referral list
@@ -10,110 +10,131 @@
 
 {% block content %}
 
-  <div class="govuk-grid-row">
-    <div class="govuk-grid-column-full">
-      <h1 class="govuk-heading-l">
-        New referrals
-      </h1>
+<!-- <div class="govuk-grid-row">
+  <div class="govuk-grid-column-full">
+    <h1 class="govuk-heading-l">
+      New referrals
+    </h1>
+  </div>
+</div> -->
 
-      <h2 class="govuk-heading-m govuk-!-margin-bottom-1">Filters</h2>
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-one-quarter">
+      <h2 class="govuk-heading-m govuk-!-margin-bottom-5">
+        Filters
+      </h2>
       <div id="filter-hint" class="govuk-hint govuk-!-margin-bottom-4">
         Emily do we need some hint text here? created it just in case.
       </div>
+      <div class="table-filter">
+        <!--Filters-->
 
-      <div class="govuk-grid-row govuk-!-margin-top-2">
-        <div class="govuk-grid-column-one-third">
-          {{ govukCheckboxes({
-          idPrefix: "endOfLife",
-          name: "end of life",
-          classes: "govuk-checkboxes--small",
-          fieldset: {
-          legend: {
-          text: "End of life",
-          isPageHeading: true,
-          classes: "govuk-fieldset__legend--s "
-          }
-          },
-          items: [
-          {
-          value: "end of life yes",
-          text: "Yes"
-          },
-          {
-          value: "end of life no",
-          text: "No"
-          }
-          ]
-          }) }}
-          </div>
-        
-          <div class="govuk-grid-column-one-third">
-          {{ govukCheckboxes({
-          idPrefix: "benefitType",
-          name: "benefit type",
-          classes: "govuk-checkboxes--small",
-          fieldset: {
-          legend: {
-          text: "Benefit type",
-          isPageHeading: true,
-          classes: "govuk-fieldset__legend--s "
-          }
-          },
-          items: [
-          {
-          value: "pip",
-          text: "PIP"
-          },
-          {
-          value: "uc",
-          text: "UC"
-          },
-          {
-          value: "esa",
-          text: "ESA"
-          }
-          ]
-          }) }}
-          </div>
-
-          <div class="govuk-grid-column-one-third">
-          {{ govukCheckboxes({
-          idPrefix: "assessmentCentre",
-          name: "assessment centre",
-          classes: "govuk-checkboxes--small",
-          fieldset: {
-          legend: {
-          text: "Assessment Centre",
-          isPageHeading: true,
-          classes: "govuk-fieldset__legend--s "
-          }
-          },
-          items: [
-          {
-          value: "tresco",
-          text: "London Tresco House",
-          checked: true if data['assessment centre'] and data['assessment centre'].includes('tresco')
-          },
-          {
-          value: "handsworth",
-          text: "Birmingham Handsworth"
-          },
-          {
-          value: "doncaster",
-          text: "Doncaster site name"
-          }
-          ]
-          }) }}
-          </div>
-        
-        </div>
-        
-        {{ govukButton({
-        text: "Apply",
-        classes: "govuk-button--secondary govuk-!-margin-bottom-8"
+        {{ govukCheckboxes({
+        idPrefix: "endOfLife",
+        name: "endOfLife",
+        classes: "govuk-checkboxes--small",
+        fieldset: {
+        legend: {
+        text: "End of life",
+        isPageHeading: false,
+        classes: "govuk-fieldset__legend--s"
+        }
+        },
+        items: [
+        {
+        id: "endOfLifeYes",
+        value: "endOfLife-yes",
+        text: "Yes"
+        },
+        {
+        id: "endOfLifeNo",
+        value: "endOfLife-no",
+        text: "No"
+        }
+        ]
         }) }}
 
-      <h3 class="govuk-heading-m govuk-!-padding-top-0">11 Referrals</h3>
+        {{ govukCheckboxes({
+        idPrefix: "benefitType",
+        name: "benefit-type",
+        classes: "govuk-checkboxes--small",
+        fieldset: {
+        legend: {
+        text: "Benefit type",
+        isPageHeading: false,
+        classes: "govuk-fieldset__legend--s"
+        }
+        },
+        items: [
+        {
+        id: "esa",
+        value: "esa",
+        text: "ESA"
+        },
+        {
+        id: "pip",
+        value: "pip",
+        text: "PIP"
+        },
+        {
+        id: "uc",
+        value: "uc",
+        text: "UC"
+        }
+        ]
+        }) }}
+
+        {{ govukCheckboxes({
+        idPrefix: "assessmentCentre",
+        name: "assessment-centre",
+        classes: "govuk-checkboxes--small",
+        fieldset: {
+        legend: {
+        text: "Assessment centre",
+        isPageHeading: false,
+        classes: "govuk-fieldset__legend--s"
+        }
+        },
+        items: [
+        {
+        id: "handsworth",
+        value: "handsworth",
+        text: "Birmingham handsworth"
+        },
+        {
+        id: "doncaster",
+        value: "doncaster",
+        text: "Doncaster site name"
+        },
+        {
+        id: "leeds",
+        value: "leeds",
+        text: "Leeds site name"
+        },
+        {
+        id: "tresco",
+        value: "tresco",
+        text: "London Tresco House",
+        checked: true if data['assessment centre'] and data['assessment centre'].includes('tresco')
+        }
+        ]
+        }) }}
+  
+        {{ govukButton({
+          id: "apply-filter-button",
+          text: "Apply filter",
+          classes: "govuk-button--secondary"
+        }) }}
+      </div>
+    </div>
+    <div class="govuk-grid-column-three-quarters">
+      
+      <h1 class="govuk-heading-l">
+        New referrals
+      </h1>
+      <div id="filter-hint" class="govuk-hint govuk-!-margin-bottom-4">
+       11 New end of life referrals in PIP at London Tresco House.
+      </div>
 
       <table class="govuk-table">
         <thead class="govuk-table__head">
@@ -199,6 +220,7 @@
           </tr>
         </tbody>
       </table>
+
     </div>
   </div>
 

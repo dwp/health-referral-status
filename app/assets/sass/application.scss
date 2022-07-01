@@ -255,6 +255,38 @@ $govuk-assets-path: '/govuk/assets/';
 
 .pagination__summary {
   padding-top: 10px;
+  padding-bottom: 10px;
+  font-size: 16px;
+  line-height: 1.25;
+  font-family: Arial, Helvetica, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  font-weight: 400;
+  float: right;
 }
+
+.pagination__list-items {
+  padding-left: 0;
+  margin-left: 0;
+}
+
+.pagination__item {
+  display: inline-block;
+}
+
+.pagination__link {
+  font-family: Arial, Helvetica, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-weight: 400;
+  font-size: 16px;
+  padding-bottom: 5px;
+  padding-top: 5px;
+  padding-left: 10px;
+  padding-right: 10px;
+  text-decoration: none;
+}
+
+
 
             

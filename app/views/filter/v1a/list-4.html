@@ -27,6 +27,7 @@
         Emily do we need some hint text here? created it just in case.
       </div>
       <div class="table-filter">
+        <form method="post" action="list-4b">
         <!--Filters-->
 
         {{ govukCheckboxes({
@@ -120,9 +121,8 @@
         ]
         }) }}
   
-        <a href="list-4b">
-          <div class="govuk-button govuk-button--secondary govuk-!-margin-bottom-8">Apply</div>
-        </a>
+        <button class="govuk-button govuk-button--secondary govuk-!-margin-bottom-8">Apply</button>
+        </form>
 
       </div>
     </div>

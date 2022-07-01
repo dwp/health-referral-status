@@ -23,6 +23,8 @@
 
       <div class="govuk-grid-row govuk-!-margin-top-2">
         <div class="govuk-grid-column-one-third">
+
+        <form method="post" action="list-4b">
           {{ govukCheckboxes({
           idPrefix: "endOfLife",
           name: "end of life",
@@ -108,9 +110,8 @@
         
         </div>
         
-        <a href="list-4b">
-          <div class="govuk-button govuk-button--secondary govuk-!-margin-bottom-8">Apply</div>
-        </a>
+        <button class="govuk-button govuk-button--secondary govuk-!-margin-bottom-8">Apply</button>
+        </form>
     
 
       <h3 class="govuk-heading-m govuk-!-padding-top-0">76 New referrals</h3>

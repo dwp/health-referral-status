@@ -23,7 +23,6 @@
       <h2 class="govuk-heading-m govuk-!-margin-bottom-5">
         Filters
       </h2>
-      {{ data | dump }}
       <div id="filter-hint" class="govuk-hint govuk-!-margin-bottom-4">
         Emily do we need some hint text here? created it just in case.
       </div>
@@ -31,95 +30,97 @@
         <!--Filters-->
 
         {{ govukCheckboxes({
-        idPrefix: "endOfLife",
-        name: "endOfLife",
-        classes: "govuk-checkboxes--small",
-        fieldset: {
-        legend: {
-        text: "End of life",
-        isPageHeading: false,
-        classes: "govuk-fieldset__legend--s"
-        }
-        },
-        items: [
-        {
-        id: "endOfLifeYes",
-        value: "endOfLife-yes",
-        text: "Yes"
-        },
-        {
-        id: "endOfLifeNo",
-        value: "endOfLife-no",
-        text: "No"
-        }
-        ]
-        }) }}
-
-        {{ govukCheckboxes({
-        idPrefix: "benefitType",
-        name: "benefit-type",
-        classes: "govuk-checkboxes--small",
-        fieldset: {
-        legend: {
-        text: "Benefit type",
-        isPageHeading: false,
-        classes: "govuk-fieldset__legend--s"
-        }
-        },
-        items: [
-        {
-        id: "esa",
-        value: "esa",
-        text: "ESA"
-        },
-        {
-        id: "pip",
-        value: "pip",
-        text: "PIP"
-        },
-        {
-        id: "uc",
-        value: "uc",
-        text: "UC"
-        }
-        ]
-        }) }}
-
-        {{ govukCheckboxes({
-        idPrefix: "assessmentCentre",
-        name: "assessment-centre",
-        classes: "govuk-checkboxes--small",
-        fieldset: {
-        legend: {
-        text: "Assessment centre",
-        isPageHeading: false,
-        classes: "govuk-fieldset__legend--s"
-        }
-        },
-        items: [
-        {
-        id: "handsworth",
-        value: "handsworth",
-        text: "Birmingham handsworth"
-        },
-        {
-        id: "doncaster",
-        value: "doncaster",
-        text: "Doncaster site name"
-        },
-        {
-        id: "leeds",
-        value: "leeds",
-        text: "Leeds site name"
-        },
-        {
-        id: "tresco",
-        value: "tresco",
-        text: "London Tresco House",
-        checked: true if data['assessment centre'] and data['assessment centre'].includes('tresco')
-        }
-        ]
-        }) }}
+          idPrefix: "endOfLife",
+          name: "endOfLife",
+          classes: "govuk-checkboxes--small",
+          fieldset: {
+          legend: {
+          text: "End of life",
+          isPageHeading: false,
+          classes: "govuk-fieldset__legend--s"
+          }
+          },
+          items: [
+          {
+          id: "yes",
+          value: "yes",
+          text: "Yes",
+          checked: true if data['endOfLife'] and data['endOfLife'].includes('yes')
+          },
+          {
+          id: "no",
+          value: "no",
+          text: "No"
+          }
+          ]
+          }) }}
+  
+          {{ govukCheckboxes({
+          idPrefix: "benefitType",
+          name: "benefit-type",
+          classes: "govuk-checkboxes--small",
+          fieldset: {
+          legend: {
+          text: "Benefit type",
+          isPageHeading: false,
+          classes: "govuk-fieldset__legend--s"
+          }
+          },
+          items: [
+          {
+          id: "esa",
+          value: "esa",
+          text: "ESA"
+          },
+          {
+          id: "pip",
+          value: "pip",
+          text: "PIP",
+          checked: true if data['benefit-type'] and data['benefit-type'].includes('pip')
+          },
+          {
+          id: "uc",
+          value: "uc",
+          text: "UC"
+          }
+          ]
+          }) }}
+  
+          {{ govukCheckboxes({
+          idPrefix: "assessmentCentre",
+          name: "assessment-centre",
+          classes: "govuk-checkboxes--small",
+          fieldset: {
+          legend: {
+          text: "Assessment centre",
+          isPageHeading: false,
+          classes: "govuk-fieldset__legend--s"
+          }
+          },
+          items: [
+          {
+          id: "handsworth",
+          value: "handsworth",
+          text: "Birmingham handsworth"
+          },
+          {
+          id: "doncaster",
+          value: "doncaster",
+          text: "Doncaster site name"
+          },
+          {
+          id: "leeds",
+          value: "leeds",
+          text: "Leeds site name"
+          },
+          {
+          id: "tresco",
+          value: "tresco",
+          text: "London Tresco House",
+          checked: true if data['assessment-centre'] and data['assessment-centre'].includes('tresco')
+          }
+          ]
+          }) }}
   
         {{ govukButton({
           id: "apply-filter-button",

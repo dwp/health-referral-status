@@ -38,11 +38,12 @@
           },
           items: [
           {
-          value: "end of life yes",
-          text: "Yes"
+          value: "yes",
+          text: "Yes",
+          checked: true if data['end of life'] and data['end of life'].includes('yes')
           },
           {
-          value: "end of life no",
+          value: "no",
           text: "No"
           }
           ]
@@ -64,7 +65,8 @@
           items: [
           {
           value: "pip",
-          text: "PIP"
+          text: "PIP",
+          checked: true if data['benefit type'] and data['benefit type'].includes('pip')
           },
           {
           value: "uc",

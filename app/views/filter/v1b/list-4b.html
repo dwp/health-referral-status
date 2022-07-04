@@ -15,16 +15,15 @@
       <h1 class="govuk-heading-l">
         New referrals
       </h1>
-      {{ data | dump }}
-      <h2 class="govuk-heading-m govuk-!-margin-bottom-1">Filters</h2>
+      <h2 class="govuk-heading-m govuk-!-margin-bottom-1">Apply filters</h2>
       <div id="filter-hint" class="govuk-hint govuk-!-margin-bottom-4">
-        Emily do we need some hint text here? created it just in case.
+        Select one or more filters to apply to this list of referrals.
       </div>
 
       <div class="govuk-grid-row govuk-!-margin-top-2">
         <div class="govuk-grid-column-one-third">
 
-            {{ govukCheckboxes({
+          {{ govukCheckboxes({
             idPrefix: "endOfLife",
             name: "end of life",
             classes: "govuk-checkboxes--small",
@@ -63,6 +62,10 @@
             },
             items: [
             {
+            value: "esa",
+            text: "ESA"
+            },
+            {
             value: "pip",
             text: "PIP",
             checked: true if data['benefit type'] and data['benefit type'].includes('pip')
@@ -70,10 +73,6 @@
             {
             value: "uc",
             text: "UC"
-            },
-            {
-            value: "esa",
-            text: "ESA"
             }
             ]
             }) }}
@@ -93,30 +92,35 @@
             },
             items: [
             {
-            value: "tresco",
-            text: "London Tresco House",
-            checked: true if data['assessment centre'] and data['assessment centre'].includes('tresco')
-            },
-            {
             value: "handsworth",
             text: "Birmingham Handsworth"
             },
             {
             value: "doncaster",
             text: "Doncaster site name"
+            },
+            {
+            value: "leeds",
+            text: "Leeds site name"
+            },
+            {
+            value: "tresco",
+            text: "London Tresco House",
+            checked: true if data['assessment centre'] and data['assessment centre'].includes('tresco')
             }
             ]
             }) }}
-            </div>
-        
-        </div>
-        
-        {{ govukButton({
-        text: "Apply",
-        classes: "govuk-button--secondary govuk-!-margin-bottom-8"
-        }) }}
 
-      <h3 class="govuk-heading-m govuk-!-padding-top-0">11 Referrals</h3>
+          </div>
+          </div>
+
+
+          {{ govukButton({
+            text: "Apply",
+            classes: "govuk-button--secondary govuk-!-margin-bottom-8"
+            }) }}
+
+      <h3 class="govuk-heading-m govuk-!-padding-top-0">11 New end of life referrals in PIP at London Tresco House</h3>
 
       <table class="govuk-table">
         <thead class="govuk-table__head">

@@ -387,34 +387,38 @@ Referral list
       hideAllWithClass("srel")
     }
 
-    if (document.getElementById('pip').checked == false) {
-      hideAllWithClass("pip")
-    } else {
-      benefitTypes.push("PIP")
+    if (document.getElementById('pip').checked != false && document.getElementById('esa').checked != false && document.getElementById('uc').checked != false) {
+      if (document.getElementById('pip').checked == false) {
+        hideAllWithClass("pip")
+      } else {
+        benefitTypes.push("PIP")
+      }
+
+      if (document.getElementById('esa').checked == false) {
+        hideAllWithClass("esa")
+      } else {
+        benefitTypes.push("ESA")
+      }
+
+      if (document.getElementById('uc').checked == false) {
+        hideAllWithClass("uc")
+      } else {
+        benefitTypes.push("UC")
+      }
     }
 
-    if (document.getElementById('esa').checked == false) {
-      hideAllWithClass("esa")
-    } else {
-      benefitTypes.push("ESA")
-    }
+    if (document.getElementById('handsworth').checked != false && document.getElementById('tresco').checked != false) {
+      if (document.getElementById('handsworth').checked == false) {
+        hideAllWithClass("handsworth")
+      } else {
+        sites.push("Handsworth");
+      }
 
-    if (document.getElementById('uc').checked == false) {
-      hideAllWithClass("uc")
-    } else {
-      benefitTypes.push("UC")
-    }
-
-    if (document.getElementById('handsworth').checked == false) {
-      hideAllWithClass("handsworth")
-    } else {
-      sites.push("Handsworth");
-    }
-
-    if (document.getElementById('tresco').checked == false) {
-      hideAllWithClass("tresco")
-    } else {
-      sites.push('Tresco');
+      if (document.getElementById('tresco').checked == false) {
+        hideAllWithClass("tresco")
+      } else {
+        sites.push('Tresco');
+      }
     }
 
     var count = document.querySelectorAll('.govuk-table tr').length - 1;

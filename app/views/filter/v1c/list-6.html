@@ -354,41 +354,62 @@
           }
 
           document.querySelector("#filters").addEventListener("submit", function(e){
-              console.log('test');
-              console.log(e);
-
-              showAllWithClass("esa");
+            showAllWithClass("esa");
               showAllWithClass("pip");
               showAllWithClass("uc");
               showAllWithClass("tresco");
               showAllWithClass("handsworth");
               showAllWithClass("srel");
               
+            let benefitTypes = [];
+            let sites = [];
+
               if(document.getElementById('srel').checked == false){
                   hideAllWithClass("srel")
               }
 
               if(document.getElementById('pip').checked == false){
                   hideAllWithClass("pip")
+              } else {
+                  benefitTypes.push("PIP")
               }
 
               if(document.getElementById('esa').checked == false){
                   hideAllWithClass("esa")
+              } else {
+                  benefitTypes.push("ESA")
               }
 
               if(document.getElementById('uc').checked == false){
                   hideAllWithClass("uc")
+              } else {
+                  benefitTypes.push("UC")
               }
 
               if(document.getElementById('handsworth').checked == false){
                   hideAllWithClass("handsworth")
+              } else {
+                  sites.push("Handsworth");
               }
 
               if(document.getElementById('tresco').checked == false){
                   hideAllWithClass("tresco")
+              } else {
+                  sites.push('Tresco');
               }
 
+                var count = document.querySelectorAll('.govuk-table tr').length - 1;
+
+                var eol = document.getElementById('srel').checked ? " end of life" : "" ;
+                var benefitTypeString = benefitTypes.join(", ");
+                var sites = sites.join(", ");
+
+                //11 HCP review end of life referrals in PIP, ESA, UC at Birmingham Handsworth
+                var text = count + " HCP review " + eol + "referrals in " + benefitTypeString + " at " + sites;
+
+            document.getElementById('filter-playback').innerText = text;
               e.preventDefault();    //stop form from submitting
+
           });
 
   </script>

@@ -1,0 +1,86 @@
+{% extends "layout-extended.html" %}
+
+{% block pageTitle %}
+  Referral list
+{% endblock %}
+
+{% block beforeContent %}
+<a href="start" class="govuk-back-link">Back</a>
+{% endblock %}
+
+{% block content %}
+
+<!-- <div class="govuk-grid-row">
+  <div class="govuk-grid-column-full">
+    <h1 class="govuk-heading-l">
+      New referrals
+    </h1>
+  </div>
+</div> -->
+      <form id='filter-form'>
+          <label for="value1">Value 1</label>
+          <input type="checkbox" id="value1" name="value1" value="value1">
+          <label for="value2">Value 2</label>
+          <input type="checkbox" id="value2" name="value2" value="value2">
+          <input type="submit">
+      </form>
+      <!-- This script needs to go after the form so that the query selector for #filter-form can find the form -->
+      <script>
+          function hideAllWithClass(classname) {
+              document.querySelectorAll("."+classname).forEach((element) =>{
+                      element.style.visibility = 'collapse';
+              });
+          }
+
+          function showAllWithClass(classname) {
+              document.querySelectorAll("."+classname).forEach((element) =>{
+                      element.style.visibility = 'visible';
+              });
+          }
+
+          document.querySelector("#filter-form").addEventListener("submit", function(e){
+              console.log('test');
+              console.log(e);
+
+              showAllWithClass("value1");
+
+              showAllWithClass("value2");
+              
+              if(document.getElementById('value1').checked == false){
+                  hideAllWithClass("value1")
+              }
+
+              if(document.getElementById('value2').checked == false){
+                  hideAllWithClass("value2")
+              }
+
+              e.preventDefault();    //stop form from submitting
+          });
+      </script>
+      <table>
+          <tr>
+              <th>Column 1</th>
+              <th>Column 2</th>
+              <th>Column 3</th>
+              <th>Column 4</th>
+          </tr>
+          <tr class="value1 value2"><td>value 1</td><td>value 1</td><td>value 2</td><td>value 2</td></tr>
+          <tr class="value1"><td>value 1</td><td>value 1</td><td></td><td></td></tr>
+          <tr class="value1 value2"><td>value 1</td><td>value 1</td><td>value 2</td><td>value 2</td></tr>
+          <tr class="value1"><td>value 1</td><td>value 1</td><td></td><td></td></tr>
+          <tr class="value1"><td>value 1</td><td>value 1</td><td></td><td></td></tr>
+          <tr class="value1 value2"><td>value 1</td><td>value 1</td><td>value 2</td><td>value 2</td></tr>
+          <tr class="value2"><td></td><td></td><td>value 2</td><td>value 2</td></tr>
+          <tr class="value1 value2"><td>value 1</td><td>value 1</td><td>value 2</td><td>value 2</td></tr>
+          <tr class="value1"><td>value 1</td><td>value 1</td><td></td><td></td></tr>
+          <tr class="value1 value2"><td>value 1</td><td>value 1</td><td>value 2</td><td>value 2</td></tr>
+          <tr class="value1 value2"><td>value 1</td><td>value 1</td><td>value 2</td><td>value 2</td></tr>
+          <tr class="value2"><td></td><td></td><td>value 2</td><td>value 2</td></tr>
+          <tr class="value1 value2"><td>value 1</td><td>value 1</td><td>value 2</td><td>value 2</td></tr>
+          <tr class="value2"><td></td><td></td><td>value 2</td><td>value 2</td></tr>
+          <tr class="value1"><td>value 1</td><td>value 1</td><td></td><td></td></tr>
+          <tr class="value1 value2"><td>value 1</td><td>value 1</td><td>value 2</td><td>value 2</td></tr>
+          <tr class="value2"><td></td><td></td><td>value 2</td><td>value 2</td></tr>
+      </table>
+
+{% endblock %}

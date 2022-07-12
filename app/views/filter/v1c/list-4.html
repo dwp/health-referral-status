@@ -31,27 +31,22 @@
         <!--Filters-->
 
         {{ govukCheckboxes({
-        idPrefix: "endOfLife",
-        name: "endOfLife",
+        idPrefix: "caseType",
+        name: "caseType",
         classes: "govuk-checkboxes--small",
         fieldset: {
         legend: {
-        text: "End of life",
+        text: "Case Type",
         isPageHeading: false,
         classes: "govuk-fieldset__legend--s"
         }
         },
         items: [
         {
-        id: "yes",
-        value: "yes",
-        text: "Yes (11)",
+        id: "SREL",
+        value: "SREL",
+        text: "Special Rules for End of Life (1)",
         checked: true if data['endOfLife'] and data['endOfLife'].includes('yes')
-        },
-        {
-        id: "no",
-        value: "no",
-        text: "No (64)"
         }
         ]
         }) }}
@@ -102,7 +97,8 @@
         {
         id: "handsworth",
         value: "handsworth",
-        text: "Birmingham Handsworth (12)"
+        text: "Birmingham Handsworth (12)",
+        checked: true if data['assessment-centre'] and data['assessment-centre'].includes('handsworth')
         },
         {
         id: "doncaster",

@@ -384,38 +384,38 @@ Referral list
     let sites = [];
 
     if (document.getElementById('srel').checked == true) {
-      hideAllWithClass("no-srel")
+      hideAllWithClass("no-srel");
     }
 
-    if (document.getElementById('pip').checked != false && document.getElementById('esa').checked != false && document.getElementById('uc').checked != false) {
+    if (document.getElementById('pip').checked == true || document.getElementById('esa').checked == true || document.getElementById('uc').checked == true) {
       if (document.getElementById('pip').checked == false) {
-        hideAllWithClass("pip")
+        hideAllWithClass("pip");
       } else {
-        benefitTypes.push("PIP")
+        benefitTypes.push("PIP");
       }
 
       if (document.getElementById('esa').checked == false) {
-        hideAllWithClass("esa")
+        hideAllWithClass("esa");
       } else {
-        benefitTypes.push("ESA")
+        benefitTypes.push("ESA");
       }
 
       if (document.getElementById('uc').checked == false) {
-        hideAllWithClass("uc")
+        hideAllWithClass("uc");
       } else {
-        benefitTypes.push("UC")
+        benefitTypes.push("UC");
       }
     }
 
-    if (document.getElementById('handsworth').checked != false && document.getElementById('tresco').checked != false) {
+    if (document.getElementById('handsworth').checked == true || document.getElementById('tresco').checked == true) {
       if (document.getElementById('handsworth').checked == false) {
-        hideAllWithClass("handsworth")
+        hideAllWithClass("handsworth");
       } else {
         sites.push("Handsworth");
       }
 
       if (document.getElementById('tresco').checked == false) {
-        hideAllWithClass("tresco")
+        hideAllWithClass("tresco");
       } else {
         sites.push('Tresco');
       }

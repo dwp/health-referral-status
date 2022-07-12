@@ -370,6 +370,9 @@ Referral list
   }
 
   document.querySelector("#filters").addEventListener("submit", function (e) {
+
+    e.preventDefault();    //stop form from submitting
+
     showAllWithClass("esa");
     showAllWithClass("pip");
     showAllWithClass("uc");
@@ -424,7 +427,6 @@ Referral list
     var text = count + " HCP review " + eol + "referrals in " + benefitTypeString + " at " + sitesString;
 
     document.getElementById('filter-playback').innerText = text;
-    e.preventDefault();    //stop form from submitting
 
   });
 

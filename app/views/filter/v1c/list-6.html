@@ -43,10 +43,9 @@
         },
         items: [
         {
-        id: "SREL",
-        value: "SREL",
-        text: "Special Rules for End of Life (1)",
-        checked: true if data['endOfLife'] and data['endOfLife'].includes('yes')
+        id: "srel",
+        value: "srel",
+        text: "Special Rules for End of Life (1)"
         }
         ]
         }) }}
@@ -71,8 +70,7 @@
         {
         id: "pip",
         value: "pip",
-        text: "PIP (25)",
-        checked: true if data['benefit-type'] and data['benefit-type'].includes('pip')
+        text: "PIP (25)"
         },
         {
         id: "uc",
@@ -97,8 +95,7 @@
         {
         id: "handsworth",
         value: "handsworth",
-        text: "Birmingham Handsworth (12)",
-        checked: true if data['assessment-centre'] and data['assessment-centre'].includes('handsworth')
+        text: "Birmingham Handsworth (12)"
         },
         {
         id: "doncaster",
@@ -113,14 +110,15 @@
         {
         id: "tresco",
         value: "tresco",
-        text: "London Tresco House (36)",
-        checked: true if data['assessment-centre'] and data['assessment-centre'].includes('tresco')
+        text: "London Tresco House (36)"
         }
         ]
         }) }}
   
         <button class="govuk-button govuk-button--secondary govuk-!-margin-bottom-8">Apply filters</button>
         </form>
+
+        
 
       </div>
     </div>
@@ -340,5 +338,59 @@
 
     </div>
   </div>
+
+  <script>
+
+    function hideAllWithClass(classname) {
+              document.querySelectorAll("."+classname).forEach((element) =>{
+                      element.style.visibility = 'collapse';
+              });
+          }
+
+          function showAllWithClass(classname) {
+              document.querySelectorAll("."+classname).forEach((element) =>{
+                      element.style.visibility = 'visible';
+              });
+          }
+
+          document.querySelector("#filters").addEventListener("submit", function(e){
+              console.log('test');
+              console.log(e);
+
+              showAllWithClass("esa");
+              showAllWithClass("pip");
+              showAllWithClass("uc");
+              showAllWithClass("tresco");
+              showAllWithClass("handsworth");
+              showAllWithClass("srel");
+              
+              if(document.getElementById('srel').checked == false){
+                  hideAllWithClass("srel")
+              }
+
+              if(document.getElementById('pip').checked == false){
+                  hideAllWithClass("pip")
+              }
+
+              if(document.getElementById('esa').checked == false){
+                  hideAllWithClass("esa")
+              }
+
+              if(document.getElementById('uc').checked == false){
+                  hideAllWithClass("uc")
+              }
+
+              if(document.getElementById('handsworth').checked == false){
+                  hideAllWithClass("handsworth")
+              }
+
+              if(document.getElementById('tresco').checked == false){
+                  hideAllWithClass("tresco")
+              }
+
+              e.preventDefault();    //stop form from submitting
+          });
+
+  </script>
 
 {% endblock %}

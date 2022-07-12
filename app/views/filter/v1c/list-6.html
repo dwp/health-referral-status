@@ -422,7 +422,12 @@ Referral list
       }
     }
 
-    var count = document.querySelectorAll('.govuk-table tr').length - 1;
+    var count = document
+      .querySelectorAll('.govuk-table tr')
+      .filter((element) => {
+        return element.style.visibility === 'visible';
+      })
+      .length - 1;
 
     var eol = document.getElementById('srel').checked ? " end of life" : "";
     var benefitTypeString = benefitTypes.join(", ");

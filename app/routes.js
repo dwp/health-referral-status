@@ -938,9 +938,9 @@ router.post('/filter/v1c/status-filter', function (req, res) {
 
   if (status2 === 'new') {
     res.redirect('/filter/v1c/list-4')
-  } else if (status2 === 'assessment-booked') {
-    res.redirect('/filter/v1c/list-5')
   } else if (status2 === 'hcp-review') {
+    res.redirect('/filter/v1c/list-5')
+  } else if (status2 === 'report-ready') {
     res.redirect('/filter/v1c/list-6')
   } else {
     res.redirect('/filter/v1c/error')

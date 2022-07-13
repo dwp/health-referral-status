@@ -65,17 +65,17 @@ Referral list
         {
         id: "esa",
         value: "esa",
-        text: "ESA (13)"
+        text: "Employment Support Allowance (13)"
         },
         {
         id: "pip",
         value: "pip",
-        text: "PIP (25)"
+        text: "Personal Independence Payment (25)"
         },
         {
         id: "uc",
         value: "uc",
-        text: "UC (22)"
+        text: "Universal Credit (22)"
         }
         ]
         }) }}
@@ -155,7 +155,7 @@ Referral list
           <td class="govuk-table__cell">10 Jul 2022</td>
           <td class="govuk-table__cell">1 Day</td>
         </tr>
-        <tr class="govuk-table__row no-srel pip tresco">
+        <tr class="govuk-table__row no-srel pip handsworth">
           <td class="govuk-table__cell"><a href="claimant-detail-report"
               aria-describedby="claimant-detail-report">Janette Rafe</a></td>
           <td class="govuk-table__cell">RN 00 11 23 A</td>
@@ -173,7 +173,7 @@ Referral list
             <strong class="govuk-tag govuk-tag--red" id="overdue">7 Days overdue</strong>
           </td>
         </tr>
-        <tr class="govuk-table__row no-srel pip tresco">
+        <tr class="govuk-table__row no-srel pip handsworth">
           <td class="govuk-table__cell"><a href="claimant-detail-report"
               aria-describedby="claimant-detail-report">Janice West</a></td>
           <td class="govuk-table__cell">RN 11 0 22 C</td>
@@ -433,19 +433,19 @@ Referral list
       if (document.getElementById('pip').checked == false) {
         hideAllWithClass("pip");
       } else {
-        benefitTypes.push("PIP");
+        benefitTypes.push("Personal Independence Payment");
       }
 
       if (document.getElementById('esa').checked == false) {
         hideAllWithClass("esa");
       } else {
-        benefitTypes.push("ESA");
+        benefitTypes.push("Employment Support Allowance");
       }
 
       if (document.getElementById('uc').checked == false) {
         hideAllWithClass("uc");
       } else {
-        benefitTypes.push("UC");
+        benefitTypes.push("Universal Credit");
       }
     }
 
@@ -482,7 +482,7 @@ Referral list
     var eol = document.getElementById('srel').checked ? " end of life" : "";
     var benefitTypeString = benefitTypes.join(", ");
     var sitesString = sites.join(", ");
-    var ifBenefitType = benefitTypes.length > 0 ? ' in ' : '';
+    var ifBenefitType = benefitTypes.length > 0 ? ' for ' : '';
     var ifSites = sites.length > 0 ? ' at ' : '';
 
     //11 HCP review end of life referrals in PIP, ESA, UC at Birmingham Handsworth

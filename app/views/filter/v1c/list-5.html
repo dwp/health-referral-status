@@ -433,19 +433,19 @@ Referral list
       if (document.getElementById('pip').checked == false) {
         hideAllWithClass("pip");
       } else {
-        benefitTypes.push("PIP");
+        benefitTypes.push("Personal Independence Payment");
       }
 
       if (document.getElementById('esa').checked == false) {
         hideAllWithClass("esa");
       } else {
-        benefitTypes.push("ESA");
+        benefitTypes.push("Employment Support Allowance");
       }
 
       if (document.getElementById('uc').checked == false) {
         hideAllWithClass("uc");
       } else {
-        benefitTypes.push("UC");
+        benefitTypes.push("Universal Credit");
       }
     }
 
@@ -482,7 +482,7 @@ Referral list
     var eol = document.getElementById('srel').checked ? " end of life" : "";
     var benefitTypeString = benefitTypes.join(", ");
     var sitesString = sites.join(", ");
-    var ifBenefitType = benefitTypes.length > 0 ? ' in ' : '';
+    var ifBenefitType = benefitTypes.length > 0 ? ' for ' : '';
     var ifSites = sites.length > 0 ? ' at ' : '';
 
     //11 HCP review end of life referrals in PIP, ESA, UC at Birmingham Handsworth

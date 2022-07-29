@@ -289,4 +289,285 @@ $govuk-assets-path: '/govuk/assets/';
 
 
 
+
+
+
+
+
+
+// filter tags
+
+@media (max-width: 40.0525em) {
+  .js-enabled .facets {
+      display:none;
+  }
+
+  .js-enabled .facets.facets--visible {
+      display: block;
+  }
+}
+
+.facets__header {
+  display: none;
+}
+
+.facets__footer {
+  display: none;
+}
+
+.facets__clear-link {
+  display: none;
+}
+
+.facets__tags-block {
+  display: none;
+}
+
+@media (max-width: 40.0525em) {
+  .js-enabled .facets__box {
+      position:fixed;
+      z-index: 1000;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      margin: 0;
+      padding: 0;
+      overflow-y: auto;
+      background: #fff;
+  }
+
+  .js-enabled .facets__header {
+      padding: 15px 0 10px;
+      border-bottom: 1px solid #b1b4b6;
+      margin: 0 15px 0 15px;
+  }
+
+  @supports (display: grid) {
+      .js-enabled .facets__header {
+          display:grid;
+          grid-auto-flow: column;
+      }
+  }
+
+  .js-enabled .facets__content {
+      padding: 10px 15px 0;
+  }
+
+  .js-enabled .facets__footer {
+      display: block;
+      margin: 15px;
+  }
+
+  .js-enabled .facets__return-link {
+      text-decoration: none;
+  }
+
+  @supports (display: grid) {
+      .js-enabled .facets__return-link {
+          justify-self:end;
+          align-self: start;
+      }
+  }
+
+  .js-enabled .facets__clear-link {
+      display: inline-block;
+      margin-top: 10px;
+      text-decoration: none;
+  }
+
+  .js-enabled .facets__tags-block {
+      display: block;
+  }
+}
+
+.filtered-results__group .filtered-results__facet-heading {
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 700;
+  font-size: 18px;
+  font-size: 1.125rem;
+  line-height: 1.1111111111;
+  margin-bottom: 20px;
+}
+
+@media (min-width: 40.0625em) {
+  .filtered-results__group .filtered-results__facet-heading {
+      font-size:24px;
+      font-size: 1.5rem;
+      line-height: 1.25;
+  }
+}
+
+.finder-frontend {
+  margin-bottom: 50px;
+}
+
+.facet-tags__container {
+  display: none;
+}
+
+@media (min-width: 40.0625em) {
+  .facet-tags__container {
+      display:block;
+  }
+}
+
+.facet-tags {
+  padding-bottom: 5px;
+  font-family: Arial, Helvetica, sans-serif !important;
+  font-weight: 700;
+}
+
+.facet-tags__group {
+  padding: 5px;
+}
+
+@media (min-width: 40.0625em) {
+  .facet-tags__group:nth-child(odd) {
+      background-color:#f3f2f1;
+  }
+}
+
+.facet-tags__wrapper {
+  vertical-align: middle;
+  margin: 5px 0;
+  display: inline-block;
+}
+
+@media (max-width: 40.0525em) {
+  .facet-tags__wrapper {
+      vertical-align:baseline;
+  }
+}
+
+.facet-tags__wrapper:first-of-type .facet-tags__preposition:first-of-type {
+  font-weight: bold;
+}
+
+@media (max-width: 40.0525em) {
+  .facet-tags__wrapper:first-of-type .facet-tags__preposition:first-of-type {
+      display:block;
+  }
+}
+
+.facet-tags__wrapper:first-of-type .facet-tags__preposition:first-of-type:first-letter {
+  text-transform: uppercase;
+}
+
+.facet-tags__preposition {
+  display: table-cell;
+  padding: 0 5px 0 2px;
+  vertical-align: middle;
+  text-transform: lowercase;
+}
+
+@media (max-width: 40.0525em) {
+  .facet-tags__preposition {
+      display:inline-block;
+  }
+}
+
+.facet-tag {
+  display: table-cell;
+  position: relative;
+  padding: .3125em;
+  border: 1px solid #505a5f;
+  border-radius: .3125em;
+  background-color: #f3f2f1;
+  font-family: Arial, Helvetica, sans-serif !important;
+  font-weight: 700;
+}
+
+@media (max-width: 40.0525em) {
+  .facet-tag {
+      display:inline-block;
+      background: none;
+      border: 2px solid #0b0c0c;
+  }
+}
+
+.js-enabled .facet-tag {
+  padding: .5em;
+}
+
+.facet-tag__text {
+  display: inline-block;
+  margin-left: 0;
+  pointer-events: none;
+  position: relative;
+  z-index: 1;
+}
+
+.js-enabled .facet-tag__text {
+  margin-left: .3125em;
+}
+
+.facet-tag__remove {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  padding: .5em;
+  border-radius: .3125em;
+  font-weight: bold;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 700;
+  font-size: 14px;
+  font-size: .875rem;
+  line-height: 1.1428571429;
+  text-align: left;
+  cursor: pointer;
+  color: #000;
+  text-decoration: none;
+  background: none;
+  border: 0;
+}
+
+@media print {
+  .facet-tag__remove {
+      font-family: sans-serif;
+  }
+}
+
+@media (min-width: 40.0625em) {
+  .facet-tag__remove {
+      font-size:16px;
+      font-size: 1rem;
+      line-height: 1.25;
+  }
+}
+
+@media print {
+  .facet-tag__remove {
+      font-size: 14pt;
+      line-height: 1.2;
+  }
+}
+
+.js-enabled .facet-tag__remove {
+  display: inline-block;
+  border: 1px solid transparent;
+}
+
+.js-enabled .facet-tag__remove:hover {
+  background: #b1b4b6;
+}
+
+.js-enabled .facet-tag__remove:focus {
+  -webkit-box-shadow: inset 0 0 0 2px;
+  box-shadow: inset 0 0 0 2px;
+  border: solid 1px #0b0c0c;
+  outline: 3px solid #fd0;
+}
+
+.facet-container {
+  padding-left: 13px;
+  padding-right: 13px;
+}
+
+
             

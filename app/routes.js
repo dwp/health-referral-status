@@ -947,6 +947,22 @@ router.post('/filter/v1c/status-filter', function (req, res) {
   }
 })
 
+router.post('/filter/v2/status-filter', function (req, res) {
+  
+  const status2 = req.session.data['status']
+  req.session.data['status']=''
+
+  if (status2 === 'new') {
+    res.redirect('/filter/v2/list-4')
+  } else if (status2 === 'hcp-review') {
+    res.redirect('/filter/v2/list-5')
+  } else if (status2 === 'report-ready') {
+    res.redirect('/filter/v2/list-6')
+  } else {
+    res.redirect('/filter/v2/error')
+  }
+})
+
 // Collaboration
 
 router.post('/colab/v1/status-filter', function (req, res) {

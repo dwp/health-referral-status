@@ -220,31 +220,13 @@ max-width:1160px !important;}
 
 {% endblock %}
 
-{% set containerClasses = 'govuk-width-container--extended' %}
-
-{% set mainClasses = mainClasses | default("govuk-main-wrapper--auto-spacing govuk-width-container--extended") %}
-
 {% endblock %}
 
 
 
+{% set containerClasses = 'govuk-width-container--extended' %}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-{% set mainClasses = mainClasses | default("govuk-main-wrapper--auto-spacing") %}
-
-
+{% set mainClasses = mainClasses | default("govuk-main-wrapper--auto-spacing govuk-width-container--extended") %}
 
 
 {% if useAutoStoreData %}

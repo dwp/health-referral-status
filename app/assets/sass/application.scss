@@ -682,16 +682,11 @@ $govuk-assets-path: '/govuk/assets/';
 .facet-tags {
   padding-bottom: 5px;
   font-family: Arial, Helvetica, sans-serif !important;
+  font-size: 1.1875rem;
 }
 
 .facet-tags__group {
-  padding: 5px;
-}
-
-@media (min-width: 40.0625em) {
-  .facet-tags__group:nth-child(odd) {
-      background-color:#f3f2f1;
-  }
+  padding: 0;
 }
 
 .facet-tags__wrapper {
@@ -737,9 +732,6 @@ $govuk-assets-path: '/govuk/assets/';
   display: table-cell;
   position: relative;
   padding: .3125em;
-  border: 1px solid #505a5f;
-  border-radius: .3125em;
-  background-color: #f3f2f1;
   font-family: Arial, Helvetica, sans-serif !important;
 }
 
@@ -747,12 +739,11 @@ $govuk-assets-path: '/govuk/assets/';
   .facet-tag {
       display:inline-block;
       background: none;
-      border: 2px solid #0b0c0c;
   }
 }
 
 .js-enabled .facet-tag {
-  padding: .5em;
+  padding: .5em 0;
 }
 
 .facet-tag__text {
@@ -765,65 +756,6 @@ $govuk-assets-path: '/govuk/assets/';
 
 .js-enabled .facet-tag__text {
   margin-left: .3125em;
-}
-
-.facet-tag__remove {
-  display: none;
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  padding: .5em;
-  border-radius: .3125em;
-  font-weight: bold;
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 14px;
-  font-size: .875rem;
-  line-height: 1.1428571429;
-  text-align: left;
-  cursor: pointer;
-  color: #000;
-  text-decoration: none;
-  background: none;
-  border: 0;
-}
-
-@media print {
-  .facet-tag__remove {
-      font-family: sans-serif;
-  }
-}
-
-@media (min-width: 40.0625em) {
-  .facet-tag__remove {
-      font-size:16px;
-      font-size: 1rem;
-      line-height: 1.25;
-  }
-}
-
-@media print {
-  .facet-tag__remove {
-      font-size: 14pt;
-      line-height: 1.2;
-  }
-}
-
-.js-enabled .facet-tag__remove {
-  display: inline-block;
-  border: 1px solid transparent;
-}
-
-.js-enabled .facet-tag__remove:hover {
-  background: #b1b4b6;
-}
-
-.js-enabled .facet-tag__remove:focus {
-  -webkit-box-shadow: inset 0 0 0 2px;
-  box-shadow: inset 0 0 0 2px;
-  border: solid 1px #0b0c0c;
-  outline: 3px solid #fd0;
 }
 
 .facet-container {

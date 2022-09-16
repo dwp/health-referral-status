@@ -484,14 +484,15 @@ Referral list
 
     document.getElementById('paginationTotal').innerText = count;
 
-    var eol = document.getElementById('srel').checked ? " end of life" : "";
-    var benefitTypeString = benefitTypes.join(", ");
-    var sitesString = sites.join(", ");
-    var ifBenefitType = benefitTypes.length > 0 ? ' for ' : '';
-    var ifSites = sites.length > 0 ? ' at ' : '';
+    // var eol = document.getElementById('srel').checked ? " end of life" : "";
+    // var benefitTypeString = benefitTypes.join(", ");
+    // var sitesString = sites.join(", ");
+    // var ifBenefitType = benefitTypes.length > 0 ? ' for ' : '';
+    // var ifSites = sites.length > 0 ? ' at ' : '';
 
     //11 HCP review end of life referrals in PIP, ESA, UC at Birmingham Handsworth
-    var text = count + " report ready " + eol + " referrals " + ifBenefitType + benefitTypeString + ifSites + sitesString;
+    // var text = count + " report ready " + eol + " referrals " + ifBenefitType + benefitTypeString + ifSites + sitesString;
+    var text = count + " referrals";
 
     document.getElementById('filter-playback').innerText = text;
 

@@ -404,6 +404,24 @@ router.post('/status-alignment/archive/v1/status-filter2', function (req, res) {
 
 //archive colab
 
+router.post('/colab/archive/v1a/status-filter', function (req, res) {
+  
+  const status2 = req.session.data['status2']
+  req.session.data['status2']=''
+
+  if (status2 === 'list-1') {
+    res.redirect('/colab/archive/v1a/list-1')
+  } else if (status2 === 'list-2') {
+      res.redirect('/colab/archive/v1a/list-2')
+  } else if (status2 === 'list-3') {
+    res.redirect('/colab/archive/v1a/list-3')
+  } else {
+    res.redirect('/colab/archive/v1a/error')
+  }
+})
+
+//v1
+
 router.post('/colab/archive/v1/status-filter', function (req, res) {
   
   const status2 = req.session.data['status2']
@@ -417,6 +435,106 @@ router.post('/colab/archive/v1/status-filter', function (req, res) {
     res.redirect('/colab/archive/v1/list-3')
   } else {
     res.redirect('/colab/archive/v1/error')
+  }
+})
+
+//v2
+
+router.post('/colab/archive/v2/status-filter', function (req, res) {
+  
+  const status2 = req.session.data['status']
+  req.session.data['status']=''
+
+  if (status2 === 'list-1') {
+    res.redirect('/colab/archive/v2/list-1')
+  } else if (status2 === 'list-2') {
+      res.redirect('/colab/archive/v2/list-2')
+  } else if (status2 === 'list-3') {
+    res.redirect('/colab/archive/v2/list-3')
+  } else if (status2 === 'assigned') {
+    res.redirect('/colab/archive/v2/list-4')
+  } else if (status2 === 'assessment-booked') {
+    res.redirect('/colab/archive/v2/list-5')
+  } else if (status2 === 'report-ready') {
+    res.redirect('/colab/archive/v2/list-6')
+  } else {
+    res.redirect('/colab/archive/v2/error')
+  }
+})
+
+router.post('/colab/archive/v2/assign-list-review', function (req, res) {
+
+  const list = req.session.data['list']
+  req.session.data['list']=''
+
+  if (list === 'list1') {
+    res.redirect('/colab/archive/v2/confirmation-list1')
+  } else if (list === 'list2') {
+    res.redirect('/colab/archive/v2/confirmation-list2')
+  } else if (list === 'list3') {
+    res.redirect('/colab/archive/v2/confirmation-list3')
+  } else if (list === 'new-list') {
+    res.redirect('/colab/archive/v2/new-list')
+  } else {
+    res.redirect('/colab/archive/v2/error-list')
+  }
+})
+
+router.post('/colab/archive/v2/unassigned-list', function (req, res) {
+
+  const list = req.session.data['list']
+  req.session.data['list']=''
+
+  if (list === 'list1') {
+    res.redirect('/colab/archive/v2/confirmation-list-jared')
+  } else if (list === 'list2') {
+    res.redirect('/colab/archive/v2/confirmation-list-zoe')
+  } else if (list === 'list3') {
+    res.redirect('/colab/archive/v2/confirmation-list-akhtar')
+  } else if (list === 'new-list') {
+    res.redirect('/colab/archive/v2/new-list')
+  } else {
+    res.redirect('/colab/archive/v2/error-list')
+  }
+})
+
+//v3
+
+router.post('/colab/archive/v3/status-filter', function (req, res) {
+  
+  const status2 = req.session.data['status']
+  req.session.data['status']=''
+
+  if (status2 === 'list-1') {
+    res.redirect('/colab/archive/v3/list-1')
+  } else if (status2 === 'list-2') {
+      res.redirect('/colab/archive/v3/list-2')
+  } else if (status2 === 'list-3') {
+    res.redirect('/colab/archive/v3/list-3')
+  } else if (status2 === 'assigned') {
+    res.redirect('/colab/archive/v3/list-4')
+  } else if (status2 === 'assessment-booked') {
+    res.redirect('/colab/archive/v3/list-5')
+  } else if (status2 === 'report-ready') {
+    res.redirect('/colab/archive/v3/list-6')
+  } else {
+    res.redirect('/colab/archive/v3/error')
+  }
+})
+
+router.post('/colab/archive/v3/status-filter', function (req, res) {
+  
+  const status2 = req.session.data['status2']
+  req.session.data['status2']=''
+
+  if (status2 === 'list-1') {
+    res.redirect('/colab/archive/v3/list-1')
+  } else if (status2 === 'list-2') {
+      res.redirect('/colab/archive/v3/list-2')
+  } else if (status2 === 'list-3') {
+    res.redirect('/colab/archive/v3/list-3')
+  } else {
+    res.redirect('/colab/archive/v3/error')
   }
 })
 
@@ -1008,122 +1126,6 @@ router.post('/filter/screen-width/status-filter', function (req, res) {
 })
 
 // Collaboration
-
-router.post('/colab/v1/status-filter', function (req, res) {
-  
-  const status2 = req.session.data['status2']
-  req.session.data['status2']=''
-
-  if (status2 === 'list-1') {
-    res.redirect('/colab/v1/list-1')
-  } else if (status2 === 'list-2') {
-      res.redirect('/colab/v1/list-2')
-  } else if (status2 === 'list-3') {
-    res.redirect('/colab/v1/list-3')
-  } else {
-    res.redirect('/colab/v1/error')
-  }
-})
-
-//v2
-
-router.post('/colab/v2/status-filter', function (req, res) {
-  
-  const status2 = req.session.data['status']
-  req.session.data['status']=''
-
-  if (status2 === 'list-1') {
-    res.redirect('/colab/v2/list-1')
-  } else if (status2 === 'list-2') {
-      res.redirect('/colab/v2/list-2')
-  } else if (status2 === 'list-3') {
-    res.redirect('/colab/v2/list-3')
-  } else if (status2 === 'assigned') {
-    res.redirect('/colab/v2/list-4')
-  } else if (status2 === 'assessment-booked') {
-    res.redirect('/colab/v2/list-5')
-  } else if (status2 === 'report-ready') {
-    res.redirect('/colab/v2/list-6')
-  } else {
-    res.redirect('/colab/v2/error')
-  }
-})
-
-router.post('/colab/v2/assign-list-review', function (req, res) {
-
-  const list = req.session.data['list']
-  req.session.data['list']=''
-
-  if (list === 'list1') {
-    res.redirect('/colab/v2/confirmation-list1')
-  } else if (list === 'list2') {
-    res.redirect('/colab/v2/confirmation-list2')
-  } else if (list === 'list3') {
-    res.redirect('/colab/v2/confirmation-list3')
-  } else if (list === 'new-list') {
-    res.redirect('/colab/v2/new-list')
-  } else {
-    res.redirect('/colab/v2/error-list')
-  }
-})
-
-router.post('/colab/v2/unassigned-list', function (req, res) {
-
-  const list = req.session.data['list']
-  req.session.data['list']=''
-
-  if (list === 'list1') {
-    res.redirect('/colab/v2/confirmation-list-jared')
-  } else if (list === 'list2') {
-    res.redirect('/colab/v2/confirmation-list-zoe')
-  } else if (list === 'list3') {
-    res.redirect('/colab/v2/confirmation-list-akhtar')
-  } else if (list === 'new-list') {
-    res.redirect('/colab/v2/new-list')
-  } else {
-    res.redirect('/colab/v2/error-list')
-  }
-})
-
-//v3
-
-router.post('/colab/v3/status-filter', function (req, res) {
-  
-  const status2 = req.session.data['status']
-  req.session.data['status']=''
-
-  if (status2 === 'list-1') {
-    res.redirect('/colab/v3/list-1')
-  } else if (status2 === 'list-2') {
-      res.redirect('/colab/v3/list-2')
-  } else if (status2 === 'list-3') {
-    res.redirect('/colab/v3/list-3')
-  } else if (status2 === 'assigned') {
-    res.redirect('/colab/v3/list-4')
-  } else if (status2 === 'assessment-booked') {
-    res.redirect('/colab/v3/list-5')
-  } else if (status2 === 'report-ready') {
-    res.redirect('/colab/v3/list-6')
-  } else {
-    res.redirect('/colab/v3/error')
-  }
-})
-
-router.post('/colab/v3/status-filter', function (req, res) {
-  
-  const status2 = req.session.data['status2']
-  req.session.data['status2']=''
-
-  if (status2 === 'list-1') {
-    res.redirect('/colab/v3/list-1')
-  } else if (status2 === 'list-2') {
-      res.redirect('/colab/v3/list-2')
-  } else if (status2 === 'list-3') {
-    res.redirect('/colab/v3/list-3')
-  } else {
-    res.redirect('/colab/v3/error')
-  }
-})
 
 //v4
 

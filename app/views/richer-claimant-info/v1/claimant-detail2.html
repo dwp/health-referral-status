@@ -1,4 +1,4 @@
-{% extends "layout-key-details-assessment-extended.html" %}
+{% extends "layout-key-details-extended.html" %}
 
 {% block pageTitle %}
   Claimant details
@@ -12,7 +12,7 @@
 {% block content %}
 
 <div class="govuk-grid-row">
-    <div class="govuk-grid-column-two-thirds-from-desktop">
+    <div class="govuk-grid-column-two-thirds-from-desktop govuk-!-padding-right-9">
 
       <h1 class="govuk-heading-m">Personal details</h1>
 
@@ -22,7 +22,12 @@
             Preferred name
           </dt>
           <dd class="govuk-summary-list__value">
-            Sam
+            None
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a class="govuk-link" href="#">
+              Change<span class="govuk-visually-hidden"> name</span>
+            </a>
           </dd>
         </div>
         <div class="govuk-summary-list__row">
@@ -30,7 +35,12 @@
             Phone number
           </dt>
           <dd class="govuk-summary-list__value">
-            07799 000000
+            07799 997799
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a class="govuk-link" href="update-number">
+              Change<span class="govuk-visually-hidden"> name</span>
+            </a>
           </dd>
         </div>
         <div class="govuk-summary-list__row">
@@ -39,6 +49,11 @@
           </dt>
           <dd class="govuk-summary-list__value">
             N2 1XX
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a class="govuk-link" href="#">
+              Change<span class="govuk-visually-hidden"> name</span>
+            </a>
           </dd>
         </div>
       </dl>
@@ -67,7 +82,7 @@
             Benefit type
           </dt>
           <dd class="govuk-summary-list__value">
-            PIP
+            UC
           </dd>
         </div>
         <div class="govuk-summary-list__row">
@@ -91,7 +106,7 @@
             Case manager
           </dt>
           <dd class="govuk-summary-list__value">
-            Jared Mosely-Redman
+            Unassigned
           </dd>
         </div>
       </dl>
@@ -107,10 +122,7 @@
         <nav role="navigation" aria-labelledby="subsection-title">
           <ul class="govuk-list">
             <li>
-              <a href="https://dwp-health-assessments.herokuapp.com/pip-htl-1024-v3/assessment-type">Start assessment</a>
-            </li>
-            <li>
-              <a href="update-status-pip">Update status</a>
+              <a href="https://supporting-documents-service.herokuapp.com/v4/full-mvp/claimant-documents-buttons">View claimant documents</a>
             </li>
             <li>
               <a href="https://interaction-log.herokuapp.com/version-0-3-2/">View timeline</a>
@@ -118,18 +130,12 @@
             <li>
               <a href="https://interaction-log.herokuapp.com/version-0-3-2/referral">Add entry to timeline</a>
             </li>
-            <li>
-              <a href="https://supporting-documents-service.herokuapp.com/v4/full-mvp/claimant-documents-buttons">View claimant documents</a>
-            </li>
-            <li>
-              <a href="https://hummingbird-appointment-proto.herokuapp.com/2_location">Book, view, amend assessment</a>
-            </li>
-            <li>
-              <a href="assign-list-review">Move to another caseload</a>
-            </li>
+            <!--<li>
+              <a href="update-status">Update status</a>
+            </li>-->
           </ul>
         </nav>
-      </aside>
+      </aside> 
 
     </div>
 

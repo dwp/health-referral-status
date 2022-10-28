@@ -1,4 +1,4 @@
-{% extends "layout-key-details-extended.html" %}
+{% extends "layout-extended.html" %}
 
 {% block pageTitle %}
   Claimant details
@@ -12,68 +12,42 @@
 {% block content %}
 
 <div class="govuk-grid-row">
-    <div class="govuk-grid-column-two-thirds-from-desktop govuk-!-padding-right-9">
 
-      <h1 class="govuk-visually-hidden">Full list of claimant information</h1>
+  <!-- <div class="govuk-grid-column-full">
 
-      <h2 class="govuk-heading-m">Important information</h2>
-        <dl class="govuk-summary-list govuk-!-margin-bottom-9">
-         
-          <div class="govuk-summary-list__row">
-            <dt class="govuk-summary-list__key">
-              Special rules end of life
-            </dt>
-            <dd class="govuk-summary-list__value">
-              Yes
-            </dd>
-            <dd class="govuk-summary-list__actions">
-              <a class="govuk-link" href="#">
-                Change<span class="govuk-visually-hidden"> Special rules end of life</span>
-              </a>
-            </dd>
-          </div>
-          <div class="govuk-summary-list__row">
-            <dt class="govuk-summary-list__key">
-              Special rules end of life aware
-            </dt>
-            <dd class="govuk-summary-list__value">
-              No
-            </dd>
-            <dd class="govuk-summary-list__actions">
-              <a class="govuk-link" href="#">
-                Change<span class="govuk-visually-hidden"> Special rules end of life aware</span>
-              </a>
-            </dd>
-          </div>
-          <div class="govuk-summary-list__row">
-            <dt class="govuk-summary-list__key">
-              unacceptable behaviour
-            </dt>
-            <dd class="govuk-summary-list__value">
-              No
-            </dd>
-            <dd class="govuk-summary-list__actions">
-              <a class="govuk-link" href="#">
-                Change<span class="govuk-visually-hidden">unacceptable behaviour</span>
-              </a>
-            </dd>
-          </div>
-          <div class="govuk-summary-list__row">
-            <dt class="govuk-summary-list__key">
-              Mental health condition
-            </dt>
-            <dd class="govuk-summary-list__value">
-              No
-            </dd>
-            <dd class="govuk-summary-list__actions">
-              <a class="govuk-link" href="#">
-                Change<span class="govuk-visually-hidden">Mental health condition</span>
-              </a>
-            </dd>
-          </div>
-        </dl>
+    
+  </div> -->
 
-        <h2 class="govuk-heading-m">Personal details</h2>
+  <div class="govuk-grid-column-two-thirds-from-desktop govuk-!-padding-right-9">
+
+    <h1 class="govuk-visually-hidden">Full list of claimant information</h1>
+
+    <section class="new-key-details-bar" role="identifier" aria-label="Claimant name and identifier">
+      <dl class="new-key-details-bar__key-details">
+        <div class="new-key-details-bar__top-block">
+          <dt class="govuk-visually-hidden">Name:</dt>
+          <dd class="new-key-details-bar__name">Jane Doe</dd>
+    
+          <dt class="govuk-visually-hidden">National Insurance number:</dt>
+          <dd class="new-key-details-bar__nino">RN 00 04 26 D</dd>
+    
+        </div>
+    
+        <div class="new-key-details-bar__bottom-block">
+          <dt class="govuk-visually-hidden">Claimant markers:</dt>
+          <dd>
+            <strong class="govuk-tag govuk-tag--purple">Terminally ill</strong>
+            <!-- <strong class="govuk-tag govuk-tag--yellow">Additional support</strong> -->
+            <strong class="govuk-tag govuk-tag--green">Appointee</strong>
+            <!-- <strong class="govuk-tag govuk-tag--blue">Mental health condition</strong>
+            <strong class="govuk-tag govuk-tag--pink">Unacceptable behaviour</strong> -->
+            <strong class="govuk-tag govuk-tag--red">Deceased</strong>
+          </dd>
+        </div>
+      </dl>
+    </section>
+
+        <h2 class="govuk-heading-m govuk-!-margin-top-6">Personal details</h2>
         <dl class="govuk-summary-list govuk-!-margin-bottom-9">
           <div class="govuk-summary-list__row">
             <dt class="govuk-summary-list__key">

@@ -766,4 +766,114 @@ $govuk-assets-path: '/govuk/assets/';
 
 //End filter tags
 
+//New key detail bar
+
+.new-key-details-bar {
+  width: 1220px;
+}
+
+.new-key-details-bar .new-key-details-bar__key-details {
+  margin: 0 auto;
+  padding: 0px 30px 20px 0px;
+  position: relative;
+  font-family: "Arial";
+}
+
+@media (max-width: 670px) {
+  .new-key-details-bar .new-key-details-bar__key-details {
+    padding: 20px 15px;
+  }
+}
+
+.new-key-details-bar .new-key-details-bar__key-details * {
+  color: #000;
+}
+
+.new-key-details-bar .new-key-details-bar__key-details .new-key-details-bar__top-block::after,
+.new-key-details-bar .new-key-details-bar__key-details .new-key-details-bar__bottom-block::after {
+  clear: both;
+  content: ' ';
+  display: block;
+}
+
+.new-key-details-bar .new-key-details-bar__key-details .new-key-details-bar__bottom-block {
+  border-top: 1px solid rgba(255, 255, 255, 0.3);
+  content: ' ';
+  padding-top: 10px;
+  margin-top: 6px;
+}
+
+@media (max-width: 670px) {
+  .new-key-details-bar .new-key-details-bar__key-details .new-key-details-bar__bottom-block {
+    border: 0;
+  }
+}
+
+.new-key-details-bar .new-key-details-bar__key-details dd,
+.new-key-details-bar .new-key-details-bar__key-details dt {
+  float: left;
+  font-size: 19px;
+  margin-right: 5px;
+  margin-inline-start: 0;
+}
+
+@media (max-width: 670px) {
+  .new-key-details-bar .new-key-details-bar__key-details dd,
+  .new-key-details-bar .new-key-details-bar__key-details dt {
+    float: none;
+    font-size: 16px;
+    margin: 0;
+  }
+}
+
+.new-key-details-bar .new-key-details-bar__key-details dd {
+  margin-right: 20px;
+}
+
+.new-key-details-bar .new-key-details-bar__key-details .new-key-details-bar__bottom-block dd {
+  margin-right: 0;
+  margin-inline-start: 0;
+
+}
+
+@media (max-width: 670px) {
+  .new-key-details-bar .new-key-details-bar__key-details dd {
+    margin-bottom: 20px;
+  }
+  .new-key-details-bar .new-key-details-bar__key-details dd:last-of-type {
+    margin-bottom: 0;
+  }
+}
+
+.new-key-details-bar .new-key-details-bar__key-details .new-key-details-bar__name {
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 1.11111;
+  margin-right: 10px;
+}
+
+@media (max-width: 670px) {
+  .new-key-details-bar .new-key-details-bar__key-details .new-key-details-bar__name {
+    font-size: 24px;
+    line-height: 1.04167;
+    float: left;
+    margin: 0 5px 0 0;
+  }
+}
+
+.new-key-details-bar .new-key-details-bar__key-details .new-key-details-bar__nino {
+  font-size: 24px;
+  line-height: 1;
+  margin-top: 12px;
+}
+
+@media (max-width: 670px) {
+  .new-key-details-bar .new-key-details-bar__key-details .new-key-details-bar__nino {
+    font-size: 18px;
+    float: left;
+    margin: 5px 0 0 0;
+  }
+}
+
+//End new key detail bar
             

@@ -1249,6 +1249,65 @@ router.post('/richer-claimant-info/v1/unassigned-list', function (req, res) {
   }
 })
 
+//V2
+router.post('/richer-claimant-info/v2/status-filter', function (req, res) {
+  
+  const status2 = req.session.data['status']
+  req.session.data['status']=''
+
+  if (status2 === 'list-1') {
+    res.redirect('/richer-claimant-info/v2/list-1')
+  } else if (status2 === 'list-2') {
+      res.redirect('/richer-claimant-info/v2/list-2')
+  } else if (status2 === 'list-3') {
+    res.redirect('/richer-claimant-info/v2/list-3')
+  } else if (status2 === 'assigned') {
+    res.redirect('/richer-claimant-info/v2/list-4')
+  } else if (status2 === 'assessment-booked') {
+    res.redirect('/richer-claimant-info/v2/list-5')
+  } else if (status2 === 'report-ready') {
+    res.redirect('/richer-claimant-info/v2/list-6')
+  } else {
+    res.redirect('/richer-claimant-info/v2/error')
+  }
+})
+
+router.post('/richer-claimant-info/v2/assign-list-review', function (req, res) {
+
+  const list = req.session.data['list']
+  req.session.data['list']=''
+
+  if (list === 'list1') {
+    res.redirect('/richer-claimant-info/v2/confirmation-list1')
+  } else if (list === 'list2') {
+    res.redirect('/richer-claimant-info/v2/confirmation-list2')
+  } else if (list === 'list3') {
+    res.redirect('/richer-claimant-info/v2/confirmation-list3')
+  } else if (list === 'new-list') {
+    res.redirect('/richer-claimant-info/v2/new-list')
+  } else {
+    res.redirect('/richer-claimant-info/v2/error-list')
+  }
+})
+
+router.post('/richer-claimant-info/v2/unassigned-list', function (req, res) {
+
+  const list = req.session.data['list']
+  req.session.data['list']=''
+
+  if (list === 'list1') {
+    res.redirect('/richer-claimant-info/v2/confirmation-list-jared')
+  } else if (list === 'list2') {
+    res.redirect('/richer-claimant-info/v2/confirmation-list-zoe')
+  } else if (list === 'list3') {
+    res.redirect('/richer-claimant-info/v2/confirmation-list-akhtar')
+  } else if (list === 'new-list') {
+    res.redirect('/richer-claimant-info/v2/new-list')
+  } else {
+    res.redirect('/richer-claimant-info/v2/error-list')
+  }
+})
+
 
 //Branching bluesky
 

@@ -1103,6 +1103,28 @@ router.post('/filter/v3/status-filter', function (req, res) {
   }
 })
 
+router.post('/filter/v4/status-filter', function (req, res) {
+  
+  const status2 = req.session.data['status']
+  req.session.data['status']=''
+
+  if (status2 === 'list-1') {
+    res.redirect('/filter/v4/list-1')
+  } else if (status2 === 'list-2') {
+      res.redirect('/filter/v4/list-2')
+  } else if (status2 === 'list-3') {
+    res.redirect('/filter/v4/list-3')
+  } else if (status2 === 'assigned') {
+    res.redirect('/filter/v4/list-4')
+  } else if (status2 === 'hcp-review') {
+    res.redirect('/filter/v4/list-5')
+  } else if (status2 === 'report-ready') {
+    res.redirect('/filter/v4/list-6')
+  } else {
+    res.redirect('/filter/v4/error')
+  }
+})
+
 router.post('/filter/sort/status-filter', function (req, res) {
   
   const status2 = req.session.data['status']

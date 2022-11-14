@@ -1,4 +1,4 @@
-{% extends "layout-extended.html" %}
+{% extends "layout.html" %}
 
 {% block pageTitle %}
   Referral list
@@ -13,7 +13,7 @@
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
 
-      <form action="/filter/v3/status-filter" method="post" class="form">
+      <form action="/filter/archive/sort/status-filter" method="post" class="form">
 
         <div class="govuk-form-group">
           <fieldset class="govuk-fieldset" aria-describedby="contact-hint">
@@ -67,9 +67,9 @@
                 <div class="govuk-form-group">
                   <div class="govuk-radios--small">
                     <div class="govuk-radios__item">
-                      <input class="govuk-radios__input" id="status-1" name="status" type="radio" value="assigned">
+                      <input class="govuk-radios__input" id="status-1" name="status" type="radio" value="new">
                       <label class="govuk-label govuk-radios__label" for="status-1">
-                        Assigned (50)
+                        New (50)
                       </label>
                     </div>
                     <div class="govuk-radios__item">

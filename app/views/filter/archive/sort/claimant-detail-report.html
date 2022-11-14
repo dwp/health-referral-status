@@ -1,4 +1,4 @@
-{% extends "layout-key-details-extended.html" %}
+{% extends "layout-key-details-decision.html" %}
 
 {% block pageTitle %}
   Claimant details
@@ -22,7 +22,7 @@
             Preferred name
           </dt>
           <dd class="govuk-summary-list__value">
-            None
+            Sam
           </dd>
         </div>
         <div class="govuk-summary-list__row">
@@ -75,7 +75,7 @@
             Benefit type
           </dt>
           <dd class="govuk-summary-list__value">
-            UC
+            PIP
           </dd>
         </div>
         <div class="govuk-summary-list__row">
@@ -91,7 +91,7 @@
             Case manager
           </dt>
           <dd class="govuk-summary-list__value">
-            Unassigned
+            Zoe Hall
           </dd>
         </div>
       </dl>
@@ -107,6 +107,12 @@
         <nav role="navigation" aria-labelledby="subsection-title">
           <ul class="govuk-list">
             <li>
+              <a href="update-status-pip">Update status</a>
+            </li>
+            <li>
+              <a href="https://health-core-components.herokuapp.com/reports/reports_templates/PIP-PBR-20211026-v1/report-PBR-PIP-template">View report</a>
+            </li>
+            <li>
               <a href="https://supporting-documents-service.herokuapp.com/v4/full-mvp/claimant-documents-buttons">View claimant documents</a>
             </li>
             <li>
@@ -115,12 +121,15 @@
             <li>
               <a href="https://interaction-log.herokuapp.com/version-0-3-2/referral">Add entry to timeline</a>
             </li>
-            <!--<li>
-              <a href="update-status">Update status</a>
-            </li>-->
+            <!-- <li>
+              <a href="https://hummingbird-appointment-proto.herokuapp.com/2_location">Book, view, amend assessment</a>
+            </li> -->
+            <li>
+              <a href="assign-list-review">Move to another caseload</a>
+            </li>
           </ul>
         </nav>
-      </aside> 
+      </aside>
 
     </div>
 

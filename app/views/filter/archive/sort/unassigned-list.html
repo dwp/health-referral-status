@@ -1,11 +1,11 @@
-{% extends "layout-key-details-review-extended.html" %}
+{% extends "layout.html" %}
 
 {% block pageTitle %}
   Referral list
 {% endblock %}
 
 {% block beforeContent %}
-<a href="claimant-detail-review" class="govuk-back-link">Back</a>
+<a href="new-referrals" class="govuk-back-link">Back</a>
 {% endblock %}
 
 {% block content %}
@@ -13,13 +13,14 @@
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
 
-      <form action="/filter/screen-width/assign-list-review" method="post" class="form">
+      <form action="/filter/archive/sort/unassigned-list" method="post" class="form">
 
       <div class="govuk-form-group">
         <fieldset class="govuk-fieldset" aria-describedby="waste-hint">
           <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+            <span class="govuk-caption-l govuk-!-margin-bottom-2">New referrals to assign</span>
             <h1 class="govuk-fieldset__heading">
-              Which caseload do you want to assign this referral to?
+              Which caseload do you want to assign these referrals to?
             </h1>
           </legend>
           <div id="waste-hint" class="govuk-hint">

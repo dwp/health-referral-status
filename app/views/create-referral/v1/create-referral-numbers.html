@@ -1,0 +1,45 @@
+{% extends "layout-extended.html" %}
+
+{% block pageTitle %}
+  Referral list
+{% endblock %}
+
+{% block beforeContent %}
+<a href="create-referral-name" class="govuk-back-link">Back</a>
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      
+      <span class="govuk-caption-l govuk-!-margin-bottom-2">Create referral question 2 of X</span>
+      <h1 class="govuk-heading-l">
+        Enter the claimants identification details
+      </h1>
+
+      <div class="govuk-form-group">
+        <label class="govuk-label" for="ni-number">
+          National insurance number
+        </label>
+        <input class="govuk-input" id="ni-number" name="ni-number" type="text" spellcheck="false" autocomplete="ni-number">
+      </div>
+
+      <div class="govuk-form-group">
+        <label class="govuk-label" for="cr-number">
+          Customer reference number
+        </label>
+        <input class="govuk-input" id="cr-number" name="cr-number" type="text" spellcheck="false" autocomplete="cr-number">
+      </div>
+
+      <a href="create-referral-dob" aria-describedby="search-referral">
+        <button class="govuk-button" data-module="govuk-button">
+          Continue
+        </button>
+      </a>
+
+    </div>
+  </div>
+
+{% endblock %}

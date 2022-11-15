@@ -1,0 +1,53 @@
+{% extends "layout-extended.html" %}
+
+{% block pageTitle %}
+  Referral list
+{% endblock %}
+
+{% block beforeContent %}
+<a href="index" class="govuk-back-link">Back</a>
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      
+      <span class="govuk-caption-l govuk-!-margin-bottom-2">Create referral question 1 of X</span>
+      <h1 class="govuk-heading-l">
+        Enter the claimants name
+      </h1>
+
+      <div class="govuk-form-group">
+        <label class="govuk-label" for="first-name">
+          First Name
+        </label>
+        <input class="govuk-input" id="first-name" name="first-name" type="text" spellcheck="false" autocomplete="first-name">
+      </div>
+
+      <div class="govuk-form-group">
+        <label class="govuk-label" for="surname">
+          Surname
+        </label>
+        <input class="govuk-input" id="surname" name="surname" type="text" spellcheck="false" autocomplete="surname">
+      </div>
+
+      <div class="govuk-form-group">
+        <label class="govuk-label" for="preferred-name">
+          Preferred name
+        </label>
+        <input class="govuk-input" id="preferred-name" name="preferred-name" type="text" spellcheck="false" autocomplete="preferred-name">
+      </div>
+
+
+      <a href="create-referral-numbers" aria-describedby="search-referral">
+        <button class="govuk-button" data-module="govuk-button">
+          Continue
+        </button>
+      </a>
+
+    </div>
+  </div>
+
+{% endblock %}

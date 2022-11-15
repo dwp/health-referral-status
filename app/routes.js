@@ -562,6 +562,38 @@ router.post('/filter/archive/sort/status-filter', function (req, res) {
   }
 })
 
+router.post('/filter/archive/v1b/status-filter', function (req, res) {
+  
+  const status2 = req.session.data['status']
+  req.session.data['status']=''
+
+  if (status2 === 'new') {
+    res.redirect('/filter/archive/v1b/list-4')
+  } else if (status2 === 'assessment-booked') {
+    res.redirect('/filter/archive/v1b/list-5')
+  } else if (status2 === 'hcp-review') {
+    res.redirect('/filter/archive/v1b/list-6')
+  } else {
+    res.redirect('/filter/archive/v1b/error')
+  }
+})
+
+router.post('/filter/archive/v1a/status-filter', function (req, res) {
+  
+  const status2 = req.session.data['status']
+  req.session.data['status']=''
+
+  if (status2 === 'new') {
+    res.redirect('/filter/archive/v1a/list-4')
+  } else if (status2 === 'assessment-booked') {
+    res.redirect('/filter/archive/v1a/list-5')
+  } else if (status2 === 'hcp-review') {
+    res.redirect('/filter/archive/v1a/list-6')
+  } else {
+    res.redirect('/filter/archive/v1a/error')
+  }
+})
+
 //End of archive
 
 // Branching v1
@@ -1041,37 +1073,6 @@ router.post('/next-action/v4/status-filter', function (req, res) {
 })
 
 // Filter
-router.post('/filter/v1b/status-filter', function (req, res) {
-  
-  const status2 = req.session.data['status']
-  req.session.data['status']=''
-
-  if (status2 === 'new') {
-    res.redirect('/filter/v1b/list-4')
-  } else if (status2 === 'assessment-booked') {
-    res.redirect('/filter/v1b/list-5')
-  } else if (status2 === 'hcp-review') {
-    res.redirect('/filter/v1b/list-6')
-  } else {
-    res.redirect('/filter/v1b/error')
-  }
-})
-
-router.post('/filter/v1a/status-filter', function (req, res) {
-  
-  const status2 = req.session.data['status']
-  req.session.data['status']=''
-
-  if (status2 === 'new') {
-    res.redirect('/filter/v1a/list-4')
-  } else if (status2 === 'assessment-booked') {
-    res.redirect('/filter/v1a/list-5')
-  } else if (status2 === 'hcp-review') {
-    res.redirect('/filter/v1a/list-6')
-  } else {
-    res.redirect('/filter/v1a/error')
-  }
-})
 
 router.post('/filter/v1c/status-filter', function (req, res) {
   

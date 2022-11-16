@@ -7,7 +7,7 @@
 
 {% block beforeContent %}
 
-<a href="javascript:history.back()" class="govuk-back-link">Back</a>
+<a href="incomplete-list" class="govuk-back-link">Back</a>
 {% endblock %}
 
 {% block content %}
@@ -49,6 +49,19 @@
     </section>
 
 
+    <div class="govuk-notification-banner govuk-notification-banner--success" role="alert" aria-labelledby="govuk-notification-banner-title" data-module="govuk-notification-banner">
+      <div class="govuk-notification-banner__header">
+        <h2 class="govuk-notification-banner__title" id="govuk-notification-banner-title">
+          Success
+        </h2>
+      </div>
+      <div class="govuk-notification-banner__content">
+        <h3 class="govuk-notification-banner__heading">
+          Claimant details updated
+        </h3>
+        <p class="govuk-body">Personal details has been updated.</p>
+      </div>
+    </div>
 
     <h2 class="govuk-heading-m govuk-!-margin-top-6">Consent</h2>
     <dl class="govuk-summary-list govuk-!-margin-bottom-9">
@@ -59,11 +72,7 @@
         <dd class="govuk-summary-list__value">
           Yes
         </dd>
-        <dd class="govuk-summary-list__actions">
-          <a class="govuk-link" href="#">
-            Change<span class="govuk-visually-hidden"> Contact GP</span>
-          </a>
-        </dd>
+       
       </div>
       <div class="govuk-summary-list__row">
         <dt class="govuk-summary-list__key">
@@ -72,13 +81,19 @@
         <dd class="govuk-summary-list__value">
           Yes
         </dd>
-        <dd class="govuk-summary-list__actions">
-          <a class="govuk-link" href="#">
-            Change<span class="govuk-visually-hidden"> Outcome of recommmendation</span>
-          </a>
-        </dd>
+       
+
+        
       </div>
+
+    
     </dl>
+
+    <p style="margin-top:-45px;">  <a class="govuk-link" href="change-sections/referral-consent">
+      Change
+       </a></p> 
+
+  
 
         <h2 class="govuk-heading-m">Personal details</h2>
         <dl class="govuk-summary-list govuk-!-margin-bottom-9">
@@ -89,11 +104,7 @@
             <dd class="govuk-summary-list__value">
               None
             </dd>
-            <dd class="govuk-summary-list__actions">
-              <a class="govuk-link" href="#">
-                Change<span class="govuk-visually-hidden"> Preferred name</span>
-              </a>
-            </dd>
+           
           </div>
           <div class="govuk-summary-list__row">
             <dt class="govuk-summary-list__key">
@@ -102,11 +113,7 @@
             <dd class="govuk-summary-list__value">
               31 December 1969
             </dd>
-            <dd class="govuk-summary-list__actions">
-              <a class="govuk-link" href="#">
-                Change<span class="govuk-visually-hidden"> Date of birth</span>
-              </a>
-            </dd>
+            
           </div>
           <div class="govuk-summary-list__row">
             <dt class="govuk-summary-list__key">
@@ -115,11 +122,7 @@
             <dd class="govuk-summary-list__value">
               22 February 2022
             </dd>
-            <dd class="govuk-summary-list__actions">
-              <a class="govuk-link" href="#">
-                Change<span class="govuk-visually-hidden"> Date of death</span>
-              </a>
-            </dd>
+            
           </div>
           <div class="govuk-summary-list__row">
             <dt class="govuk-summary-list__key">
@@ -128,11 +131,7 @@
             <dd class="govuk-summary-list__value">
               1 Test Street<br/>Test City<br/>XX11 1XX
             </dd>
-            <dd class="govuk-summary-list__actions">
-              <a class="govuk-link" href="#">
-                Change<span class="govuk-visually-hidden">Correspondence address</span>
-              </a>
-            </dd>
+           
           </div>
           <div class="govuk-summary-list__row">
             <dt class="govuk-summary-list__key">
@@ -141,11 +140,7 @@
             <dd class="govuk-summary-list__value">
               none
             </dd>
-            <dd class="govuk-summary-list__actions">
-              <a class="govuk-link" href="#">
-                Change<span class="govuk-visually-hidden">Other address</span>
-              </a>
-            </dd>
+           
           </div>
           <div class="govuk-summary-list__row">
             <dt class="govuk-summary-list__key">
@@ -154,11 +149,7 @@
             <dd class="govuk-summary-list__value">
               07000 000000
             </dd>
-            <dd class="govuk-summary-list__actions">
-              <a class="govuk-link" href="update-number">
-                Change<span class="govuk-visually-hidden"> Home phone number</span>
-              </a>
-            </dd>
+            
           </div>
           <div class="govuk-summary-list__row">
             <dt class="govuk-summary-list__key">
@@ -167,11 +158,7 @@
             <dd class="govuk-summary-list__value">
               07000 000000
             </dd>
-            <dd class="govuk-summary-list__actions">
-              <a class="govuk-link" href="#">
-                Change<span class="govuk-visually-hidden">Mobile phone number</span>
-              </a>
-            </dd>
+            
           </div>
           <div class="govuk-summary-list__row">
             <dt class="govuk-summary-list__key">
@@ -180,11 +167,7 @@
             <dd class="govuk-summary-list__value">
               07000 000000
             </dd>
-            <dd class="govuk-summary-list__actions">
-              <a class="govuk-link" href="#">
-                Change<span class="govuk-visually-hidden">Text phone number</span>
-              </a>
-            </dd>
+           
           </div>
           <div class="govuk-summary-list__row">
             <dt class="govuk-summary-list__key">
@@ -193,13 +176,13 @@
             <dd class="govuk-summary-list__value">
               test.email@example.com
             </dd>
-            <dd class="govuk-summary-list__actions">
-              <a class="govuk-link" href="#">
-                Change<span class="govuk-visually-hidden">Email address</span>
-              </a>
-            </dd>
+            
           </div>
           </dl>
+
+          <p style="margin-top:-45px;">  <a class="govuk-link" href="change-sections/referral-personal-details">
+            Change
+             </a></p> 
 
           <h2 class="govuk-heading-m">Contact preferences</h2>
           <dl class="govuk-summary-list govuk-!-margin-bottom-9">
@@ -212,11 +195,7 @@
               <br>
               Hearing loop
               </dd>
-              <dd class="govuk-summary-list__actions">
-                <a class="govuk-link" href="#">
-                  Change<span class="govuk-visually-hidden">Reasonable adjustments</span>
-                </a>
-              </dd>
+             
             </div>
             <div class="govuk-summary-list__row">
               <dt class="govuk-summary-list__key">
@@ -226,9 +205,7 @@
                 None
               </dd>
               <dd class="govuk-summary-list__actions">
-                <a class="govuk-link" href="#">
-                  Change<span class="govuk-visually-hidden"> Alternative formats</span>
-                </a>
+               
               </dd>
             </div>
             <div class="govuk-summary-list__row">
@@ -238,11 +215,7 @@
               <dd class="govuk-summary-list__value">
                 none
               </dd>
-              <dd class="govuk-summary-list__actions">
-                <a class="govuk-link" href="#">
-                  Change<span class="govuk-visually-hidden"> HCP preference</span>
-                </a>
-              </dd>
+              
             </div>
             <div class="govuk-summary-list__row">
               <dt class="govuk-summary-list__key">
@@ -251,13 +224,12 @@
               <dd class="govuk-summary-list__value">
                 Email
               </dd>
-              <dd class="govuk-summary-list__actions">
-                <a class="govuk-link" href="#">
-                  Change<span class="govuk-visually-hidden"> Preferred contact method</span>
-                </a>
-              </dd>
+            
             </div>
             </dl>
+            <p style="margin-top:-45px;">  <a class="govuk-link" href="change-sections/contact-preferences">
+              Change
+               </a></p> 
 
         <h2 class="govuk-heading-m">Representation and support</h2>
         <dl class="govuk-summary-list govuk-!-margin-bottom-9">
@@ -268,11 +240,7 @@
             <dd class="govuk-summary-list__value">
               Corporate Acting Body
             </dd>
-            <dd class="govuk-summary-list__actions">
-              <a class="govuk-link" href="#">
-                Change<span class="govuk-visually-hidden">Appointee</span>
-              </a>
-            </dd>
+           
           </div>
           <div class="govuk-summary-list__row">
             <dt class="govuk-summary-list__key">
@@ -281,11 +249,7 @@
             <dd class="govuk-summary-list__value">
               Age UK
             </dd>
-            <dd class="govuk-summary-list__actions">
-              <a class="govuk-link" href="#">
-                Change<span class="govuk-visually-hidden"> Organisation name</span>
-              </a>
-            </dd>
+            
           </div>
           <div class="govuk-summary-list__row">
             <dt class="govuk-summary-list__key">
@@ -294,11 +258,7 @@
             <dd class="govuk-summary-list__value">
               Janette Rafe
             </dd>
-            <dd class="govuk-summary-list__actions">
-              <a class="govuk-link" href="#">
-                Change<span class="govuk-visually-hidden"> Contact name</span>
-              </a>
-            </dd>
+           
           </div>
           <div class="govuk-summary-list__row">
             <dt class="govuk-summary-list__key">
@@ -307,11 +267,7 @@
             <dd class="govuk-summary-list__value">
               10 Test Street<br/>Test City<br/>XX12 1XX
             </dd>
-            <dd class="govuk-summary-list__actions">
-              <a class="govuk-link" href="#">
-                Change<span class="govuk-visually-hidden"> Address</span>
-              </a>
-            </dd>
+            
           </div>
           <div class="govuk-summary-list__row">
             <dt class="govuk-summary-list__key">
@@ -320,11 +276,7 @@
             <dd class="govuk-summary-list__value">
               07000 000000
             </dd>
-            <dd class="govuk-summary-list__actions">
-              <a class="govuk-link" href="#">
-                Change<span class="govuk-visually-hidden">Phone number</span>
-              </a>
-            </dd>
+           
           </div>
           <div class="govuk-summary-list__row">
             <dt class="govuk-summary-list__key">
@@ -333,13 +285,12 @@
             <dd class="govuk-summary-list__value">
               test.email@example.com
             </dd>
-            <dd class="govuk-summary-list__actions">
-              <a class="govuk-link" href="#">
-                Change<span class="govuk-visually-hidden">Email address</span>
-              </a>
-            </dd>
+            
           </div>
         </dl>
+        <p style="margin-top:-45px;">  <a class="govuk-link" href="change-sections/representation-support">
+          Change
+           </a></p> 
 
         <h2 class="govuk-heading-m">GP details</h2>
         <dl class="govuk-summary-list govuk-!-margin-bottom-9">
@@ -350,11 +301,7 @@
             <dd class="govuk-summary-list__value">
               Dr T Test
             </dd>
-            <dd class="govuk-summary-list__actions">
-              <a class="govuk-link" href="#">
-                Change<span class="govuk-visually-hidden"> Named GP</span>
-              </a>
-            </dd>
+            
           </div>
           <div class="govuk-summary-list__row">
             <dt class="govuk-summary-list__key">
@@ -363,11 +310,7 @@
             <dd class="govuk-summary-list__value">
               1 Test Surgery<br/>Test City<br/>XX11 1XX
             </dd>
-            <dd class="govuk-summary-list__actions">
-              <a class="govuk-link" href="#">
-                Change<span class="govuk-visually-hidden"> GP Address</span>
-              </a>
-            </dd>
+           
           </div>
           <div class="govuk-summary-list__row">
             <dt class="govuk-summary-list__key">
@@ -376,11 +319,7 @@
             <dd class="govuk-summary-list__value">
               09000 000000
             </dd>
-            <dd class="govuk-summary-list__actions">
-              <a class="govuk-link" href="#">
-                Change<span class="govuk-visually-hidden"> GP Phone number</span>
-              </a>
-            </dd>
+           
           </div>
           <div class="govuk-summary-list__row">
             <dt class="govuk-summary-list__key">
@@ -389,13 +328,12 @@
             <dd class="govuk-summary-list__value">
               test.surgery@example.com
             </dd>
-            <dd class="govuk-summary-list__actions">
-              <a class="govuk-link" href="#">
-                Change<span class="govuk-visually-hidden"> GP email address</span>
-              </a>
-            </dd>
+           
           </div>
         </dl>
+        <p style="margin-top:-45px;">  <a class="govuk-link" href="change-sections/gp-details">
+          Change
+           </a></p> 
 
         <h2 class="govuk-heading-m">Other specialist or medical contacts</h2>
         <dl class="govuk-summary-list govuk-!-margin-bottom-9">
@@ -406,11 +344,7 @@
             <dd class="govuk-summary-list__value">
               Mr B Test
             </dd>
-            <dd class="govuk-summary-list__actions">
-              <a class="govuk-link" href="#">
-                Change<span class="govuk-visually-hidden"> Other medical professional name</span>
-              </a>
-            </dd>
+            
           </div>
           <div class="govuk-summary-list__row">
             <dt class="govuk-summary-list__key">
@@ -419,11 +353,7 @@
             <dd class="govuk-summary-list__value">
               Consultant Rheumatologist
             </dd>
-            <dd class="govuk-summary-list__actions">
-              <a class="govuk-link" href="#">
-                Change<span class="govuk-visually-hidden"> Profession</span>
-              </a>
-            </dd>
+           
           </div>
           <div class="govuk-summary-list__row">
             <dt class="govuk-summary-list__key">
@@ -432,11 +362,7 @@
             <dd class="govuk-summary-list__value">
               1 Test Hospital<br/>Test City<br/>XX11 1XX
             </dd>
-            <dd class="govuk-summary-list__actions">
-              <a class="govuk-link" href="#">
-                Change<span class="govuk-visually-hidden"> address</span>
-              </a>
-            </dd>
+           
           </div>
           <div class="govuk-summary-list__row">
             <dt class="govuk-summary-list__key">
@@ -445,11 +371,7 @@
             <dd class="govuk-summary-list__value">
               09000 000000
             </dd>
-            <dd class="govuk-summary-list__actions">
-              <a class="govuk-link" href="#">
-                Change<span class="govuk-visually-hidden">Phone number</span>
-              </a>
-            </dd>
+           
           </div>
           <div class="govuk-summary-list__row">
             <dt class="govuk-summary-list__key">
@@ -458,13 +380,12 @@
             <dd class="govuk-summary-list__value">
               test.surgery@example.com
             </dd>
-            <dd class="govuk-summary-list__actions">
-              <a class="govuk-link" href="#">
-                Change<span class="govuk-visually-hidden">email address</span>
-              </a>
-            </dd>
+           
           </div>
         </dl>
+        <p style="margin-top:-45px;">  <a class="govuk-link" href="change-sections/medical-specialist">
+          Change
+           </a></p> 
 
         <h2 class="govuk-heading-m">Case details</h2>
 

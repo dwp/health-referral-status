@@ -1,0 +1,66 @@
+{% extends "layout-extended.html" %}
+
+{% block pageTitle %}
+  Referral list
+{% endblock %}
+
+{% block beforeContent %}
+
+<a href="javascript:history.back()" class="govuk-back-link">Back</a>
+
+
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+     
+
+      <div class="govuk-form-group">
+        <fieldset class="govuk-fieldset" aria-describedby="waste-hint">
+          <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+            <h2 class="govuk-fieldset__heading">
+              Reasonable adjustments
+            </h2>
+          </legend>
+          <div id="adjustment-hint" class="govuk-hint">
+            Select all that apply.
+          </div>
+          <div class="govuk-checkboxes" data-module="govuk-checkboxes">
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="adjustment" name="adjustment" type="checkbox" value="textphone" checked>
+              <label class="govuk-label govuk-checkboxes__label" for="adjustment">
+                Textphone
+              </label>
+            </div>
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="adjustment-2" name="adjustment" type="checkbox" value="hearing loop" checked>
+              <label class="govuk-label govuk-checkboxes__label" for="adjustment-2">
+                Hearing loop
+              </label>
+            </div>
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="adjustment-3" name="adjustment" type="checkbox" value="other">
+              <label class="govuk-label govuk-checkboxes__label" for="adjustment-3">
+                Other adjustment type
+              </label>
+            </div>
+          </div>
+      
+        </fieldset>
+      </div>
+
+
+     
+
+      <a href="../claimant-detail-assigned2-updated" aria-describedby="search-referral">
+        <button class="govuk-button" data-module="govuk-button">
+          Continue
+        </button>
+      </a>
+
+    </div>
+  </div>
+
+{% endblock %}

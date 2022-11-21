@@ -43,6 +43,9 @@
           </tr>
         </thead>
         <tbody class="govuk-table__body">
+
+          {% if  (data['where'] === 'tresco') and (data['benefit-type'] === 'UC' || (data['benefit-type'] && data['benefit-type'].includes('UC') %)
+      
             <tr class="govuk-table__row govuk-table__row--selected">
             <td class="govuk-table__cell">
               <div class="govuk-checkboxes__item govuk-checkboxes--small moj-multi-select__checkbox">
@@ -60,6 +63,7 @@
             <td class="govuk-table__cell">Tresco House</td>
           </tr>
        
+          {% endif %} 
 
           {% if  (data['where'] === 'tresco') and (data['benefit-type'] != 'UC') and (data['benefit-type'] != 'PIP') %} 
           <tr class="govuk-table__row">

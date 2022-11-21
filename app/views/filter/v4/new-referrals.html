@@ -14,7 +14,13 @@
     <div class="govuk-grid-column-full">
 
       <h1 class="govuk-heading-l">
-        New referrals to assign  {{ data['where'] }}   {{ data['benefit-type'] }} 
+        New referrals to assign  {{ data['where'] }}   {{ data['benefit-type'] }}   
+
+        {% for feature in data['benefit-type'] %}
+        {{ feature }}
+      {% else %}
+        <li>No features selected</li>
+      {% endfor %}
       </h1>
 
       <table class="govuk-table" data-module="moj-multi-select" data-multi-select-checkbox="#select-all">

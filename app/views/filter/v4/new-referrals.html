@@ -14,13 +14,9 @@
     <div class="govuk-grid-column-full">
 
       <h1 class="govuk-heading-l">
-        New referrals to assign  {{ data['where'] }}   {{ data['benefit-type'] }}   
+        New referrals to assign  
 
-        {% for feature in data['benefit-type'] %}
-        {{ feature }}
-      {% else %}
-        <li>No features selected</li>
-      {% endfor %}
+       
       </h1>
 
       <table class="govuk-table" data-module="moj-multi-select" data-multi-select-checkbox="#select-all">
@@ -43,9 +39,7 @@
           </tr>
         </thead>
         <tbody class="govuk-table__body">
-
-          {% if  (data['where'] === 'tresco') and (data['benefit-type'] === 'UC' || (data['benefit-type'] && data['benefit-type'].includes('UC') %)
-      
+          {% if (data['where'] === 'tresco') and (data['benefit-type'] === 'UC' or (data['benefit-type'] and data['benefit-type'].includes('UC'))) %}
             <tr class="govuk-table__row govuk-table__row--selected">
             <td class="govuk-table__cell">
               <div class="govuk-checkboxes__item govuk-checkboxes--small moj-multi-select__checkbox">
@@ -57,7 +51,7 @@
             </td>
             <td class="govuk-table__cell"><a href="#">John Doe</a></td>
             <td class="govuk-table__cell">RN 00 01 23 A</td>
-            <td class="govuk-table__cell">UC {{ data ['benefit-type'] | first }}</td>
+            <td class="govuk-table__cell">UC</td>
             <td class="govuk-table__cell">1 Feb 2021</td>
             <td class="govuk-table__cell">Yes</td>
             <td class="govuk-table__cell">Tresco House</td>
@@ -65,7 +59,7 @@
        
           {% endif %} 
 
-          {% if  (data['where'] === 'tresco') and (data['benefit-type'] != 'UC') and (data['benefit-type'] != 'PIP') %} 
+          {% if (data['where'] === 'tresco') and (data['benefit-type'] === 'ESA' or (data['benefit-type'] and data['benefit-type'].includes('ESA'))) %}
           <tr class="govuk-table__row">
             <td class="govuk-table__cell">
               <div class="govuk-checkboxes__item govuk-checkboxes--small moj-multi-select__checkbox">
@@ -85,7 +79,7 @@
           </tr>
           {% endif %} 
 
-          {% if  (data['where'] === 'tresco') and (data['benefit-type'] != 'ESA') and (data['benefit-type'] != 'ESA') %} 
+          {% if (data['where'] === 'tresco') and (data['benefit-type'] === 'PIP' or (data['benefit-type'] and data['benefit-type'].includes('PIP'))) %}
           <tr class="govuk-table__row">
             <td class="govuk-table__cell">
               <div class="govuk-checkboxes__item govuk-checkboxes--small moj-multi-select__checkbox">
@@ -104,7 +98,7 @@
           </tr>
           {% endif %} 
 
-          {% if  (data['where'] === 'tresco') and (data['benefit-type'] != 'ESA') and (data['benefit-type'] != 'ESA') %} 
+          {% if (data['where'] === 'tresco') and (data['benefit-type'] === 'PIP' or (data['benefit-type'] and data['benefit-type'].includes('PIP'))) %}
           <tr class="govuk-table__row">
             <td class="govuk-table__cell">
               <div class="govuk-checkboxes__item govuk-checkboxes--small moj-multi-select__checkbox">
@@ -124,7 +118,7 @@
           {% endif %} 
 
 
-          {% if  (data['where'] === 'tresco') and (data['benefit-type'] != 'ESA') and (data['benefit-type'] != 'PIP') %} 
+          {% if (data['where'] === 'tresco') and (data['benefit-type'] === 'UC' or (data['benefit-type'] and data['benefit-type'].includes('UC'))) %}
           <tr class="govuk-table__row">
             <td class="govuk-table__cell">
               <div class="govuk-checkboxes__item govuk-checkboxes--small moj-multi-select__checkbox">
@@ -144,7 +138,7 @@
           {% endif %} 
 
 
-          {% if  (data['where'] === 'handsworth') and (data['benefit-type'] != 'ESA') and (data['benefit-type'] != 'UC') %} 
+          {% if (data['where'] === 'handsworth') and (data['benefit-type'] === 'PIP' or (data['benefit-type'] and data['benefit-type'].includes('PIP'))) %}
           <tr class="govuk-table__row">
             <td class="govuk-table__cell">
               <div class="govuk-checkboxes__item govuk-checkboxes--small moj-multi-select__checkbox">
@@ -163,8 +157,7 @@
           </tr>
           {% endif %} 
 
-
-          {% if  (data['where'] === 'handsworth') and (data['benefit-type'] != 'ESA') and (data['benefit-type'] != 'PIP') %} 
+          {% if (data['where'] === 'handsworth') and (data['benefit-type'] === 'UC' or (data['benefit-type'] and data['benefit-type'].includes('UC'))) %}
           <tr class="govuk-table__row">
             <td class="govuk-table__cell">
               <div class="govuk-checkboxes__item govuk-checkboxes--small moj-multi-select__checkbox">
@@ -183,7 +176,7 @@
           </tr>
           {% endif %} 
 
-          {% if  (data['where'] === 'handsworth') and (data['benefit-type'] != 'UC') and (data['benefit-type'] != 'PIP') %} 
+          {% if (data['where'] === 'handworth') and (data['benefit-type'] === 'ESA' or (data['benefit-type'] and data['benefit-type'].includes('ESA'))) %}
           <tr class="govuk-table__row">
             <td class="govuk-table__cell">
               <div class="govuk-checkboxes__item govuk-checkboxes--small moj-multi-select__checkbox">
@@ -203,7 +196,7 @@
           {% endif %} 
 
 
-          {% if  (data['where'] === 'handsworth') and (data['benefit-type'] != 'ESA') and (data['benefit-type'] != 'PIP') %} 
+          {% if (data['where'] === 'handsworth') and (data['benefit-type'] === 'UC' or (data['benefit-type'] and data['benefit-type'].includes('UC'))) %}
           <tr class="govuk-table__row">
             <td class="govuk-table__cell">
               <div class="govuk-checkboxes__item govuk-checkboxes--small moj-multi-select__checkbox">

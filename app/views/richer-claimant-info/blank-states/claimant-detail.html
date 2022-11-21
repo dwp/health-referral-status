@@ -6,7 +6,7 @@
 
 
 {% block beforeContent %}
-<a href="start" class="govuk-back-link">Back</a>
+<a href="javascript:history.back()" class="govuk-back-link">Back</a>
 {% endblock %}
 
 {% block content %}
@@ -47,6 +47,67 @@
       </dl>
     </section>
 
+    
+
+    <h2 class="govuk-heading-m govuk-!-margin-top-6">Important information</h2>
+    <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+     
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Special rules end of life
+        </dt>
+        <dd class="govuk-summary-list__value">
+          Yes
+        </dd>
+        <dd class="govuk-summary-list__actions">
+          <a class="govuk-link" href="#">
+            Change<span class="govuk-visually-hidden"> Special rules end of life</span>
+          </a>
+        </dd>
+      </div>
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Special rules end of life aware
+        </dt>
+        <dd class="govuk-summary-list__value">
+          No
+        </dd>
+        <dd class="govuk-summary-list__actions">
+          <a class="govuk-link" href="#">
+            Change<span class="govuk-visually-hidden"> Special rules end of life aware</span>
+          </a>
+        </dd>
+      </div>
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Unacceptable behaviour
+        </dt>
+        <dd class="govuk-summary-list__value">
+          No
+        </dd>
+        <dd class="govuk-summary-list__actions">
+          <a class="govuk-link" href="#">
+            Change<span class="govuk-visually-hidden">unacceptable behaviour</span>
+          </a>
+        </dd>
+      </div>
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Mental health condition
+        </dt>
+        <dd class="govuk-summary-list__value">
+          No
+        </dd>
+        <dd class="govuk-summary-list__actions">
+          <a class="govuk-link" href="#">
+            Change<span class="govuk-visually-hidden">Mental health condition</span>
+          </a>
+        </dd>
+      </div>
+    </dl>
+
+
+
 
 
     <h2 class="govuk-heading-m govuk-!-margin-top-6">Consent</h2>
@@ -60,20 +121,7 @@
         </dd>
         <dd class="govuk-summary-list__actions">
           <a class="govuk-link" href="#">
-            Add<span class="govuk-visually-hidden"> Contact GP</span>
-          </a>
-        </dd>
-      </div>
-      <div class="govuk-summary-list__row">
-        <dt class="govuk-summary-list__key">
-          Outcome of recommmendation
-        </dt>
-        <dd class="govuk-summary-list__value">
-          Yes
-        </dd>
-        <dd class="govuk-summary-list__actions">
-          <a class="govuk-link" href="#">
-            Add<span class="govuk-visually-hidden"> Outcome of recommmendation</span>
+            Change<span class="govuk-visually-hidden"> Contact GP</span>
           </a>
         </dd>
       </div>
@@ -102,9 +150,7 @@
               31 December 1969
             </dd>
             <dd class="govuk-summary-list__actions">
-              <a class="govuk-link" href="#">
-                Change<span class="govuk-visually-hidden"> Date of birth</span>
-              </a>
+
             </dd>
           </div>
           <div class="govuk-summary-list__row">
@@ -129,13 +175,13 @@
             </dd>
             <dd class="govuk-summary-list__actions">
               <a class="govuk-link" href="#">
-                Add<span class="govuk-visually-hidden">Correspondence address</span>
+                Add<span class="govuk-visually-hidden">Residential address</span>
               </a>
             </dd>
           </div>
           <div class="govuk-summary-list__row">
             <dt class="govuk-summary-list__key">
-              Other address
+              Correspondence address
             </dt>
             <dd class="govuk-summary-list__value">
 

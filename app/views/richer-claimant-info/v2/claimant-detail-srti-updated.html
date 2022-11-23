@@ -6,7 +6,7 @@
 
 
 {% block beforeContent %}
-<a href="javascript:history.back()" class="govuk-back-link">Back</a>
+<a href="list-1" class="govuk-back-link">Back</a>
 
 {% endblock %}
 
@@ -16,6 +16,20 @@
 
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds-from-desktop govuk-!-padding-right-9">
+
+    <div class="govuk-notification-banner govuk-notification-banner--success" role="alert" aria-labelledby="govuk-notification-banner-title" data-module="govuk-notification-banner">
+      <div class="govuk-notification-banner__header">
+        <h2 class="govuk-notification-banner__title" id="govuk-notification-banner-title">
+          Success
+        </h2>
+      </div>
+      <div class="govuk-notification-banner__content">
+        <h3 class="govuk-notification-banner__heading">
+          Claimant details updated
+        </h3>
+        <p class="govuk-body">Personal details updated.</p>
+      </div>
+    </div>
 
     <h2 class="govuk-heading-m">Important information</h2>
     <dl class="govuk-summary-list govuk-!-margin-bottom-9">

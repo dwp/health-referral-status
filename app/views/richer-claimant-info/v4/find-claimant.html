@@ -1,11 +1,10 @@
-{% extends "layout-extended.html" %}
-
+{% extends "richer-claimant-info/v4/nav/layout-find-claimant.html" %}
 {% block pageTitle %}
   Referral list
 {% endblock %}
 
 {% block beforeContent %}
-<a href="index" class="govuk-back-link">Back</a>
+
 {% endblock %}
 
 {% block content %}
@@ -25,7 +24,7 @@
         </label>
         <input class="govuk-input" id="search-name" name="search-name" type="text">
       </div>
-      <a href="claimant-detail-review" aria-describedby="search-referral">
+      <a href="uc-claimant-detail" aria-describedby="search-referral">
         <button class="govuk-button" data-module="govuk-button">
           Search
         </button>

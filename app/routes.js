@@ -1899,7 +1899,19 @@ router.post('/claimant-case/v5/status-filter2', function (req, res) {
 // Jen routing
 
 
+//V4
+router.post('/richer-claimant-info/v4/status-filter', function (req, res) {
+  
+  const view = req.session.data['view']
+  req.session.data['view']=''
 
+  if (view === 'caseload') {
+    res.redirect('/richer-claimant-info/v4/list-1')
+  } 
+   else {
+    res.redirect('/richer-claimant-info/v4/list-4')
+  }
+})
 
 
 module.exports = router

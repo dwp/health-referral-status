@@ -24,9 +24,6 @@
       <div class="govuk-form-group">
         <fieldset class="govuk-fieldset" role="group" aria-describedby="claimant-names">
           <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
-            <h2 class="govuk-fieldset__heading">
-              Claimant name
-            </h2>
           </legend>
          <!--  <div class="govuk-form-group">
             <label class="govuk-label" for="first-name">
@@ -82,7 +79,7 @@
         <fieldset class="govuk-fieldset" role="group" aria-describedby="dob-hint">
           <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
             <h2 class="govuk-fieldset__heading">
-              Enter the claimants date of birth
+              Enter the claimant's date of birth
             </h2>
           </legend>
           <div id="dob-hint" class="govuk-hint">
@@ -123,7 +120,7 @@
         <fieldset class="govuk-fieldset" role="group" aria-describedby="dob-hint">
           <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
             <h2 class="govuk-fieldset__heading">
-              Enter the claimants date of death
+              Date of death
             </h2>
           </legend>
           <div id="dob-hint" class="govuk-hint">
@@ -165,10 +162,10 @@
       <fieldset class="govuk-fieldset" role="group" aria-describedby="dob-hint">
         <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
           <h2 class="govuk-fieldset__heading">
-            Enter the claimants address
+           Residential address
           </h2>
         </legend>
-    </legend>
+    
 
     <div class="govuk-form-group">
       <label class="govuk-label" for="address-line-1">
@@ -179,7 +176,7 @@
 
     <div class="govuk-form-group">
       <label class="govuk-label" for="address-line-2">
-        Address line 2 (optional)
+        Address line 2
       </label>
       <input class="govuk-input" id="address-line-2" name="address-line-2" type="text" autocomplete="address-line2" >
     </div>
@@ -193,7 +190,7 @@
 
     <div class="govuk-form-group">
       <label class="govuk-label" for="address-county">
-        County (optional)
+        County
       </label>
       <input class="govuk-input govuk-!-width-two-thirds" id="address-county" name="address-county" type="text">
     </div>
@@ -210,10 +207,10 @@
       <fieldset class="govuk-fieldset" aria-describedby="contact-hint">
         <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
           <h1 class="govuk-fieldset__heading">
-          Is the correspondence address the same as the residential address?
+          Is the claimant's correspondence address the same as their residential address?
           </h1>
         </legend>
-        
+
         <div class="govuk-radios" data-module="govuk-radios">
           <div class="govuk-radios__item">
             <input class="govuk-radios__input" id="contact" name="contact" type="radio" value="yes" data-aria-controls="conditional-contact" checked>
@@ -222,8 +219,8 @@
             </label>
           </div>
           <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-contact">
-     
-    
+
+
           </div>
           <div class="govuk-radios__item">
             <input class="govuk-radios__input" id="contact-2" name="contact" type="radio" value="no" data-aria-controls="conditional-contact-2">
@@ -235,64 +232,62 @@
           <div class="govuk-form-group">
               <label class="govuk-label" for="contact-by-text">
                 <fieldset class="govuk-fieldset" role="group" aria-describedby="dob-hint">
-                  <legend class="govuk-fieldset__legend govuk-fieldset__legend--s">
+                  <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
                     <h2 class="govuk-fieldset__heading">
-                      Enter correspondence address
+                      Correspondence address
                     </h2>
                   </legend>
-              </legend>
-            
+
+
               <div class="govuk-form-group">
                 <label class="govuk-label" for="address-line-1">
                   Address line 1
                 </label>
                 <input class="govuk-input" id="address-line-1" name="address-line-1" type="text" autocomplete="address-line1" >
               </div>
-            
+
               <div class="govuk-form-group">
                 <label class="govuk-label" for="address-line-2">
-                  Address line 2 (optional)
+                  Address line 2
                 </label>
                 <input class="govuk-input" id="address-line-2" name="address-line-2" type="text" autocomplete="address-line2" >
               </div>
-            
+
               <div class="govuk-form-group">
                 <label class="govuk-label" for="address-town">
                   Town or city
                 </label>
                 <input class="govuk-input govuk-!-width-two-thirds" id="address-town" name="address-town" type="text" autocomplete="address-level2" >
               </div>
-            
+
               <div class="govuk-form-group">
                 <label class="govuk-label" for="address-county">
-                  County (optional)
+                  County
                 </label>
                 <input class="govuk-input govuk-!-width-two-thirds" id="address-county" name="address-county" type="text">
               </div>
-            
+
               <div class="govuk-form-group">
                 <label class="govuk-label" for="address-postcode">
                   Postcode
                 </label>
                 <input class="govuk-input govuk-input--width-10" id="address-postcode" name="address-postcode" type="text" autocomplete="postal-code" >
               </div>
-            
+
               </label>
             </div>
-    
+
           </div>
         </div>
-    
+
       </fieldset>
     </div>
-
-    
 
 
 
 
       <div class="govuk-form-group">
-        <fieldset class="govuk-fieldset" ">
+        <fieldset class="govuk-fieldset" role="group" aria-describedby="contact-details">
           <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
             <h2 class="govuk-fieldset__heading">
               Contact details
@@ -310,7 +305,7 @@
             <label class="govuk-label" for="mobile-number">
               Mobile phone number
             </label>
-            <input class="govuk-input govuk-input--width-20" id="mobile-number" name="mobile-number" type="text" spellcheck="false" autocomplete="mobile-number" value="07000 000000">
+            <input class="govuk-input govuk-input--width-20"id="mobile-number" name="mobile-number" type="text" spellcheck="false" autocomplete="mobile-number" value="07000 000000">
           </div>
 
           <div class="govuk-form-group">
@@ -341,6 +336,8 @@
 
         </fieldset>
       </div>
+
+
 
 
 

@@ -1250,3 +1250,8 @@ $govuk-assets-path: '/govuk/assets/';
     flex: 0 0 auto;
     width: 85%;
   }
+
+  //new links forever
+  .govuk-link:visited, a:visited, .app-step-nav-header__title:visited, .app-step-nav-related__link:visited {
+    color: #1d70b8;
+}

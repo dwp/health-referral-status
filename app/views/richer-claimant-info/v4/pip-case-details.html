@@ -18,10 +18,7 @@
     <nav class="app-subnav" aria-labelledby="app-subnav-heading">
       <h2 class="govuk-visually-hidden" id="app-subnav-heading">Pages in this section</h2>
       <ul class="app-subnav__section">
-        <li class="app-subnav__section-item">
-          <a class="app-subnav__link govuk-link govuk-link--no-visited-state govuk-link--no-underline" href="pip-claimant-detail">Claimant
-            details</a>
-        </li>
+       
         <li class="app-subnav__section-item app-subnav__section-item--current">
           <a class="app-subnav__link govuk-link govuk-link--no-visited-state govuk-link--no-underline"
             href="pip-case-details">Case details</a>
@@ -31,11 +28,11 @@
                   Referral
                 </a>
               </li>
-              <li class="app-subnav__section-item">
+            <!--  <li class="app-subnav__section-item">
                 <a class="app-subnav__link govuk-link govuk-link--no-visited-state govuk-link--no-underline" href="#consent">
                   Consent
                 </a>
-              </li>
+              </li> -->
 
               <li class="app-subnav__section-item">
                 <a class="app-subnav__link govuk-link govuk-link--no-visited-state govuk-link--no-underline" href="#important">
@@ -48,6 +45,11 @@
                 </a>
               </li>
             </ul>
+        </li>
+
+        <li class="app-subnav__section-item">
+          <a class="app-subnav__link govuk-link govuk-link--no-visited-state govuk-link--no-underline" href="pip-claimant-detail">Claimant
+            details</a>
         </li>
        <!--- <li class="app-subnav__section-item">
           <a class="app-subnav__link govuk-link govuk-link--no-visited-state govuk-link--no-underline"
@@ -104,12 +106,31 @@
     <h2 class="govuk-heading-m" id="referral">Referral</h2>
 
     <dl class="govuk-summary-list govuk-!-margin-bottom-9">
-      <div class="govuk-summary-list__row">
+     
+
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Consent to contact GP
+          </dt>
+          <dd class="govuk-summary-list__value">
+            Yes
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a class="govuk-link" href="change-singular/consent-gp">
+              Change<span class="govuk-visually-hidden"> Contact GP</span>
+            </a>
+          </dd>
+        </div>
+
+        <div class="govuk-summary-list__row">
         <dt class="govuk-summary-list__key">
           Referral date
         </dt>
         <dd class="govuk-summary-list__value">
           2 February 2021
+        </dd>
+        <dd class="govuk-summary-list__value">
+         
         </dd>
       </div>
       <div class="govuk-summary-list__row">
@@ -118,6 +139,9 @@
         </dt>
         <dd class="govuk-summary-list__value">
 PIP
+        </dd>
+        <dd class="govuk-summary-list__value">
+         
         </dd>
       </div>
 
@@ -132,6 +156,9 @@ PIP
           <dd class="govuk-summary-list__value">
             New referral
           </dd>
+          <dd class="govuk-summary-list__value">
+         
+          </dd>
         </div>
         <div class="govuk-summary-list__row">
           <dt class="govuk-summary-list__key">
@@ -140,19 +167,25 @@ PIP
           <dd class="govuk-summary-list__value">
             Tresco House
           </dd>
+          <dd class="govuk-summary-list__value">
+         
+          </dd>
         </div>
         <div class="govuk-summary-list__row">
           <dt class="govuk-summary-list__key">
             Case manager
           </dt>
           <dd class="govuk-summary-list__value">
-            Unassigned
+            Jared Mosely-Redman
+          </dd>
+          <dd class="govuk-summary-list__value">
+         
           </dd>
         </div>
       </dl>
 
 
-      <h2 class="govuk-heading-m govuk-!-margin-top-6" id="consent">Consent</h2>
+    <!---  <h2 class="govuk-heading-m govuk-!-margin-top-6" id="consent">Consent</h2>
       <dl class="govuk-summary-list govuk-!-margin-bottom-9">
         <div class="govuk-summary-list__row">
           <dt class="govuk-summary-list__key">
@@ -166,7 +199,7 @@ PIP
               Change<span class="govuk-visually-hidden"> Contact GP</span>
             </a>
           </dd>
-        </div>
+        </div> -->
       <!--  <div class="govuk-summary-list__row">
           <dt class="govuk-summary-list__key">
             Outcome of recommmendation
@@ -265,19 +298,7 @@ PIP
        
         <h2 class="govuk-heading-m" id="medicalcontacts">Other specialist or medical contacts</h2>
         <dl class="govuk-summary-list govuk-!-margin-bottom-9">
-          <div class="govuk-summary-list__row">
-            <dt class="govuk-summary-list__key">
-              Name
-            </dt>
-            <dd class="govuk-summary-list__value">
-              Mr B Test
-            </dd>
-            <dd class="govuk-summary-list__actions">
-              <a class="govuk-link" href="change-singular/medical-name">
-                Change<span class="govuk-visually-hidden"> Other medical professional name</span>
-              </a>
-            </dd>
-          </div>
+         
           <div class="govuk-summary-list__row">
             <dt class="govuk-summary-list__key">
               Profession
@@ -288,6 +309,20 @@ PIP
             <dd class="govuk-summary-list__actions">
               <a class="govuk-link" href="change-singular/medical-profession">
                 Change<span class="govuk-visually-hidden"> Profession</span>
+              </a>
+            </dd>
+          </div>
+
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Name
+            </dt>
+            <dd class="govuk-summary-list__value">
+              Mr B Test
+            </dd>
+            <dd class="govuk-summary-list__actions">
+              <a class="govuk-link" href="change-singular/medical-name">
+                Change<span class="govuk-visually-hidden"> Other medical professional name</span>
               </a>
             </dd>
           </div>

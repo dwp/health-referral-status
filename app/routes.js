@@ -1119,7 +1119,7 @@ router.post('/filter/v3/status-filter', function (req, res) {
     res.redirect('/filter/v3/list-3')
   } else if (status2 === 'assigned') {
     res.redirect('/filter/v3/list-4')
-  } else if (status2 === 'hcp-review') {
+  } else if (status2 === 'assessment-booked') {
     res.redirect('/filter/v3/list-5')
   } else if (status2 === 'report-ready') {
     res.redirect('/filter/v3/list-6')
@@ -1141,7 +1141,7 @@ router.post('/filter/v4/status-filter', function (req, res) {
     res.redirect('/filter/v4/list-3')
   } else if (status2 === 'assigned') {
     res.redirect('/filter/v4/list-4')
-  } else if (status2 === 'hcp-review') {
+  } else if (status2 === 'assessment-booked') {
     res.redirect('/filter/v4/list-5')
   } else if (status2 === 'report-ready') {
     res.redirect('/filter/v4/list-6')

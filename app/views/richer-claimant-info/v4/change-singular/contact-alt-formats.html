@@ -19,7 +19,7 @@ Alternative formats - Health Assesssment Service
 
 
 
-
+      <form action="reasonable-support-more-detail" method="post" class="form">
       <div class="govuk-form-group">
         <fieldset class="govuk-fieldset" aria-describedby="waste-hint">
           <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
@@ -32,30 +32,64 @@ Alternative formats - Health Assesssment Service
           </div>
           <div class="govuk-checkboxes" data-module="govuk-checkboxes">
             <div class="govuk-checkboxes__item">
-              <input class="govuk-checkboxes__input" id="format" name="format" type="checkbox" value="braille">
+              <input class="govuk-checkboxes__input" id="format-1" name="format" type="checkbox" value="braille" {{ checked("format", "braille") }}>
               <label class="govuk-label govuk-checkboxes__label" for="format">
                Braille
               </label>
             </div>
+
             <div class="govuk-checkboxes__item">
-              <input class="govuk-checkboxes__input" id="format-2" name="format" type="checkbox" value="large print">
-              <label class="govuk-label govuk-checkboxes__label" for="format-2">
-               Large print
-              </label>
-            </div>
-            <div class="govuk-checkboxes__item">
-              <input class="govuk-checkboxes__input" id="format-3" name="format" type="checkbox" value="audio">
-              <label class="govuk-label govuk-checkboxes__label" for="format-3">
-                Audio CD, DVD or MP3
+              <input class="govuk-checkboxes__input" id="format-2" name="format" type="checkbox" value="sign-language" {{ checked("format", "sign-language") }}>
+              <label class="govuk-label govuk-checkboxes__label" for="format">
+              Sign language
               </label>
             </div>
 
             <div class="govuk-checkboxes__item">
-              <input class="govuk-checkboxes__input" id="format-3" name="format" type="checkbox" value="audio2">
-              <label class="govuk-label govuk-checkboxes__label" for="format-3">
-                Audio recording of interview
+              <input class="govuk-checkboxes__input" id="format-3" name="format" type="checkbox" value="audio" {{ checked("format", "audio") }}>
+              <label class="govuk-label govuk-checkboxes__label" for="format">
+              Audio
               </label>
             </div>
+
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="format-4" name="format" type="checkbox" value="coloured-paper">
+              <label class="govuk-label govuk-checkboxes__label" for="format">
+            Coloured paper
+              </label>
+            </div>
+
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="format-5" name="format" type="checkbox" value="large-print" {{ checked("format", "large-print") }}>
+              <label class="govuk-label govuk-checkboxes__label" for="format">
+               Large print
+              </label>
+            </div>
+
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="format-6" name="format" type="checkbox" value="pdf">
+              <label class="govuk-label govuk-checkboxes__label" for="format">
+             Accesible PDF
+              </label>
+            </div>
+
+
+
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="format-7" name="format" type="checkbox" value="other" aria-controls="conditional-format-7" aria-expanded="false">
+              <label class="govuk-label govuk-checkboxes__label" for="format-7">
+                Other
+              </label>
+            </div>
+            <div class="govuk-checkboxes__conditional govuk-checkboxes__conditional--hidden" id="conditional-format-7">
+              <div class="govuk-form-group">
+                <label class="govuk-label" for="other">
+                 Please specify
+                </label>
+               
+                <input class="govuk-input govuk-input--width-20" id="width-20" name="width-20" type="text">
+              </div>  </div>
+          </div>
 
       
         </fieldset>
@@ -65,11 +99,10 @@ Alternative formats - Health Assesssment Service
       
 
 
-      <a href="../pip-claimant-detail-updated"> 
         <button class="govuk-button" data-module="govuk-button">
           Continue
         </button>
-      </a>
+      </form>
 
     </div>
   </div>

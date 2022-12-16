@@ -31,14 +31,14 @@ Contact preferences - Health Assesssment Service
           </legend>
           <div class="govuk-radios" data-module="govuk-radios">
             <div class="govuk-radios__item">
-              <input class="govuk-radios__input" id="male" name="hcp-preference" type="radio" value="male">
-              <label class="govuk-label govuk-radios__label" for="male">
+              <input class="govuk-radios__input" id="braille1" name="braille" type="radio" value="type1">
+              <label class="govuk-label govuk-radios__label" for="braille1">
                 Type 1 - uncontracted
               </label>
             </div>
             <div class="govuk-radios__item">
-              <input class="govuk-radios__input" id="female" name="hcp-preference" type="radio" value="female">
-              <label class="govuk-label govuk-radios__label" for="female">
+              <input class="govuk-radios__input" id="braille2" name="braille" type="radio" value="type2">
+              <label class="govuk-label govuk-radios__label" for="braille2">
                 Type 2 - contracted
               </label>
             </div>
@@ -61,26 +61,26 @@ Contact preferences - Health Assesssment Service
           </legend>
           <div class="govuk-radios" data-module="govuk-radios">
             <div class="govuk-radios__item">
-              <input class="govuk-radios__input" id="male" name="hcp-preference" type="radio" value="male">
-              <label class="govuk-label govuk-radios__label" for="male">
+              <input class="govuk-radios__input" id="signlang-dvd1" name="signlang" type="radio" value="1">
+              <label class="govuk-label govuk-radios__label" for="signlang-dvd1">
                 British sign language DVD
               </label>
             </div>
             <div class="govuk-radios__item">
-              <input class="govuk-radios__input" id="female" name="hcp-preference" type="radio" value="female">
-              <label class="govuk-label govuk-radios__label" for="female">
+              <input class="govuk-radios__input" id="signlang-dvd2" name="signlang" type="radio" value="2">
+              <label class="govuk-label govuk-radios__label" for="signlang-dvd2">
                 British sign language MPEG
               </label>
             </div>
             <div class="govuk-radios__item">
-              <input class="govuk-radios__input" id="female" name="hcp-preference" type="radio" value="female">
-              <label class="govuk-label govuk-radios__label" for="female">
+              <input class="govuk-radios__input" id="signlang-dvd3" name="signlang" type="radio" value="3">
+              <label class="govuk-label govuk-radios__label" for="signlang-dvd3">
                 Irish sign language DVD
               </label>
             </div>
             <div class="govuk-radios__item">
-              <input class="govuk-radios__input" id="female" name="hcp-preference" type="radio" value="female">
-              <label class="govuk-label govuk-radios__label" for="female">
+              <input class="govuk-radios__input" id="signlang-dvd4" name="signlang" type="radio" value="4">
+              <label class="govuk-label govuk-radios__label" for="signlang-dvd4">
                 Irish sign language MPEG
               </label>
             </div>
@@ -100,26 +100,26 @@ Contact preferences - Health Assesssment Service
           </legend>
           <div class="govuk-radios" data-module="govuk-radios">
             <div class="govuk-radios__item">
-              <input class="govuk-radios__input" id="male" name="hcp-preference" type="radio" value="male">
-              <label class="govuk-label govuk-radios__label" for="male">
+              <input class="govuk-radios__input" id="audio1" name="audio" type="radio" value="1">
+              <label class="govuk-label govuk-radios__label" for="audio1">
                 Audio casette
               </label>
             </div>
             <div class="govuk-radios__item">
-              <input class="govuk-radios__input" id="female" name="hcp-preference" type="radio" value="female">
-              <label class="govuk-label govuk-radios__label" for="female">
+              <input class="govuk-radios__input" id="audio2" name="audio" type="radio" value="2">
+              <label class="govuk-label govuk-radios__label" for="audio2">
                 Audio CD
               </label>
             </div>
             <div class="govuk-radios__item">
-              <input class="govuk-radios__input" id="female" name="hcp-preference" type="radio" value="female">
-              <label class="govuk-label govuk-radios__label" for="female">
+              <input class="govuk-radios__input" id="audio3" name="audio" type="radio" value="3">
+              <label class="govuk-label govuk-radios__label" for="audio3">
                 Audio DVD
               </label>
             </div>
             <div class="govuk-radios__item">
-              <input class="govuk-radios__input" id="female" name="hcp-preference" type="radio" value="female">
-              <label class="govuk-label govuk-radios__label" for="female">
+              <input class="govuk-radios__input" id="audio4" name="audio" type="radio" value="4">
+              <label class="govuk-label govuk-radios__label" for="audio4">
                 Audio MP3
               </label>
             </div>
@@ -127,6 +127,31 @@ Contact preferences - Health Assesssment Service
         </fieldset>
       </div>
       {% endif %} 
+
+
+      {% if (data['format'].includes('coloured-paper')) %}
+      <div class="govuk-form-group">
+        <fieldset class="govuk-fieldset">
+          <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+            <h2 class="govuk-fieldset__heading">
+              What colour paper
+            </h2>
+          </legend>
+         
+          
+                <!-- <label class="govuk-label" for="contact-by-text">
+                Specify colour paper
+                </label> -->
+                
+                <input class="govuk-input govuk-input--width-20" id="width-20" name="width-20" type="text">
+           
+            </div>
+
+        </fieldset>
+     
+
+      {% endif %} 
+
 
       {% if (data['format'].includes('large-print')) %}
       <div class="govuk-form-group">
@@ -138,20 +163,20 @@ Contact preferences - Health Assesssment Service
           </legend>
           <div class="govuk-radios" data-module="govuk-radios">
             <div class="govuk-radios__item">
-              <input class="govuk-radios__input" id="male" name="hcp-preference" type="radio" value="male">
-              <label class="govuk-label govuk-radios__label" for="male">
+              <input class="govuk-radios__input" id="print1" name="print" type="radio" value="1">
+              <label class="govuk-label govuk-radios__label" for="print1">
                 Large print - 16 point font
               </label>
             </div>
           
 
             <div class="govuk-radios__item">
-              <input class="govuk-radios__input" id="contact-3" name="contact" type="radio" value="text" data-aria-controls="conditional-contact-3">
-              <label class="govuk-label govuk-radios__label" for="contact-3">
+              <input class="govuk-radios__input" id="print2" name="print" type="radio" value="text" data-aria-controls="conditional-print2">
+              <label class="govuk-label govuk-radios__label" for="print2">
                 Large print with custom font
               </label>
             </div>
-            <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-contact-3">
+            <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-print2">
               <div class="govuk-form-group">
                 <label class="govuk-label" for="contact-by-text">
                 Specify which font

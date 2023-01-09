@@ -182,6 +182,51 @@ Contact preferences - Health Assesssment Service
       </div>
 
 
+
+
+
+  <div class="govuk-form-group">
+    <fieldset class="govuk-fieldset">
+      <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+        <h2 class="govuk-fieldset__heading">
+          Is the email for reasonable support the same as previously given?
+        </h2>
+      </legend>
+
+      <div class="govuk-inset-text">
+       Previously given email: <br> test.email@example.com  </div>
+
+
+      <div class="govuk-radios" data-module="govuk-radios">
+        <div class="govuk-radios__item">
+          <input class="govuk-radios__input" id="email1" name="email" type="radio" value="1">
+          <label class="govuk-label govuk-radios__label" for="email1">
+           Yes
+          </label>
+        </div>
+      
+
+        <div class="govuk-radios__item">
+          <input class="govuk-radios__input" id="email2" name="email" type="radio" value="text" data-aria-controls="conditional-email2">
+          <label class="govuk-label govuk-radios__label" for="email2">
+           No
+          </label>
+        </div>
+        <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-email2">
+          <div class="govuk-form-group">
+            <label class="govuk-label" for="contact-by-text">
+           Enter email address
+            </label>
+            
+            <input class="govuk-input govuk-input--width-20" id="width-20" name="width-20" type="text">
+         </div>
+        </div>
+
+      </div>
+    </fieldset>
+  </div>
+
+
       
 
 

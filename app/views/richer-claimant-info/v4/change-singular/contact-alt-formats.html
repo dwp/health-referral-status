@@ -19,7 +19,7 @@ Alternative formats - Health Assesssment Service
 
 
 
-      <form action="reasonable-support-more-detail" method="post" class="form">
+    <!--  <form action="reasonable-support-more-detail" method="post" class="form"> -->
       <div class="govuk-form-group">
         <fieldset class="govuk-fieldset" aria-describedby="waste-hint">
           <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
@@ -32,7 +32,7 @@ Alternative formats - Health Assesssment Service
           </div>
           <div class="govuk-checkboxes" data-module="govuk-checkboxes">
             <div class="govuk-checkboxes__item">
-              <input class="govuk-checkboxes__input" id="format-1" name="format" type="checkbox" value="braille" {{ checked("format", "braille") }}>
+              <input class="govuk-checkboxes__input" id="format1" name="format1" type="checkbox" value="braille" {{ checked("format", "braille") }}>
               <label class="govuk-label govuk-checkboxes__label" for="format1">
                Braille
               </label>
@@ -152,7 +152,7 @@ Alternative formats - Health Assesssment Service
             </div>
 
             <div class="govuk-checkboxes__item">
-              <input class="govuk-checkboxes__input" id="format17" name="format" type="checkbox" value="video">
+              <input class="govuk-checkboxes__input" id="format17" name="format17" type="checkbox" value="video">
               <label class="govuk-label govuk-checkboxes__label" for="format17">
           Video Relay Service
               </label>
@@ -182,13 +182,34 @@ Alternative formats - Health Assesssment Service
 
 
       
-
-
-        <button class="govuk-button" data-module="govuk-button">
+      <button onclick="goToPage()"  class="govuk-button" data-module="govuk-button">
           Continue
         </button>
-      </form>
+    <!-- </form> -->
+ 
 
+   
+
+      <script>
+        function goToPage(){
+            var checkBox = document.getElementById("format1");
+            var checkBox2 = document.getElementById("format2");
+
+            if(checkBox.checked === true) {
+              window.location.href = 'reasonable-support-more-detail';
+            }
+
+            if(checkBox2.checked === true) {
+              window.location.href = 'reasonable-support-more-detail';
+            }
+
+            else  {
+              window.location.href = '../pip-claimant-detail-updated';
+      
+            }
+          }
+        </script>
+        
     </div>
   </div>
 

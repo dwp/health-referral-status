@@ -224,13 +224,27 @@ Alternative formats - Health Assesssment Service
             var checkBox6 = document.getElementById("format16");
 
             if(checkBox.checked || checkBox2.checked || checkBox3.checked || checkBox4.checked || checkBox5.checked || checkBox6.checked) {
-              window.location.href = 'reasonable-support-more-detail';
-            }
+              item = [];
+              if (checkBox.checked) {
+                item.push('braille')
+              }
+              if (checkBox2.checked) {
+                item.push('sign')
+              }
+              if (checkBox3.checked) {
+                item.push('audio')
+              }
+              if (checkBox4.checked) {
+                item.push('coloured-paper')
+              }
+              if (checkBox5.checked) {
+                item.push('large-print')
+              }
+              if (checkBox6.checked) {
+                item.push('textphone')
+              }
 
-
-            else  {
-              window.location.href = '../pip-claimant-detail-updated';
-      
+              window.location.href = 'reasonable-support-more-detail?format=' + item.toString();
             }
           }
         </script>

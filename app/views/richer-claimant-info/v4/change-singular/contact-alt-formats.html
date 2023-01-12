@@ -30,6 +30,32 @@ Alternative formats - Health Assesssment Service
           <div id="format-hint" class="govuk-hint">
             Select all that apply.
           </div>
+
+
+          <div class="govuk-checkboxes__item">
+            <input class="govuk-checkboxes__input" id="format12" name="format12" type="checkbox" value="pdf">
+            <label class="govuk-label govuk-checkboxes__label" for="format12">
+           Accesible PDF
+            </label>
+          </div>
+
+
+          <div class="govuk-checkboxes__item">
+            <input class="govuk-checkboxes__input" id="format6" name="format6" type="checkbox" value="audio" {{ checked("format", "audio") }}>
+            <label class="govuk-label govuk-checkboxes__label" for="format6">
+            Audio
+            </label>
+          </div>
+
+          <div class="govuk-checkboxes__item">
+            <input class="govuk-checkboxes__input" id="format8" name="format8" type="checkbox" value="recording" {{ checked("format", "recording") }}>
+            <label class="govuk-label govuk-checkboxes__label" for="format8">
+            Audio recording of interview
+            </label>
+          </div>
+
+
+
           <div class="govuk-checkboxes" data-module="govuk-checkboxes">
             <div class="govuk-checkboxes__item">
               <input class="govuk-checkboxes__input" id="format1" name="format" type="checkbox" value="braille" {{ checked("format", "braille") }}>
@@ -37,6 +63,55 @@ Alternative formats - Health Assesssment Service
                Braille
               </label>
             </div>
+
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="format10" name="format10" type="checkbox" value="coloured-paper" {{ checked("format", "coloured-paper") }}>
+              <label class="govuk-label govuk-checkboxes__label" for="format10">
+            Coloured paper
+              </label>
+            </div>
+
+
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="format9" name="format9" type="checkbox" value="easyread" {{ checked("format", "easyread") }}>
+              <label class="govuk-label govuk-checkboxes__label" for="format9">
+              Easy read format
+              </label>
+            </div>
+
+
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="format4" name="format4" type="checkbox" value="hand-sign-language" {{ checked("format", "hand-sign-language") }}>
+              <label class="govuk-label govuk-checkboxes__label" for="format4">
+              Hands on signing
+              </label>
+            </div>
+
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="format11" name="format11" type="checkbox" value="large-print" {{ checked("format", "large-print") }}>
+              <label class="govuk-label govuk-checkboxes__label" for="format1">
+               Large print
+              </label>
+            </div>
+
+
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="format5" name="format5" type="checkbox" value="lipseaking" {{ checked("format", "lipseaking") }}>
+              <label class="govuk-label govuk-checkboxes__label" for="format5">
+              Lipspeaking
+              </label>
+            </div>
+
+
+
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="format7" name="format7" type="checkbox" value="relay" {{ checked("format", "relay") }}>
+              <label class="govuk-label govuk-checkboxes__label" for="format7">
+              Relay UK
+              </label>
+            </div>
+
+
 
             <div class="govuk-checkboxes__item">
               <input class="govuk-checkboxes__input" id="format2" name="format" type="checkbox" value="sign-language" {{ checked("format", "sign-language") }}>
@@ -53,73 +128,22 @@ Alternative formats - Health Assesssment Service
               </label>
             </div>
 
-            <div class="govuk-checkboxes__item">
-              <input class="govuk-checkboxes__input" id="format4" name="format4" type="checkbox" value="hand-sign-language" {{ checked("format", "hand-sign-language") }}>
-              <label class="govuk-label govuk-checkboxes__label" for="format4">
-              Hands on signing
-              </label>
-            </div>
+           
 
-            <div class="govuk-checkboxes__item">
-              <input class="govuk-checkboxes__input" id="format5" name="format5" type="checkbox" value="lipseaking" {{ checked("format", "lipseaking") }}>
-              <label class="govuk-label govuk-checkboxes__label" for="format5">
-              Lipspeaking
-              </label>
-            </div>
-
-
-            <div class="govuk-checkboxes__item">
-              <input class="govuk-checkboxes__input" id="format6" name="format6" type="checkbox" value="audio" {{ checked("format", "audio") }}>
-              <label class="govuk-label govuk-checkboxes__label" for="format6">
-              Audio
-              </label>
-            </div>
-
-            <div class="govuk-checkboxes__item">
-              <input class="govuk-checkboxes__input" id="format7" name="format7" type="checkbox" value="relay" {{ checked("format", "relay") }}>
-              <label class="govuk-label govuk-checkboxes__label" for="format7">
-              Relay UK
-              </label>
-            </div>
+          
 
 
 
-            <div class="govuk-checkboxes__item">
-              <input class="govuk-checkboxes__input" id="format8" name="format8" type="checkbox" value="recording" {{ checked("format", "recording") }}>
-              <label class="govuk-label govuk-checkboxes__label" for="format8">
-              Audio recording of interview
-              </label>
-            </div>
+           
 
 
-            <div class="govuk-checkboxes__item">
-              <input class="govuk-checkboxes__input" id="format9" name="format9" type="checkbox" value="easyread" {{ checked("format", "easyread") }}>
-              <label class="govuk-label govuk-checkboxes__label" for="format9">
-              Easy read format
-              </label>
-            </div>
+           
 
-            <div class="govuk-checkboxes__item">
-              <input class="govuk-checkboxes__input" id="format10" name="format10" type="checkbox" value="coloured-paper" {{ checked("format", "coloured-paper") }}>
-              <label class="govuk-label govuk-checkboxes__label" for="format10">
-            Coloured paper
-              </label>
-            </div>
+      
 
-            <div class="govuk-checkboxes__item">
-              <input class="govuk-checkboxes__input" id="format11" name="format11" type="checkbox" value="large-print" {{ checked("format", "large-print") }}>
-              <label class="govuk-label govuk-checkboxes__label" for="format1">
-               Large print
-              </label>
-            </div>
+         
 
-            <div class="govuk-checkboxes__item">
-              <input class="govuk-checkboxes__input" id="format12" name="format12" type="checkbox" value="pdf">
-              <label class="govuk-label govuk-checkboxes__label" for="format12">
-             Accesible PDF
-              </label>
-            </div>
-
+          
 
          <!--   <div class="govuk-checkboxes__item">
               <input class="govuk-checkboxes__input" id="format13" name="format" type="checkbox" value="email">

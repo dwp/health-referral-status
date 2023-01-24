@@ -90,8 +90,8 @@ Alternative formats - Health Assesssment Service
             </div>
 
             <div class="govuk-checkboxes__item">
-              <input class="govuk-checkboxes__input" id="format4" name="format4" type="checkbox" value="hand-sign-language" {{ checked("format", "hand-sign-language") }}>
-              <label class="govuk-label govuk-checkboxes__label" for="format4">
+              <input class="govuk-checkboxes__input" id="format22" name="format22" type="checkbox" value="interpreter" {{ checked("format", "interpreter") }}>
+              <label class="govuk-label govuk-checkboxes__label" for="format22">
               Interpreter during assessment
               </label>
             </div>
@@ -231,8 +231,9 @@ Alternative formats - Health Assesssment Service
             var checkBox4 = document.getElementById("format10");
             var checkBox5 = document.getElementById("format11");
             var checkBox6 = document.getElementById("format16");
+            var checkBox7 = document.getElementById("format22");
 
-            if(checkBox.checked || checkBox2.checked || checkBox3.checked || checkBox4.checked || checkBox5.checked || checkBox6.checked) {
+            if(checkBox.checked || checkBox2.checked || checkBox3.checked || checkBox4.checked || checkBox5.checked || checkBox6.checked || checkBox7.checked) {
               item = [];
               if (checkBox.checked) {
                 item.push('braille')
@@ -251,6 +252,9 @@ Alternative formats - Health Assesssment Service
               }
               if (checkBox6.checked) {
                 item.push('textphone')
+              }
+              if (checkBox7.checked) {
+                item.push('interpreter')
               }
 
               window.location.href = 'reasonable-support-more-detail?format=' + item.toString();

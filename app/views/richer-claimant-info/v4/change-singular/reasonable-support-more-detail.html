@@ -21,7 +21,7 @@ Contact preferences - Health Assesssment Service
       </h1>
 
 
-
+      {% if  data['format'].includes('braille')  %} 
       <div class="govuk-form-group">
         <fieldset class="govuk-fieldset">
           <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
@@ -48,9 +48,10 @@ Contact preferences - Health Assesssment Service
 
         </fieldset>
       </div>
+      {% endif %}  
 
 
-
+      {% if  data['format'].includes('sign')  %} 
       <div class="govuk-form-group">
         <fieldset class="govuk-fieldset">
           <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
@@ -86,8 +87,9 @@ Contact preferences - Health Assesssment Service
           </div>
         </fieldset>
       </div>
+      {% endif %}  
 
-
+      {% if  data['format'].includes('audio')  %} 
       <div class="govuk-form-group">
         <fieldset class="govuk-fieldset">
           <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
@@ -123,9 +125,9 @@ Contact preferences - Health Assesssment Service
           </div>
         </fieldset>
       </div>
+      {% endif %}  
 
-
-
+      {% if  data['format'].includes('coloured-paper')  %} 
       <div class="govuk-form-group">
         <fieldset class="govuk-fieldset">
           <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
@@ -144,10 +146,10 @@ Contact preferences - Health Assesssment Service
             </div>
 
         </fieldset>
+        {% endif %}  
 
 
-
-
+        {% if  data['format'].includes('interpreter')  %} 
         <div class="govuk-form-group">
           <fieldset class="govuk-fieldset">
             <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
@@ -166,7 +168,9 @@ Contact preferences - Health Assesssment Service
               </div>
 
           </fieldset>
+          {% endif %}  
 
+          {% if  data['format'].includes('large-print')  %} 
   <div class="govuk-form-group">
         <fieldset class="govuk-fieldset">
           <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
@@ -202,9 +206,10 @@ Contact preferences - Health Assesssment Service
           </div>
         </fieldset>
       </div>
+      {% endif %}  
 
 
-
+      {% if  data['format'].includes('textphone')  %} 
       <div class="govuk-form-group">
         <fieldset class="govuk-fieldset">
           <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
@@ -223,7 +228,7 @@ Contact preferences - Health Assesssment Service
 
         </fieldset>
 
-
+        {% endif %}  
 
 
 
